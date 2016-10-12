@@ -1,0 +1,22 @@
+{
+  "name": "stevent",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Pyry Pajunpää <pymapa@utu.fi>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Stevent-event/stevent",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1"
+  }
+}
