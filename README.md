@@ -1,6 +1,11 @@
 # stevent
-Stevent event sharing application for Capstone-project -course
+=== Stevent === Capstone 2016 project, Team Ekat.
 
+=== Platfrom ===
+MongoDB
+Express
+AngularJS 2
+NodeJS
 
 INSTRUCTIONS
 1. npm install
