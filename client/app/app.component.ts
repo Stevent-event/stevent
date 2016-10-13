@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HomeComponent } from './components/home/home.component';
 
 @Component({
   selector: 'my-app',
-  template: '<h1>Super-fancy event service!</h1>'
+  template: '<home></home>'
 })
 
 export class AppComponent { }
