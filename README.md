@@ -2,10 +2,10 @@
 
 Capstone 2016 project, Team Ekat  
 
-## Platfrom   
+## Platform   
 MongoDB  
 Express  
-AngularJS 2 
+AngularJS 2  
 NodeJS 6.7.0  
 
 ## INSTRUCTIONS  
