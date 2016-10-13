@@ -11,7 +11,7 @@ INSTRUCTIONS
 
 1. Install dependencies: "npm install" (to help development, install also nodemon: "npm install -g nodemon")
 
-2. Install Bootsrtap: "bower install bootstrap --save"
+2. Install Client-side dependencies: "bower install" 
 
 3. in project root if you installed nodemon, run "nodemon server". If not, run "node server"
 
