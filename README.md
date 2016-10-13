@@ -1,23 +1,24 @@
-# stevent
-=== Stevent === Capstone 2016 project, Team Ekat.
+# Stevent
 
-=== Platfrom ===
-MongoDB
-Express
-AngularJS 2
-NodeJS
+Capstone 2016 project, Team Ekat  
 
-INSTRUCTIONS
+## Platform   
+MongoDB  
+Express  
+AngularJS 2  
+NodeJS 6.7.0  
 
-1. Install dependencies: "npm install" (to help development, install also nodemon: "npm install -g nodemon")
+## INSTRUCTIONS  
 
-2. Install Bootsrtap: "bower install bootstrap --save"
+1. Install dependencies: "npm install" (to help development, install also nodemon and bower: "npm install --global nodemon bower")  
 
-3. in project root if you installed nodemon, run "nodemon server". If not, run "node server"
+2. Install client-side dependencies in project root directory: "bower install"  
 
-4. Open another console or bash. Go to /client -folder. Run "npm install" again.
+3. In project root directory, if you installed nodemon, run "nodemon server". If not, run "node server"  
 
-5. On same folder run "npm start"
+4. Open another console or bash. Go to /client -folder. Run "npm install" again.  
 
-6. On browser navigate to localhost:3000 (client server opens automatically localhost:3001)
+5. On same folder run "npm start"  
+
+6. On browser navigate to localhost:3000 (client server opens automatically localhost:3001)  
 
