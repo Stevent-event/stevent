@@ -3,10 +3,10 @@ import {Component} from '@angular/core'
 @Component({
 
 selector: 'user-authentication',
-templateUrl: 'authentication.component.html'
+templateUrl: 'login.component.html'
 })
-export class AuthenticationComponent{
-
+export class LoginComponent{
+ users : UserList[]
 
 
 }
