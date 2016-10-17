@@ -24,6 +24,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
 app.use('/api', tasks);
 
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname,'views/index.html'))
+});
+
 app.listen(port, function() {
     console.log("Server started on port " + port);
 });
