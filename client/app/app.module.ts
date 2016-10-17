@@ -5,6 +5,7 @@ import {HomeComponent} from './components/home/home.component';
 import {LoginComponent} from './components/authentication/login/login.component';
 import {SignupComponent} from './components/authentication/signup/signup.component';
 import {routing} from './app.routes';
+import {AuthenticationService} from './authentication.service'
 @NgModule({
   imports:      [ BrowserModule, routing ],
   declarations: [AppComponent, HomeComponent,LoginComponent,SignupComponent],

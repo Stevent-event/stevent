@@ -1,12 +1,15 @@
 import {Component} from '@angular/core'
-
+import {AuthenticationService,User} from '.../authentication.service'
 @Component({
 
-selector: 'user-authentication',
-templateUrl: 'login.component.html'
+selector: 'login-form',
+providers: [AuthenticationService],
+templateUrl: 'login.component.html',
+styleUrls: ['login.component.css']
 })
 export class LoginComponent{
- users : UserList[]
+ 
 
+        }
+    
 
-}
