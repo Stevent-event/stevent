@@ -4,7 +4,7 @@ import { AuthenticationComponent } from './components/authentication/login/authe
 import { SignupComponent } from './components/authentication/signup/signup.component';
 @Component({
   selector: 'my-app',
-  template: '<home></home>'
+  template: '<router-outlet></router-outlet>'
 })
 
 export class AppComponent { }
