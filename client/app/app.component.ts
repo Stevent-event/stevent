@@ -6,11 +6,7 @@ import { SignupComponent } from './components/authentication/signup/signup.compo
 import {PrivateComponent} from './components/private.component';
 @Component({
   selector: 'my-app',
-<<<<<<< HEAD
-  template: '<home>Home</home>'
-=======
   template: '<router-outlet></router-outlet>'
->>>>>>> 661fe30859b806b028cff3359c21955847eda8d7
 })
 
 export class AppComponent { }

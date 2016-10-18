@@ -1,5 +1,5 @@
-import {Injectable} from 'angular2/core';
-import {Router} from 'angular2/router';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
 export class User {
   constructor(
     public email: string,
@@ -23,11 +23,11 @@ export class AuthenticationService{
  
   login(user){
     var authenticatedUser = users.filter(u => u.email === user.email);
-    if (authenticatedUser && authenticatedUser.password === user.password){
+    /*if (authenticatedUser && authenticatedUser.password === user.password){
       localStorage.setItem("user", authenticatedUser);
       this._router.navigate(['Home']);      
       return true;
-    }
+    }*/
     return false;
  
   }

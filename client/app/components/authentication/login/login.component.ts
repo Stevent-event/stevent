@@ -1,5 +1,5 @@
 import {Component} from '@angular/core'
-import {AuthenticationService,User} from '.../authentication.service'
+import {AuthenticationService,User} from '../../../authentication.service';
 @Component({
 
 selector: 'login-form',
