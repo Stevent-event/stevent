@@ -1,0 +1,70 @@
+header {
+  padding: 20px 0;
+}
+
+header .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+.jumbotron {
+  display: flex;
+  align-items: center-top;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+.jumbotron h2 {
+    font-size: 60px;
+    font-weight: 700;
+    text-shadow: black;
+    margin: 0;
+    color: black;
+
+}
+.jumbotron h3 {
+    color: black;
+}
+
+.see-more {
+  border-radius: 2px;
+  border: 0px;
+  color:white;
+  text-shadow: none;
+  background-color: black;
+  size: 5in 5in;
+}
+footer {
+  font-size: 12px;
+  padding: 20px 0;
+}
+
+footer .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li img {
+  width: 32px;
+  height: 32px;
+}
