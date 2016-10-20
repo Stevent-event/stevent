@@ -12,7 +12,14 @@ import { AuthenticationService } from './authentication.service'
 @NgModule({ 
   imports: [ BrowserModule, routing ],
 
-  declarations: [ AppComponent, HomeComponent, WelcomeComponent,LoginComponent, SignupComponent ],
+  declarations: [ 
+    AppComponent, 
+    HomeComponent, 
+    WelcomeComponent,
+    LoginComponent, 
+    SignupComponent,
+    OverviewComponent
+     ],
   bootstrap: [AppComponent]
 
 
