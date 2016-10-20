@@ -6,12 +6,13 @@ import { LoginComponent } from './components/authentication/login/login.componen
 import { SignupComponent } from './components/authentication/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { routing } from './app.routes';
-import {AuthenticationService} from './authentication.service'
+import { AuthenticationService } from './authentication.service'
 
 @NgModule({
   imports: [ BrowserModule, routing ],
   declarations: [ AppComponent, HomeComponent, LoginComponent, SignupComponent ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 
 })
+
 export class AppModule { }
