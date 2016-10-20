@@ -11,15 +11,30 @@ header h1 {
   font-weight: 700;
   margin: 0;
 }
-
-header nav {
-  display: flex;
+header a {
+  font-size: 18px;
+  padding: 0 10px;
   justify-content: flex-end;
+  color: black;
 }
 
-header p {
+header nav {
   padding: 0 20px;
-  margin: 0;
+  align-items: center-bottom;
+}
+
+header .col-sm-8 {
+  display: flex;
+  justify-content: flex-end;
+  word-spacing: normal;
+}
+header ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+header li {
+  list-style: none;
 }
 .jumbotron {
   display: flex;
@@ -43,12 +58,13 @@ header p {
 }
 
 .see-more {
+  padding: 7px;
   border-radius: 2px;
   border: 0px;
   color:white;
   text-shadow: none;
   background-color: black;
-  size: 5in 5in;
+  border: 1px solid gray;
 }
 footer {
   font-size: 12px;
