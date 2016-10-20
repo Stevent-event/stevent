@@ -10,8 +10,8 @@ import { routing } from './app.routes';
 import { AuthenticationService } from './authentication.service'
 
 @NgModule({
-  imports: [ BrowserModule, routing, OverviewComponent ],
-  declarations: [ AppComponent, HomeComponent, LoginComponent, SignupComponent ],
+  imports: [ BrowserModule, routing ],
+  declarations: [ AppComponent, HomeComponent, LoginComponent, SignupComponent, OverviewComponent ],
   bootstrap: [ AppComponent ]
 })
 
