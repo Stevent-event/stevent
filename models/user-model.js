@@ -11,21 +11,3 @@ var userSchema = new Schema({
   lastLogin: Date,
   currentlyLoggedIn: Boolean
 });
-
-var eventSchema = new Schema({
-  name: String,
-  coordinates: String,
-  address: String,
-  description: String,
-  category: String,
-  startTime: Date,
-  endTime: Date,
-  ongoing: Boolean
-});
-
-
-  
-  
-  
-  
-  
