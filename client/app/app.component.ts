@@ -8,7 +8,7 @@ import { PrivateComponent } from './components/private.component';
 
 @Component({
   selector: 'my-app',
-  template: '<welcome></welcome>'
+  template: '<home></home>'
 })
 
 @Component({
