@@ -9,16 +9,13 @@ import { OverviewComponent } from './components/home/welcome/overview/overview.c
 import { routing } from './app.routes';
 import { AuthenticationService } from './authentication.service'
 
-@NgModule({
+@NgModule({ 
   imports: [ BrowserModule, routing ],
-<<<<<<< HEAD
+
   declarations: [ AppComponent, HomeComponent, WelcomeComponent,LoginComponent, SignupComponent ],
   bootstrap: [AppComponent]
 
-=======
-  declarations: [ AppComponent, HomeComponent, LoginComponent, SignupComponent, OverviewComponent ],
-  bootstrap: [ AppComponent ]
->>>>>>> bca9af3ce347d66bf2b77cf001c651b65d809426
+
 })
 
 export class AppModule { }
