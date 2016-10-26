@@ -2,7 +2,7 @@ import {Component} from '@angular/core'
 import {AuthenticationService,User} from '../../../authentication.service';
 @Component({
 
-selector: 'login-form',
+moduleId: module.id,
 providers: [AuthenticationService],
 templateUrl: 'login.component.html',
 styleUrls: ['login.component.css']
@@ -14,5 +14,6 @@ export class LoginComponent{
   //  this.Users = _AuthenticationService.getUsers();
 
         }
+}
     
 

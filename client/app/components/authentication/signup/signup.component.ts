@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import { SignupService } from '../../../signup.service';
 @Component({
-    selector: 'signup',
+    moduleId: module.id,
     providers: [SignupService],
 
     styleUrls : ['signup.component.css'],
