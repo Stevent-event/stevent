@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var tasks = require('./routes/tasks');
+var user = require('./routes/user');
 
 var app = express();
 
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/', index);
 app.use('/api', tasks);
+app.use('/api/user', user);
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname,'views/index.html'))
