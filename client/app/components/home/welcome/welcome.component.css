@@ -1,25 +1,27 @@
 header {
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
 header .row {
   display: flex;
   align-items: center;
+  background-color: black;
+  padding: 0 20px;
+}
+header .row .col-sm-12{
+  display: flex;
+  justify-content: center;
 }
 
-header h1 {
-  font-weight: 700;
-  margin: 0;
-}
 header a {
   font-size: 18px;
   padding: 0 10px;
   justify-content: flex-end;
-  color: black;
+  color: white;
 }
 
 header nav {
-  padding: 0 20px;
   align-items: center-bottom;
 }
 
@@ -29,32 +31,63 @@ header .col-sm-8 {
   word-spacing: normal;
 }
 header ul {
-  display: flex;
+  display: inline;
   align-items: flex-end;
   justify-content: flex-end;
 }
 header li {
   list-style: none;
 }
+.menu_container {
+  display: flex;
+  justify-content: center; 
+  background-color: black;
+}
+.menu_container ul {
+  list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+.menu_container .menu_items li{
+  float: left;
+
+}
+.menu_container .menu_items a {
+  display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.menu_container .menu_items a:hover {
+    background-color: #111;
+}
+.active {
+    background-color: #0d6ebd;  
+}
+
 .jumbotron {
   display: flex;
   align-items: center-top;
   background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
   background-size: cover;
-  color: #ffffff;
-  height: 500px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
+  color: black;
+  height: 400px;
+  text-shadow: 0.25px 0.25px 0.25px #0d6ebd;
 }
+
 .jumbotron h2 {
     font-size: 60px;
     font-weight: 700;
-    text-shadow: black;
+    text-shadow:black;
     margin: 0;
-    color: black;
-
+    color:white;
 }
 .jumbotron h3 {
-    color: black;
+    color: white;
+    padding: 0 10px;
 }
 
 .see-more {
@@ -66,14 +99,40 @@ header li {
   background-color: black;
   border: 1px solid gray;
 }
+.jumbotron span {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 0 0;
+}
+content .row .col-sm-6 {
+  display: flex;
+  align-items: center-top;
+  background-size: cover;
+  color: black;
+}
+p {
+  color: white;
+}
+content .secondrow .col-sm-6 {
+  display: flex;
+  align-items: center-top;
+  background-size: cover;
+  color: black;
+}
 footer {
   font-size: 12px;
-  padding: 20px 0;
+  background-color: black;
+}
+footer .col-sm-4{
+  padding: 5;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 footer .col-sm-8 {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 footer ul {
