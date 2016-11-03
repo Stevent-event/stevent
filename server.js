@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var tasks = require('./routes/tasks');
 var user = require('./routes/user');
+var mongoose = require('mongoose');
+
 
 // Global variables and aliases
 var app = express();
@@ -35,8 +37,7 @@ app.listen(port, function() {
 // Mongoose MongoDB Connection 
 // TODO 1: partly duplicate with mongoose-connection-options.json
 // TODO 2: look what needs to be separated to config.js ("express.js best practices") 
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://vivian:steventpw@ds029575.mlab.com:29575/stevent');
-var db = mongoose.connection();
-db.on('error', console.error.bind(console, 'connection error'));
-db.once('open', function(){});
+//mongoose.connect('mongodb://vivian:steventpw@ds029575.mlab.com:29575/stevent'); //server failed to start with this "not a function"
+//var db = mongoose.connection();
+//db.on('error', console.error.bind(console, 'connection error'));
+//db.once('open', function(){});
