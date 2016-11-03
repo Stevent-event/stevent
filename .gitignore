@@ -12,6 +12,8 @@
 /.idea
 /.#
 /*.*~
+/.vscode	
+/.*.kate-swp
 
 # misc
 /.sass-cache
@@ -29,7 +31,8 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
-
+.directory
+ownotes.txt
 
 # ignore js and map files
 **/*.map
@@ -37,7 +40,6 @@ Thumbs.db
 /client/app/**/*.js
 !app/assets/*.js
 api/**/*.js
-
 
 
 #dist
