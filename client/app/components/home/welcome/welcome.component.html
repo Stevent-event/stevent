@@ -1,33 +1,53 @@
 <header class="top_bar_container">
     <div class="row">
-        <img src="https://s.w.org/about/images/wordpress-logo-notext-bg.png">
-        <h1 class="col-sm-4">Stevent</h1>
-        <nav class="col-sm-8">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="http://localhost:3000/app\components\authentication\signup\signup.component.html">Register</a></li>
-                <li><a href="http://localhost:3000/app\components\authentication\login\login.component.html">Login</a></li>
-            </ul>
-        </nav>
+        <div class="col-sm-12">
+            <img src="../../../../Images/Logo4.jpg" alt="stevent-logo" style="width:400px;height:100px;">
+        </div>
     </div>
 </header>
+
+<div class="menu_container">
+    <ul class="menu_items">
+            <li class="active"><a routerLink="/welcome" routerLinkActive="active">HOME</a></li>
+            <li><a routerLink="/login" routerLinkActive="active">LOG IN</a></li>
+            <li><a routerLink="/signup" routerLinkActive="active">SIGN UP</a></li>
+    </ul>
+</div>
 
 <div class="jumbotron">
     <div class="container">
         <div class="row text-center">
             <h2>Student Events</h2>
             <h3>Perfect Application for every student in Turku!</h3>
-            <a class="see-more" href="http://localhost:3000/app\components\home\welcome\overview\overview.component.html" role="button">See More!</a>
+            <a class="btn btn-primary" routerLink="/overview" routerLinkActive="active">See Events!</a>
+            <a routerLink='/overview'>
+            <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="row">
+        <div class="col-sm-6">
+            <p>Turun väkiluku kasvaa jo kymmenettä vuotta peräkkäin niin, että jokaisen vuoden kasvu on edellistä nopeampaa. Turun väkiluku on kasvanut viimeisen kymmenen vuoden aikana noin 10 000 asukkaalla. Myös Turun kaupungin sivistystoimialalla kaupungin kasvuun, erityisesti oppilasmäärien nousuun on varauduttu hyvissä ajoin.</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="https://www.ovikoodi.fi/wp-content/uploads/2015/10/turku-aurajoki.jpg">
         </div>
     </div>
 
-</div>
+    <div class="secondrow">
+        <div class="col-sm-6">
+            <p>Turun kaupungin vapaa-aikatoimiala tarjoaa marras- ja joulukuun aikana tapahtumia ja työpajoja, joissa turkulaiset pääsevät kohtaamaan toisiaan. Tarkoituksena on saada kantasuomalaiset ja maahanmuuttajataustaiset turkulaiset harrastamaan ja tekemään asioita yhdessä.
+</p>
+        </div>
+        <div class="col-sm-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Turku_Castle.jpg/282px-Turku_Castle.jpg">
+        </div>
+    </div>
 
-<div class="content_container"> 
-
-</div>
-
-<footer class="container">
+<footer class="bottom_bar_container">
     <div class="row">
         <p class="col-sm-4"> &copy; 2016 TeamEkat</p>
         <ul class="col-sm-8">
