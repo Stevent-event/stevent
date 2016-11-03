@@ -6,7 +6,6 @@ var tasks = require('./routes/tasks');
 var user = require('./routes/user');
 var mongoose = require('mongoose');
 
-
 // Global variables and aliases
 var app = express();
 var port = process.env.PORT || 3000;
