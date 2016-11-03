@@ -6,9 +6,20 @@ var index = require('./routes/index');
 var tasks = require('./routes/tasks');
 var user = require('./routes/user');
 
+var config = require('./config');
+var mongoose = require('mongoose');
+
 var app = express();
 
 var port = process.env.PORT || 3000;
+
+mongoose.connect(config.database);
+mongoose.connection.once('open', function() {
+  console.log('Connected to database in ' + config.database);
+})
+mongoose.connection.on('error', function() {
+  console.info('Error: Could not connect to MongoDB');
+})
 
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
