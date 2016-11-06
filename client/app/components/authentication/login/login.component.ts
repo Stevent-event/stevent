@@ -26,8 +26,8 @@ export class LoginComponent{
   }
 
   login(user: User): void {
-    console.log(user);
     this.authenticationService.login(user)
+      .then(() => location.reload);
   
   }
 

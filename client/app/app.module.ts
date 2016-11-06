@@ -20,8 +20,8 @@ import { SignupService } from './signup.service';
     BrowserModule, 
     routing, 
     ReactiveFormsModule, 
-    FormsModule 
-    
+    FormsModule, 
+    HttpModule
     ],
 
   declarations: [ 

@@ -34,7 +34,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
 app.use('/api', tasks);
-app.use('/api/user', user);
+app.use('/api/authentication', user);
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname,'views/index.html'))

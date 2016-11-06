@@ -1,5 +1,8 @@
 import {Injectable} from '@angular/core';
+import { Http, Response } from '@angular/http';
 import {Router} from '@angular/router';
+
+import 'rxjs/add/operator/toPromise';
 export class User {
   constructor(
     public email: string,
@@ -14,7 +17,10 @@ var users = [
 @Injectable()
 export class AuthenticationService{
     constructor(
-    private _router: Router){}
+      private http: Http,
+      private _router: Router
+    
+    ){}
  
   logout() {
     localStorage.removeItem("user");
@@ -22,15 +28,17 @@ export class AuthenticationService{
   }
  
   login(user){
-    console.log("login in service");
-    console.log(user);
-    var authenticatedUser = users.filter(u => u.email === user.email);
+    // var authenticatedUser = users.filter(u => u.email === user.email);
     /*if (authenticatedUser && authenticatedUser.password === user.password){
       localStorage.setItem("user", authenticatedUser);
       this._router.navigate(['Home']);      
       return true;
     }*/
-    return false;
+    return this.http
+          .post('/api/authentication/login', user)
+          .toPromise()
+          .then(res => console.log("onnistui, res: " + res))
+    // return false;
  
   }
  
