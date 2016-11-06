@@ -11,7 +11,7 @@ import { SignupComponent } from './components/authentication/signup/signup.compo
 import { HomeComponent } from './components/home/home.component';
 import { OverviewComponent } from './components/home/welcome/overview/overview.component';
 import { routing } from './app.routes';
-import { AuthenticationService } from './authentication.service';
+import { AuthenticationService } from './services/authentication.service';
 import { SignupService } from './signup.service';
 
 

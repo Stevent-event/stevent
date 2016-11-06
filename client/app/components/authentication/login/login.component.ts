@@ -1,11 +1,7 @@
 import {Component} from '@angular/core'
-import {AuthenticationService} from '../../../authentication.service';
+import {AuthenticationService} from '../../../services/authentication.service';
 
-export class User {
-  email: string;
-  password: string;
-}
-
+import {User} from '../../../classes/user';
 
 @Component({
 
@@ -27,7 +23,7 @@ export class LoginComponent{
 
   login(user: User): void {
     this.authenticationService.login(user)
-      .then(() => location.reload);
+      .then(() => console.log("success in component"));
   
   }
 

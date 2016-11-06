@@ -37,7 +37,7 @@ export class AuthenticationService{
     return this.http
           .post('/api/authentication/login', user)
           .toPromise()
-          .then(res => console.log("onnistui, res: " + res))
+          .then(res => console.log("success, res: " + res))
     // return false;
  
   }
