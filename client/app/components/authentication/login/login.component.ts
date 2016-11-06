@@ -10,13 +10,16 @@ export class User {
 @Component({
 
   moduleId: module.id,
-  providers: [AuthenticationService],
   templateUrl: 'login.component.html',
-  styleUrls: ['login.component.css']
+  styleUrls: ['login.component.css'],
+  providers: [AuthenticationService]
   
 })
 
 export class LoginComponent{
+  constructor(
+    private authenticationService: AuthenticationService
+  ){}
   user: User = {
     email: '',
     password: ''
@@ -24,12 +27,14 @@ export class LoginComponent{
 
   login(user: User): void {
     console.log(user);
+    this.authenticationService.login(user)
+  
   }
 
- componentName: 'LoginComponent';
+/* componentName: 'LoginComponent';
   //Assign 
     constructor(_AuthenticationService: AuthenticationService) {
   //  this.Users = _AuthenticationService.getUsers();
 
-        }
+        }*/
 }

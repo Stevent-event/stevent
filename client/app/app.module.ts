@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule} from "@angular/forms"; // for model-driven forms
 import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/home/welcome/welcome.component';
@@ -15,7 +16,13 @@ import { SignupService } from './signup.service';
 
 
 @NgModule({ 
-  imports: [ BrowserModule, routing, ReactiveFormsModule, FormsModule ],
+  imports: [ 
+    BrowserModule, 
+    routing, 
+    ReactiveFormsModule, 
+    FormsModule 
+    
+    ],
 
   declarations: [ 
     AppComponent, 
@@ -25,6 +32,9 @@ import { SignupService } from './signup.service';
     SignupComponent,
     OverviewComponent
      ],
+
+  providers: [AuthenticationService],
+
   bootstrap: [AppComponent]
 
 

@@ -22,6 +22,8 @@ export class AuthenticationService{
   }
  
   login(user){
+    console.log("login in service");
+    console.log(user);
     var authenticatedUser = users.filter(u => u.email === user.email);
     /*if (authenticatedUser && authenticatedUser.password === user.password){
       localStorage.setItem("user", authenticatedUser);
