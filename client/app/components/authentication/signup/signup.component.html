@@ -1,21 +1,59 @@
 		
-<section class="sample-app-content">
+<div>
     <h1> Please fill up the details:</h1>
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-        <p>
-            <label>Username:</label>
-            <input type="text" formControlName="userName">
-        </p>
-        <p>
-            <label>Email:</label>
-            <input type="email" formControlName="email">
-        </p>
-        <p>
-            <label>Password:</label>
-            <input type="password" formControlName="password">
-        </p>
-        <p>
-            <button type="submit" [disabled]="!form.valid">Submit</button>
-        </p>
+        <form (ngSubmit)="onSubmit(signupForm.value)" #signupForm="ngForm">
+
+            <div class="form-group">
+                 <label class="col-xs-4 control-label" for="userEmail" >Email : </label>
+                     <div class="col-xs-8">
+                         <input type="text" style="width: 300px" class="form-control" required
+                              [(ngModel)]="newUser.userEmail"
+                              ngControl="userEmail"
+                              #greenCarName="ngForm"
+
+                            >
+            
+                                 <div [hidden]="userEmail.valid || userEmail.pristine" class="alert alert-danger">
+                                     The Email is required !
+                                </div>
+                     </div>
+            </div>
+
+             <div class="form-group">
+                    <label class="col-xs-4 control-label" for="userPassword" >Password : </label>
+                         <div class="col-xs-8">
+                            <input type="password" style="width: 300px" class="form-control" required
+                                 [(ngModel)]="newUser.userPassword"
+                                 ngControl="userPassword"
+                                #greenCarColor="ngForm"
+                             >
+
+                             <div [hidden]="userPassword.valid || userPassword.pristine" class="alert alert-danger">
+                             The Password is required !
+                            </div>
+                         </div>
+            </div>
+ 
+
+                     <div class="form-group">
+                             <div class="col-xs-12">
+                                    <button type="submit" class="btn btn-default">Submit</button>
+                             </div>
+                     </div>
+
+
+                         <div class="form-group">
+                             <label class="col-xs-4 control-label" >Submitted Data : </label>
+                                <div class="col-xs-8">
+                                     <div [hidden]="!submitted">
+                                            <span>from signup form</span>
+                                                 <textarea style="width: 300px" class="form-control" rows="6">{{data}}</textarea>
+                                        </div>
+                                                <div [hidden]="submitted">
+                                                    <span>Edit your Data then click Submit to get new Data from signup form</span>
+                                                </div>
+                                 </div>
+                        </div>
     </form>
-</section>
+
+</div>

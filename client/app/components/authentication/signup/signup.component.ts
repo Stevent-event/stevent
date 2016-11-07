@@ -2,6 +2,7 @@ import {Component} from '@angular/core'
 import { SignupService } from '../../../signup.service';
 import { FormGroup, FormControl, Validators, FormBuilder } 
     from '@angular/forms';
+import {User} from '../../../classes/user';
 @Component({
     moduleId: module.id,
     providers: [SignupService],
@@ -12,19 +13,17 @@ import { FormGroup, FormControl, Validators, FormBuilder }
 
 
 export class SignupComponent{
- form: FormGroup;
+    newUser= new User();// user instance
+ 
     
-    userName = new FormControl("", Validators.required);
-    
-    constructor(fb: FormBuilder) {
-        this.form = fb.group({
-            "userName": this.userName,
-            "password":["", Validators.required]
-        });
-    }
-    onSubmit() {
+    submitted =false; //form not submitted : default
+    data:string; //this variable contains form data
+
+    onSubmit(data) {
         console.log("form submitted");
-        console.log(this.form);
+        this.submitted= true;
+        this.data=JSON.stringify(data);
+        console.log(this.data);
     }
 
 }
