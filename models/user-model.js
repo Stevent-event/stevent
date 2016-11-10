@@ -10,4 +10,6 @@ var userSchema = new Schema({
   registerDate: Date,
   lastLogin: Date,
   currentlyLoggedIn: Boolean
-});
+}, {collection: 'users'});
+
+module.exports = mongoose.model('User', userSchema);
