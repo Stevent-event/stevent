@@ -30,10 +30,10 @@
         <div class="col-xs-10">
             <input type="text" style="width: 300px" class="form-control" required
                    [(ngModel)]="newuserEmail"
-                   [formControl]="signupForm.control['newuserEmail']">
+                   [formControl]="signupForm.get('newuserEmail')">
 
 
-            <div [hidden]="userEmail.valid || userEmail.pristine" class="alert alert-danger">
+            <div [hidden]="newuserEmail.valid || newuserEmail.pristine" class="alert alert-danger">
                 The Email address is required !
             </div>
         </div>
@@ -43,10 +43,10 @@
         <div class="col-xs-10">
             <input type="text" style="width: 300px" class="form-control" required
                    [(ngModel)]="newuserPassword"
-                   [formControl]="signupForm.control['newuserPassword']">
+                   [formControl]="signupForm.get('newuserPassword')">
 
 
-            <div [hidden]="userPassword.valid || userPassword.pristine" class="alert alert-danger">
+            <div [hidden]="neuserPassword.valid || newuserPassword.pristine" class="alert alert-danger">
                 The password is required !
             </div>
         </div>

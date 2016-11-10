@@ -41,7 +41,8 @@ constructor(fb:FormBuilder,private _signupService:SignupService){
 
     postUserToServer()
     {
-      this._signupService.postnewUserRestful(this.newuserEmail,this.newuserPassword).subscribe(//call the post
+      this._signupService.postnewUserRestful(this.newuserEmail,this.newuserPassword)
+      .subscribe(//call the post
                 data => this.postnewuserToServer = JSON.stringify(data), // put the data returned from the server in our variable
                 error => console.log("Error HTTP Post Service"), // in case of failure show this message
                 () => console.log("Job Done Post !")//run this code in all cases
