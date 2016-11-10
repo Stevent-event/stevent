@@ -12,4 +12,6 @@ var eventSchema = new Schema({
   endTime: Date,
   ongoing: Boolean,
   attendingUsers: [User] 
-});  
+}, { collection: 'events' });  
+
+module.exports = mongoose.model('Event', eventSchema);
