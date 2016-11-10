@@ -33,7 +33,7 @@ import { SignupService } from './signup.service';
     OverviewComponent
      ],
 
-  providers: [AuthenticationService],
+  providers: [AuthenticationService,SignupService],
 
   bootstrap: [AppComponent]
 

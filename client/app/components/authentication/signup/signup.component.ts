@@ -15,6 +15,14 @@ import {User} from '../../../classes/user';
 
 export class SignupComponent{
 
+signupForm:FormGroup;
+constructor(fb:FormBuilder,private _signupService:SignupService){
+
+    this.signupForm=fb.group({
+        'newuserEmail':['somename@utu.fi',Validators.required],
+        'newuserPassword':('your password',Validators.required)
+    });
+}
 
     submitted = false; //form not submitted : default
     data: string; //this variable contains our data
@@ -30,7 +38,6 @@ export class SignupComponent{
     newuserEmail:string;
     newuserPassword:string;
 
-constructor(private _signupService:SignupService){}
 
     postUserToServer()
     {

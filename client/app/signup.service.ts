@@ -15,7 +15,8 @@ export class SignupService {
         let body = JSON.stringify({ "newuserEmail":newuserEmail,"newuserPassword":newuserPassword});
         
  
-        return this._http.post(this._newusersUrl, body)
+        return this._http
+        .post(this._newusersUrl, body)
             .map(res => res.json())
             .catch(this.handleError);
     }

@@ -22,18 +22,17 @@
     </div>
     
 <div>
-h2>Please fill up the details and Signup</h2>
-<form (ngSubmit)="onSubmit(signupForm.value)" #signupForm="ngForm">
+<h2> Please fill up the details and Signup </h2>
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)" >
  
     <div class="form-group">
         <label class="col-xs-2 control-label" for="userEmail" >Email: </label>
         <div class="col-xs-10">
             <input type="text" style="width: 300px" class="form-control" required
                    [(ngModel)]="newuserEmail"
-                   ngControl="userEmail"
-                   #userEmail="ngForm"
- 
-            >
+                   [formControl]="signupForm.control['newuserEmail']">
+
+
             <div [hidden]="userEmail.valid || userEmail.pristine" class="alert alert-danger">
                 The Email address is required !
             </div>
@@ -44,9 +43,9 @@ h2>Please fill up the details and Signup</h2>
         <div class="col-xs-10">
             <input type="text" style="width: 300px" class="form-control" required
                    [(ngModel)]="newuserPassword"
-                   ngControl="userPassword"
-                   #userPassword="ngForm"
-            >
+                   [formControl]="signupForm.control['newuserPassword']">
+
+
             <div [hidden]="userPassword.valid || userPassword.pristine" class="alert alert-danger">
                 The password is required !
             </div>
