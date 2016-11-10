@@ -8,5 +8,10 @@ router.post('/login', function(req, res) {
     res.status(200).send();
 })
 
+router.post('/passwordchange', function(req, res) {
+    console.log(req.body);
+
+    res.status(200).send();
+})
 
 module.exports = router;

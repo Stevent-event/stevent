@@ -6,34 +6,24 @@ import {User} from '../../../classes/user';
 @Component({
 
   moduleId: module.id,
-  templateUrl: 'login.component.html',
-  styleUrls: ['login.component.css'],
+  templateUrl: 'passwordchange.component.html',
+  styleUrls: ['passwordchange.component.css'],
   providers: [AuthenticationService]
   
 })
 
-export class LoginComponent{
+export class PasswordChangeComponent{
   constructor(
     private authenticationService: AuthenticationService
   ){}
-  isLoggedIn: boolean;
-
   user: User = {
     email: '',
     password: ''
   }
 
-  login(user: User): void {
+  passwordchange(user: User): void {
     this.authenticationService.login(user)
-      .then(() => console.log("success in component"));
-      this.isLoggedIn = true;
+      .then(() => console.log("success in component: PasswordChangeComponent"));
   
   }
-
-/* componentName: 'LoginComponent';
-  //Assign 
-    constructor(_AuthenticationService: AuthenticationService) {
-  //  this.Users = _AuthenticationService.getUsers();
-
-        }*/
 }

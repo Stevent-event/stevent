@@ -13,6 +13,7 @@ import { OverviewComponent } from './components/home/welcome/overview/overview.c
 import { routing } from './app.routes';
 import { AuthenticationService } from './services/authentication.service';
 import { SignupService } from './signup.service';
+import { PasswordChangeComponent} from './components/authentication/passwordchange/passwordchange.component';
 
 
 @NgModule({ 
@@ -30,7 +31,8 @@ import { SignupService } from './signup.service';
     WelcomeComponent,
     LoginComponent, 
     SignupComponent,
-    OverviewComponent
+    OverviewComponent,
+    PasswordChangeComponent
      ],
 
   providers: [AuthenticationService],
