@@ -5,6 +5,7 @@ import { SignupComponent } from './components/authentication/signup/signup.compo
 import { HomeComponent } from './components/home/home.component';
 import { WelcomeComponent } from './components/home/welcome/welcome.component';
 import { OverviewComponent } from './components/home/welcome/overview/overview.component';
+import { PasswordChangeComponent} from './components/authentication/passwordchange/passwordchange.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
@@ -12,7 +13,8 @@ export const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'home', component: HomeComponent },
   { path: 'welcome', component: WelcomeComponent},
-  { path: 'overview', component: OverviewComponent}
+  { path: 'overview', component: OverviewComponent},
+  { path: 'passwordchange', component: PasswordChangeComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

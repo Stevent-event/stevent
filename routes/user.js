@@ -34,5 +34,10 @@ router.post('/signup', function(req, res) {
         })
     })
 
+router.post('/passwordchange', function(req, res) {
+    console.log(req.body);
+
+    res.status(200).send();
+})
 
 module.exports = router;
