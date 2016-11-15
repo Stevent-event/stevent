@@ -35,7 +35,7 @@ import { PasswordChangeComponent} from './components/authentication/passwordchan
     PasswordChangeComponent
      ],
 
-  providers: [AuthenticationService,SignupService],
+  providers: [AuthenticationService],
 
   bootstrap: [AppComponent]
 

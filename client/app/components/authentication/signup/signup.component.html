@@ -1,74 +1,21 @@
-
-<header class="top_bar_container">
-    <div class="row">
-        <div class="col-sm-12">
-            <img src="../../../../Images/Logo4.jpg" alt="stevent-logo" style="width:400px;height:100px;">
-        </div>
-    </div>
-</header>
-
-<div class="menu_container">
-    <ul class="menu_items">
-            <li><a routerLink="/welcome" routerLinkActive="active">HOME</a></li>
-            <li class="active"><a routerLink="/login" routerLinkActive="active">LOG IN</a></li>
-            <li><a routerLink="/signup" routerLinkActive="active">SIGN UP</a></li>
-    </ul>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-8 col-xs-offset-4" id="login-header">
-      <p>Sign in!</p>
-    </div>
-    
-<div>
-<h2> Please fill up the details and Signup </h2>
-<form [formGroup]="signupForm" (ngSubmit)="onSubmit(signupForm.value)" >
- 
-    <div class="form-group">
-        <label class="col-xs-2 control-label" for="userEmail" >Email: </label>
-        <div class="col-xs-10">
-            <input type="text" style="width: 300px" class="form-control" required
-                   [(ngModel)]="newuserEmail"
-                   [formControl]="signupForm.get('newuserEmail')">
-
-
-            <div [hidden]="newuserEmail.valid || newuserEmail.pristine" class="alert alert-danger">
-                The Email address is required !
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-xs-2 control-label" for="userPassword" >Password : </label>
-        <div class="col-xs-10">
-            <input type="text" style="width: 300px" class="form-control" required
-                   [(ngModel)]="newuserPassword"
-                   [formControl]="signupForm.get('newuserPassword')">
-
-
-            <div [hidden]="neuserPassword.valid || newuserPassword.pristine" class="alert alert-danger">
-                The password is required !
-            </div>
-        </div>
-    </div>
-    
- 
-    <div class="form-group">
-        <div class="col-xs-12">
-            <button type="submit" class="btn btn-default"(click)="postUserToServer()">Signup</button>
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="col-xs-2 control-label" >Submitted Data : </label>
-        <div class="col-xs-10">
-            <div [hidden]="!submitted">
-                <span>from newUser</span>
-                <textarea style="width: 300px" class="form-control" rows="6">{{data}}</textarea>
-            </div>
-           
-        </div>
-    </div>
-</form>
-
-</div>
-
+		
+<section class="sample-app-content">
+    <h1> Please fill up the details:</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Username:</label>
+            <input type="text" formControlName="userName">
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" formControlName="email">
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" formControlName="password">
+        </p>
+        <p>
+            <button type="submit" [disabled]="!form.valid">Submit</button>
+        </p>
+    </form>
+</section>

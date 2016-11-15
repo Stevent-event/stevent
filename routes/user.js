@@ -20,13 +20,6 @@ var User = require('../models/user-model');
 
     })
 
-})
-router.post('/signup', function(req, res) {
-    console.log(req.body);
-
-    res.status(200).send();
-})
-
     router.get('/getUsers', function(req, res) {
         User.find({})
         .then(function(data) {
