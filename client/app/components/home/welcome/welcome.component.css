@@ -1,145 +1,50 @@
+/*Css for top content (header)*/
 header {
   display: flex;
   justify-content: center;
+  background-color: black;
+  padding: 10 0;
 }
 
 header .row {
-  display: flex;
-  align-items: center;
-  background-color: black;
-  padding: 0 20px;
+  padding: 0;
 }
-header .row .col-sm-12{
+header .row .col-xs-12{
+  padding: 0;
   display: flex;
   justify-content: center;
-}
-
-header a {
-  font-size: 18px;
-  padding: 0 10px;
-  justify-content: flex-end;
-  color: white;
-}
-
-header nav {
-  align-items: center-bottom;
-}
-
-header .col-sm-8 {
-  display: flex;
-  justify-content: flex-end;
-  word-spacing: normal;
-}
-header ul {
-  display: inline;
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-header li {
-  list-style: none;
-}
-.menu_container {
-  display: flex;
-  justify-content: center; 
   background-color: black;
 }
-.menu_container ul {
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-}
-.menu_container .menu_items li{
-  float: left;
 
-}
-.menu_container .menu_items a {
-  display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.menu_container .menu_items a:hover {
-    background-color: #111;
-}
-.active {
-    background-color: #0d6ebd;  
-}
-
+/*Css for middle section (jumbotron)*/
 .jumbotron {
   display: flex;
-  align-items: center-top;
-  background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-4/jumbotron.jpg');
-  background-size: cover;
-  color: black;
-  height: 400px;
-  text-shadow: 0.25px 0.25px 0.25px #0d6ebd;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-.jumbotron h2 {
-    font-size: 60px;
-    font-weight: 700;
-    text-shadow:black;
-    margin: 0;
-    color:white;
-}
-.jumbotron h3 {
-    color: white;
-    padding: 0 10px;
-}
-
-.see-more {
-  padding: 7px;
-  border-radius: 2px;
-  border: 0px;
-  color:white;
-  text-shadow: none;
-  background-color: black;
-  border: 1px solid gray;
-}
-.jumbotron span {
+.jumbotron .row .col-xs-12 {
   display: flex;
   justify-content: center;
-  padding: 20px 0 0 0;
+  padding: 5 0;
+  
 }
-content .row .col-sm-6 {
-  display: flex;
-  align-items: center-top;
-  background-size: cover;
-  color: black;
+.jumbotron .row button {
+  padding: 10 0;
+  width: 200px;
+  justify-content: flex-end;
 }
-p {
-  color: white;
-}
-content .secondrow .col-sm-6 {
-  display: flex;
-  align-items: center-top;
-  background-size: cover;
-  color: black;
-}
+/*Css for bottom section (footer)*/
 footer {
   font-size: 12px;
-  background-color: black;
-}
-footer .col-sm-4{
-  padding: 5;
-  color: white;
   display: flex;
   justify-content: center;
+  background-color: white;
 }
 
-footer .col-sm-8 {
-  display: flex;
-  justify-content: center;
-}
-
-footer ul {
-  list-style: none;
-}
-
-footer li img {
-  width: 32px;
-  height: 32px;
+h2, p {
+  color:black;
+  text-align: center;
 }
