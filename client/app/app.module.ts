@@ -14,7 +14,10 @@ import { routing } from './app.routes';
 import { AuthenticationService } from './services/authentication.service';
 import { SignupService } from './signup.service';
 import { PasswordChangeComponent} from './components/authentication/passwordchange/passwordchange.component';
-
+import { myPageComponent } from './components/myPage/myPage.component';
+import { newEventComponent } from './components/eventList/newEvent/newEvent.component';
+import { eventListComponent } from './components/eventList/eventList.component';
+import { AuthGuardComponent } from './components/authentication/AuthGuard/AuthGuard.component';
 
 @NgModule({ 
   imports: [ 
@@ -32,7 +35,11 @@ import { PasswordChangeComponent} from './components/authentication/passwordchan
     LoginComponent, 
     SignupComponent,
     OverviewComponent,
-    PasswordChangeComponent
+    PasswordChangeComponent,
+    myPageComponent,
+    newEventComponent,
+    eventListComponent,
+    AuthGuardComponent
      ],
 
   providers: [AuthenticationService],

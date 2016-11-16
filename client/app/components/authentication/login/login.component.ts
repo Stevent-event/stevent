@@ -13,10 +13,10 @@ import {User} from '../../../classes/user';
 })
 
 export class LoginComponent{
+  isLoggedIn: boolean;
   constructor(
     private authenticationService: AuthenticationService
   ){}
-  isLoggedIn: boolean;
 
   user: User = {
     email: '',

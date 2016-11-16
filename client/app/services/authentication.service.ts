@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import { Http, Response } from '@angular/http';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 import 'rxjs/add/operator/toPromise';
+
 export class User {
   constructor(
     public email: string,
@@ -19,7 +20,7 @@ export class AuthenticationService{
     constructor(
       private http: Http,
       private _router: Router
-    
+      
     ){}
  
   logout() {
