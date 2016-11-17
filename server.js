@@ -1,14 +1,12 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var config = require('./config');
 var index = require('./routes/index');
 var tasks = require('./routes/tasks');
 var user = require('./routes/user');
-var mongoose = require('mongoose');
 
-var config = require('./config');
-var mongoose = require('mongoose');
-//asdfasdfasdfasdf
 // Global variables and aliases
 var app = express();
 var port = process.env.PORT || 3000;
