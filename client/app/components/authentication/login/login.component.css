@@ -9,6 +9,7 @@ header .row {
   background-color: black;
   padding: 0 20px;
 }
+
 header .row .col-sm-12{
   display: flex;
   justify-content: center;
@@ -30,43 +31,17 @@ header .col-sm-8 {
   justify-content: flex-end;
   word-spacing: normal;
 }
+
 header ul {
   display: inline;
   align-items: flex-end;
   justify-content: flex-end;
 }
+
 header li {
   list-style: none;
 }
-.menu_container {
-  display: flex;
-  justify-content: center; 
-  background-color: black;
-}
-.menu_container ul {
-  list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: black;
-}
-.menu_container .menu_items li{
-  float: left;
 
-}
-.menu_container .menu_items a {
-  display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.menu_container .menu_items a:hover {
-    background-color: #111;
-}
-.active {
-    background-color: #0d6ebd;  
-}
 #login-header {
     margin-top: 50vh;
     /*text-align: right;*/
