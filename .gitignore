@@ -12,8 +12,8 @@
 /.idea
 /.#
 /*.*~
-/.vscode	
 /.*.kate-swp
+/.vscode/*	
 
 # misc
 /.sass-cache
@@ -33,6 +33,7 @@ testem.log
 Thumbs.db
 .directory
 ownotes.txt
+.vscode/*
 
 # ignore js and map files
 **/*.map
