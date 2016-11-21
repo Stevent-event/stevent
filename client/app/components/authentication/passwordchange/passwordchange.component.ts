@@ -17,6 +17,7 @@ export class PasswordChangeComponent{
     private authenticationService: AuthenticationService
   ){}
   user: User = {
+    name: '',
     email: '',
     password: ''
   }
