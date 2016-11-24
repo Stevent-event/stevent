@@ -1,21 +1,18 @@
-.wrapper {
-  width: 100%;
+
+/*Css for top content (header)*/
+header {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 10 0;
 }
 
-.textbox {
-  font-family: serif;
-  font-size: 1.2em;
-  margin: 10px; 
-  padding: 20px;
-  width: 34%;
-  height: 400px;
-  display: inline-block;
+header .row {
+  padding: 0;
 }
-
-.imagebox {
-  margin: 10px;
-  padding: 20px;
-  width: 55%;
-  height: 400px;
-  display: inline-block;
+header .row .col-xs-12{
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: black;
 }
