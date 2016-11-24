@@ -1,56 +1,61 @@
+
 <div>
-<header class="top_bar_container">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="top_bar_container">
   <div class="row">
     <div class="col-sm-12">
       <img src="../../../../Images/Logo4.jpg" alt="stevent-logo" style="width:400px;height:100px;">
     </div>  
   </div>
 </header>
+<div class="wrapper">
+  <br>
+   <div class="carousel">
+
+  <ul class="slides">
+
+    <li *ngFor="let event of events">
+      <h2>{{event.title}}</h2>
+      <img src="{{event.url}}" alt="">
+     <p>{{event.description}}</p>
+      <p>{{event.location}}</p>
+    </li>
+
+  </ul>
 </div>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">STEvent</a>
+ 
+<div class="container text-center">    
+  <h3>What are you interested in?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <img src="../../../../Images/soccer.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Sports</p>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Food <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Finnish</a></li>
-            <li><a href="#">Vietnamese</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Culture</a></li>
-        <li><a href="#">More</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+    <div class="col-sm-4"> 
+      <img src="../../../../Images/ruoka.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Food</p>    
     </div>
+    <div class="col-sm-4"> 
+      <img src="../../../../Images/finnishsauna.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>Culture</p>    
+    </div>
+    <div class="col-sm-4"> 
+      <img src="../../../../Images/preschool.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <p>More</p>    
+    </div>
+
   </div>
-</nav>
-  
-<div class="container">
-    <div class="col-xs-4">
-      <h3>Find, join and create events near you. </h3>
-       <p> Join for free together with community of university students!
-        Your events, their events – your world.</p>
-    </div>
+</div><br>
 
-    <div class="col-xs-4">
-      <p>Simple and intuitive user experience. For mobile and desktop. 
-        Your events, their events – your world.</p>
-    </div>
-  </div>
-
-
-
+<footer class="container-fluid text-center">
+  <p>Get involved! Get connected!</p>
+</footer>
+</div>
