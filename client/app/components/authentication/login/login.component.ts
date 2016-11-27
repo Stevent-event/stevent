@@ -19,6 +19,7 @@ export class LoginComponent{
   ){}
 
   user: User = {
+    name: '',
     email: '',
     password: ''
   }

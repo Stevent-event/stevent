@@ -9,6 +9,6 @@ import { routes } from "../../../app/app.routes";
 })
 
 export class eventListComponent {
-  title: "eventList"
-  
+
+ 
 }
