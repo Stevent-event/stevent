@@ -18,6 +18,7 @@ import { myPageComponent } from './components/myPage/myPage.component';
 import { newEventComponent } from './components/eventList/newEvent/newEvent.component';
 import { eventListComponent } from './components/eventList/eventList.component';
 import { AuthGuardComponent } from './components/authentication/AuthGuard/AuthGuard.component';
+import { dashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({ 
   imports: [ 
@@ -39,7 +40,8 @@ import { AuthGuardComponent } from './components/authentication/AuthGuard/AuthGu
     myPageComponent,
     newEventComponent,
     eventListComponent,
-    AuthGuardComponent
+    AuthGuardComponent,
+    dashboardComponent
      ],
 
   providers: [AuthenticationService],

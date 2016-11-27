@@ -10,6 +10,7 @@ import { myPageComponent } from './components/myPage/myPage.component';
 import { newEventComponent } from './components/eventList/newEvent/newEvent.component';
 import { eventListComponent } from './components/eventList/eventList.component';
 import { AuthGuardComponent } from './components/authentication/AuthGuard/AuthGuard.component';
+import { dashboardComponent } from './components/dashboard/dashboard.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
@@ -21,7 +22,8 @@ export const routes: Routes = [
   { path: 'passwordchange', component: PasswordChangeComponent},
   { path: 'myPage', component: myPageComponent, canActivate: [AuthGuardComponent]},
   { path: 'newEvent', component: newEventComponent, canActivate: [AuthGuardComponent]},
-  { path: 'eventList', component: eventListComponent, canActivate: [AuthGuardComponent]}
+  { path: 'eventList', component: eventListComponent, canActivate: [AuthGuardComponent]},
+  { path: 'dashboard', component: dashboardComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
