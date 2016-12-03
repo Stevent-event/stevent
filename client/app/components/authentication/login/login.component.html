@@ -6,7 +6,7 @@
   </div>
 </header>
 
-<div class="container">
+<div class="container" id="login-combo">
   <div class="row">
     <div class="col-xs-8 col-xs-offset-4" id="login-header">
       <p>Sign in!</p>
@@ -26,10 +26,13 @@
         <button (click)="login(user)" class="btn btn-primary">Login</button>
         <button routerLink="/signup" class="btn btn-primary">Create Account</button>
         <button routerLink="/passwordchange" class ="btn btn-primary">Change Password</button>
-        <p>Email: {{user.email}}</p>
+        <!-- FEEDBACK -->
+        <p>Email: {{user.email}}</p> 
+      </div>
+
     </div>
   </div>
-</div>
+</div> 
 
 
 
