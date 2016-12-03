@@ -12,18 +12,19 @@
       <p>Sign in!</p>
     </div>
     
+    <!-- EMAIL & PASSWORD FIELDS -->
     <div class="">
       <div class="form-group col-xs-8 col-xs-offset-4">
         <input [(ngModel)]="user.email" type="email" class="form-control" placeholder="Email" />
       </div>
-
       <div class="form-group col-xs-8 col-xs-offset-4">
         <input [(ngModel)]="user.password" type="password" class="form-control" placeholder="Password" />
       </div>
 
+      <!-- BUTTONS -->
       <div class="col-xs-8 col-xs-offset-4">
-        <button class="btn btn-primary">Create account</button>
         <button (click)="login(user)" class="btn btn-primary">Login</button>
+        <button routerLink="/signup" class="btn btn-primary">Create Account</button>
         <button routerLink="/passwordchange" class ="btn btn-primary">Change Password</button>
         <p>Email: {{user.email}}</p>
     </div>
