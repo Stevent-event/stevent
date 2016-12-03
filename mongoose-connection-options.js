@@ -9,10 +9,17 @@
  * 
  */
 
-var mongoose = require('mongoose'); // req mongoose > 4.3.x (Stevent has 4.6.5)  
+// req mongoose > 4.3.x (Stevent has 4.6.5)
+var mongoose = require('mongoose');   
  
-var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 }}, 
-                replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 }}};
+var options = { server: { 
+                  socketOptions: { 
+                    keepAlive: 300000, 
+                    connectTimeoutMS: 30000 }}, 
+                replset: { 
+                  socketOptions: { 
+                    keepAlive: 300000, 
+                    connectTimeoutMS : 30000 }}};
  
 var mongodbUri = 'mongodb://user:pass@host:port/db';
  
