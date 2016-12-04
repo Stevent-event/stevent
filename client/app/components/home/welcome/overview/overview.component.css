@@ -59,6 +59,7 @@ footer {
 
 .carousel img {
     display: block;
+    height: 45%;
     width: 100%;
     max-width: 100%;
 }

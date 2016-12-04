@@ -19,6 +19,5 @@ var EVENTS: Events[]= [
  { "title": "Food", "url": "../../../../Images/ruoka.jpg" },
  { "title": "ChildrenFriendly", "url": "../../../../Images/preschool.jpg" },
  { "title": "Gathering", "url": "../../../../Images/generation.jpg" },
- { "title": "More", "url": "../../../../Images/covered.jpg" },
 
 ];
