@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-    name: User,
-    userResponsible: User,
+    eventName: String,
+    eventOwner: String, //the user who created event
     coordinates: String,
     address: String,
     description: String,
@@ -12,6 +12,6 @@ var eventSchema = new Schema({
     endTime: Date,
     ongoing: Boolean,
     attendingUsers: [User] 
-}, { collection: 'events' });  
+}, { collection: 'events' })  
 
 module.exports = mongoose.model('Event', eventSchema);
