@@ -2,13 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-  name: String,
-  userResponsible: String,
+  name: User,
+  userResponsible: User,
   coordinates: String,
   address: String,
   description: String,
   category: String,
-  startTime: Date,
+  startTime: { type: Date, default: Date.now },
   endTime: Date,
   ongoing: Boolean,
   attendingUsers: [User] 

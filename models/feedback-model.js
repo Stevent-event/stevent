@@ -2,8 +2,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var feedbackSchema = new Schema({
-  grading: Number,
+  grade: Number,
   verbalFeedback: String,
   responseEmail: String,
-  name: String
+  name: { type: String, default: 'Anonymous' }
 })
+
+module.exports = mongoose.model('Feedback', feedbackSchema);
