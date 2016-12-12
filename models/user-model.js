@@ -10,8 +10,8 @@ var userSchema = new Schema({
     registerDate: Date,
     lastLogin: Date,
     currentlyLoggedIn: { type: Boolean, default: false },
-    ownEvents: [Event],
-    interests: [Interest]
+    // ownEvents: [Event],  Event not defined
+    // interests: [Interest]  Interest not defined
 }, { collection: 'users' })
 
 module.exports = mongoose.model('User', userSchema);
