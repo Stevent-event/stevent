@@ -1,3 +1,10 @@
-<div class="container">
-    <h1>Home</h1>
-</div>
+<h1>Welcome</h1>
+    <div class="alert alert-success" *ngIf="auth.authenticated()">You are logged in</div>
+    <div class="alert alert-danger" *ngIf="!auth.authenticated()"><p>You are not logged in</p><br/>
+  <p>Wanna get involved and  connected with wonderful people?</p>
+       <p>Just click the button!</p>
+       <div class="col-xs-12">
+            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary">Lets Go!</button>
+        </div>
+
+    </div>

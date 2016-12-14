@@ -1,51 +1,44 @@
 import {Injectable} from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Router } from '@angular/router';
-
 import 'rxjs/add/operator/toPromise';
+import { tokenNotExpired } from 'angular2-jwt';
 
-export class User {
-  constructor(
-    public email: string,
-    public password: string) { }
-}
- 
-var users = [
-  new User('admin@admin.com','adm9'),
-  new User('user1@gmail.com','a23')
-];
- 
+// Avoid name not found warnings
+declare var Auth0Lock: any;
+
 @Injectable()
-export class AuthenticationService{
-    constructor(
-      private http: Http,
-      private _router: Router
-      
-    ){}
- 
-  logout() {
-    localStorage.removeItem("user");
-    this._router.navigate(['Login']);
+export class Auth {
+  // Configure Auth0
+  lock = new Auth0Lock('tLuvkb0DNGFUd9WLFcIJkAfeEtv2kcY7', 'stevent.eu.auth0.com', {});
+
+  constructor() {
+    // Add callback for lock `authenticated` event
+    this.lock.on("authenticated", (authResult:any) => {
+      this.lock.getProfile(authResult.idToken, function(error:any, profile:any){
+          if(error){
+              throw new Error(error);
+          }
+            localStorage.setItem('id_token', authResult.idToken);
+            localStorage.setItem('profile', JSON.stringify(profile)); 
+      });
+    });
   }
- 
-  login(user){
-    // var authenticatedUser = users.filter(u => u.email === user.email);
-    /*if (authenticatedUser && authenticatedUser.password === user.password){
-      localStorage.setItem("user", authenticatedUser);
-      this._router.navigate(['Home']);      
-      return true;
-    }*/
-    return this.http
-          .post('/api/authentication/login', user)
-          .toPromise()
-          .then(res => console.log("success, res: " + res))
-    // return false;
- 
-  }
- 
-   checkCredentials(){
-    if (localStorage.getItem("user") === null){
-        this._router.navigate(['Login']);
-    }
-  }
+
+  public login() {
+    // Call the show method to display the widget.
+    this.lock.show();
+  };
+
+  public authenticated() {
+    // Check if there's an unexpired JWT
+    // This searches for an item in localStorage with key == 'id_token'
+    return tokenNotExpired();
+  };
+
+  public logout() {
+    // Remove token from localStorage
+    localStorage.removeItem('id_token');
+    localStorage.removeItem('profile');
+  };
 }

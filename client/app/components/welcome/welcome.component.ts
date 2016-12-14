@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { routes } from "../../../../app/app.routes";
-
+import { routes } from "./../../../app/app.routes";
+import {Auth} from '../../services/authentication.service';
+import { tokenNotExpired } from 'angular2-jwt';
 @Component({
   selector: 'welcome',
   moduleId: module.id, //???
@@ -9,6 +10,8 @@ import { routes } from "../../../../app/app.routes";
 })
 
 export class WelcomeComponent {
-  title: "Welcome"
-  
+        constructor(private auth:Auth){
+
+}
+title: 'welcome'
 }

@@ -1,0 +1,60 @@
+
+
+<h1>Welcome</h1>
+<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" routerLink="/overview">Stevent</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/dashboard">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a routerLink="/profile" *ngIf="auth.authenticated()">Profile</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class= "jumbotron">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Perfect application for every student in Turku</h2>
+        </div>
+        <div class="col-xs-12">
+            <p>Create Event. Join Event. Have Fun.</p>
+        </div>
+        <div class="col-xs-12">
+            <p>Wanna get involved and  connected with wonderful people?</p>
+        </div>
+        <div class="col-xs-12">
+            <p>Just click the button!</p>
+        </div>
+        <div class="col-xs-12">
+            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary">Lets Go!</button>
+        </div>
+        <div class="col-xs-12">
+            <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary">Logout</button>
+            
+        </div>
+        
+        <div class="col-xs-12">
+            <a routerLink = "/profile"*ngIf="auth.authenticated()" class="glyphicon glyphicon-chevron-down"></a>
+        </div>
+    </div>
+</div>
+
+<footer class="bottom_bar_container">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Team Ekat</p>
+        </div>
+    </div>
+</footer>
