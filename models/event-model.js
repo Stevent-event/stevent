@@ -3,13 +3,13 @@ var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
     eventName: String,
-    eventOwner: String, //the user who created event
+    eventOwner: String,
     coordinates: String,
     address: String,
     description: String,
     category: String,
     startTime: { type: Date, default: Date.now },
-    endTime: Date,
+    endTime: { type: Date, default: Date.now+7200000 },
     ongoing: Boolean,
     attendingUsers: [User] 
 }, { collection: 'events' })  
