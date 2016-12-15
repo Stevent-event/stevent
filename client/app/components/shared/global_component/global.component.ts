@@ -10,7 +10,7 @@ import { tokenNotExpired } from 'angular2-jwt';
 })
 
 export class GlobalComponent {
-    constructor(private auth: auth) {
+    constructor(private auth: Auth) {
         
     }
 }
