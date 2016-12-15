@@ -14,10 +14,10 @@ var port = process.env.PORT || 3000;
 mongoose.connect(config.database);
 mongoose.connection.once('open', function() {
   console.log('Connected to database in ' + config.database);
-})
+});
 mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB');
-})
+});
 
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
@@ -41,11 +41,3 @@ app.get('/', function (req, res) {
 app.listen(port, function() {
   console.log("Server started on port " + port);
 });
-
-// Mongoose MongoDB Connection 
-// TODO 1: partly duplicate with mongoose-connection-options.json
-// TODO 2: look what needs to be separated to config.js ("express.js best practices") 
-//mongoose.connect('mongodb://vivian:steventpw@ds029575.mlab.com:29575/stevent'); //server failed to start with this "not a function"
-//var db = mongoose.connection();
-//db.on('error', console.error.bind(console, 'connection error'));
-//db.once('open', function(){});
