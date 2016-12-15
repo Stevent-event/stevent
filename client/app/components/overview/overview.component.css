@@ -54,12 +54,11 @@ footer {
 .slides > li {
     position: relative;
     float: left;
-    width: 20%; /* 100% ÷ number of panes */
+    width: 20%; /* 100% รท number of panes */
 }
 
 .carousel img {
     display: block;
-    height: 45%;
     width: 100%;
     max-width: 100%;
 }

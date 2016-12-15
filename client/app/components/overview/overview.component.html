@@ -18,6 +18,7 @@
   </div>
 </header>
 
+<div class="wrapper">
    <div class="carousel">
      <ul class="slides">
        <li *ngFor="let event of events">
@@ -28,33 +29,30 @@
        </li>
      </ul>
   </div>  
- <div class="wrapper">
+ 
   <div class="container text-center">    
     <h3>What are you interested in?</h3><br>
     <div class="row">
       <div class="col-sm-4">
         <img src="../../../../Images/soccer.jpg" class="img-responsive" style="width:100%" alt="Image">
-        <button routerLink="/login" class="btn btn-primary">Sports</button>
+        <p>Sports</p>
       </div>
       <div class="col-sm-4"> 
         <img src="../../../../Images/ruoka.jpg" class="img-responsive" style="width:100%" alt="Image">
-        <button routerLink="/login" class="btn btn-primary">Food</button>    
+        <p>Food</p>    
       </div>
       <div class="col-sm-4"> 
         <img src="../../../../Images/finnishsauna.jpg" class="img-responsive" style="width:100%" alt="Image">
-        <button routerLink="/login" class="btn btn-primary">Culture</button>
+        <p>Culture</p>    
       </div>
       <div class="col-sm-4"> 
         <img src="../../../../Images/preschool.jpg" class="img-responsive" style="width:100%" alt="Image">
-        <button routerLink="/login" class="btn btn-primary">More</button>
+        <p>More</p>    
       </div>
     </div>
   </div>
 
   <footer class="container-fluid text-center">
-    <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span>Get involved! Get connected! </a></li>
-        <li><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+    <button routerLink="/home" class="btn btn-primary">Get involved! Get connected!</button>
   </footer>
 </div>

@@ -3,23 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import {ReactiveFormsModule} from "@angular/forms"; // for model-driven forms
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
-
+import {ProfileComponent} from './components/profile/profile.component';
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './components/home/welcome/welcome.component';
-import { LoginComponent } from './components/authentication/login/login.component';
-import { SignupComponent } from './components/authentication/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
-import { OverviewComponent } from './components/home/welcome/overview/overview.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 import { routing } from './app.routes';
-import { AuthenticationService } from './services/authentication.service';
-import { SignupService } from './signup.service';
-import { PasswordChangeComponent} from './components/authentication/passwordchange/passwordchange.component';
-import { myPageComponent } from './components/myPage/myPage.component';
+import { Auth } from './services/authentication.service';
 import { newEventComponent } from './components/eventList/newEvent/newEvent.component';
 import { eventListComponent } from './components/eventList/eventList.component';
-import { AuthGuardComponent } from './components/authentication/AuthGuard/AuthGuard.component';
 import { dashboardComponent } from './components/dashboard/dashboard.component';
-
+import { OverviewComponent } from './components/overview/overview.component';
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
+import {AuthGuard} from './auth.guard';
 @NgModule({ 
   imports: [ 
     BrowserModule, 
@@ -32,19 +27,15 @@ import { dashboardComponent } from './components/dashboard/dashboard.component';
   declarations: [ 
     AppComponent, 
     HomeComponent, 
-    WelcomeComponent,
-    LoginComponent, 
-    SignupComponent,
-    OverviewComponent,
-    PasswordChangeComponent,
-    myPageComponent,
     newEventComponent,
     eventListComponent,
-    AuthGuardComponent,
-    dashboardComponent
+    dashboardComponent,
+    ProfileComponent,
+    WelcomeComponent,
+    OverviewComponent
      ],
 
-  providers: [AuthenticationService],
+  providers: [Auth,AUTH_PROVIDERS,AuthGuard],
 
   bootstrap: [AppComponent]
 

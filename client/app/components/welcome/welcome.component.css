@@ -1,22 +1,4 @@
-/*Css for top content (header)*/
-header {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 10 0;
-}
-
-header .row {
-  padding: 0;
-}
-header .row .col-xs-12{
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  background-color: black;
-}
-
-/*Css for middle section (jumbotron)*/
+*Css for middle section (jumbotron)*/
 .jumbotron {
   display: flex;
   justify-content: center;

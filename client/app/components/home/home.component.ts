@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import {Auth} from '../../services/authentication.service';
+import { routes } from "./../../../app/app.routes";
+import { tokenNotExpired } from 'angular2-jwt';
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'home.component.html',
-    styleUrls: ['home.component.css']
+    selector: 'home',
+    templateUrl: 'home.component.html'
 })
-
-export class HomeComponent {
-    title: "Helloworld"
+export class HomeComponent { 
+    constructor(private auth:Auth){
+        
+    }
 }

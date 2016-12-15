@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { routes } from "../../../../../app/app.routes";
-import {Events} from '../../../../eventlists.interface';
+import { routes } from "./../../../app/app.routes";
+import {Events} from '../../eventlists.interface';
+import {Auth} from '../../services/authentication.service';
+import { tokenNotExpired } from 'angular2-jwt';
 @Component({
   selector: 'overview',
   moduleId: module.id, 
@@ -19,5 +21,6 @@ var EVENTS: Events[]= [
  { "title": "Food", "url": "../../../../Images/ruoka.jpg" },
  { "title": "ChildrenFriendly", "url": "../../../../Images/preschool.jpg" },
  { "title": "Gathering", "url": "../../../../Images/generation.jpg" },
+ { "title": "More", "url": "../../../../Images/covered.jpg" },
 
 ];
