@@ -1,15 +1,31 @@
-<nav class="footer navbar-default" id="footer">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" routerLink="/overview">7vent.fi</a>
-        </div>
-        <div class="auth-footer">
-          <ul class="nav navbar-nav">
-            <li><a routerLink="/dashboard">Home</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a routerLink="/profile" *ngIf="auth.authenticated()">{{profile.name}}</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<!--<nav class="footer navbar-default" id="footer">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/overview">7vent.fi</a>
+    </div>
+    <div class="auth-footer">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/dashboard">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/profile" *ngIf="auth.authenticated()">{{profile.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+-->
+<div class="container" id="footer">
+  <div class="row">
+    <div class="col-xs-3">
+      <a routerLink="/dashboard"><h4 align="middle"><i class="fa fa-cog" aria-hidden="true" ></i></h4></a>
+    </div>
+
+    <div class="col-xs-6" align="middle">
+      <h4>{{profile.name}}</h4>
+    </div>
+
+    <div class="col-xs-3">
+      <a routerLink="/profile" *ngIf="auth.authenticated()"><h4><i class="fa fa-user" aria-hidden="true"></i></h4></a>
+    </div>
+  </div>
+</div>
