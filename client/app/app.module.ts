@@ -15,6 +15,7 @@ import { dashboardComponent } from './components/dashboard/dashboard.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
 import {AuthGuard} from './auth.guard';
+import {GlobalComponent} from './components/shared/global_component/global.component';
 @NgModule({ 
   imports: [ 
     BrowserModule, 
@@ -32,7 +33,8 @@ import {AuthGuard} from './auth.guard';
     dashboardComponent,
     ProfileComponent,
     WelcomeComponent,
-    OverviewComponent
+    OverviewComponent,
+    GlobalComponent
      ],
 
   providers: [Auth,AUTH_PROVIDERS,AuthGuard],

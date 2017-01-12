@@ -1,7 +1,7 @@
 header {
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: white;
   padding: 10 0;
 }
 
@@ -12,7 +12,7 @@ header .row .col-xs-12{
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: white;
 }
 
 .jumbotron .col-xs-12{
