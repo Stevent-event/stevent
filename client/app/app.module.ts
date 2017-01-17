@@ -16,6 +16,8 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
 import {AuthGuard} from './auth.guard';
 import {GlobalComponent} from './components/shared/global_component/global.component';
+import { MapComponent } from './components/map/map.component';
+
 @NgModule({ 
   imports: [ 
     BrowserModule, 
@@ -34,7 +36,8 @@ import {GlobalComponent} from './components/shared/global_component/global.compo
     ProfileComponent,
     WelcomeComponent,
     OverviewComponent,
-    GlobalComponent
+    GlobalComponent,
+    MapComponent
      ],
 
   providers: [Auth,AUTH_PROVIDERS,AuthGuard],

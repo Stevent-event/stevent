@@ -8,6 +8,8 @@ import { dashboardComponent } from './components/dashboard/dashboard.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import {AuthGuard} from './auth.guard';
+import { MapComponent } from './components/map/map.component';
+
 export const routes: Routes = [
  // { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
@@ -17,8 +19,8 @@ export const routes: Routes = [
   { path: 'newEvent', component: newEventComponent, canActivate: [AuthGuard]},
   { path: 'eventList', component: eventListComponent, canActivate: [AuthGuard]},
   { path: 'dashboard', component: dashboardComponent},
-  { path:'profile', component:ProfileComponent, canActivate: [AuthGuard]
-    }
+  { path:'profile', component:ProfileComponent, canActivate: [AuthGuard]},
+  { path: 'map', component: MapComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
