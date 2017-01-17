@@ -20,7 +20,7 @@ export const routes: Routes = [
   { path: 'eventList', component: eventListComponent}, //canActivate: [AuthGuard]},
   { path: 'dashboard', component: dashboardComponent},
   { path:'profile', component:ProfileComponent}, //canActivate: [AuthGuard]},
-  { path: 'map', component: MapComponent}
+  { path: 'eventMap', component: MapComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
