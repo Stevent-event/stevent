@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+a {
+    color: white;
+}
+
 body {
   position: relative;
   margin: 0;
