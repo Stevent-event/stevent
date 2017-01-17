@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import {Auth} from '../../services/authentication.service';
-import { routes } from "./../../../app/app.routes";
-import { tokenNotExpired } from 'angular2-jwt';
 
 @Component({
     moduleId: module.id,
     selector: 'map',
     templateUrl: 'map.component.html',
+      styleUrls: ['map.component.css']
 })
 
-export class MapComponent {       
+export class MapComponent {
+    title: string = 'kartta';
+    lat: number = 60.4618696;
+    lng: number = 22.3316061;
     }
