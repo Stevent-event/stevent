@@ -14,9 +14,11 @@ import { eventListComponent } from './components/eventList/eventList.component';
 import { dashboardComponent } from './components/dashboard/dashboard.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
-import {AuthGuard} from './auth.guard';
+// import {AuthGuard} from './auth.guard';
 import {GlobalComponent} from './components/shared/global_component/global.component';
 import { MapComponent } from './components/map/map.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 
 @NgModule({ 
   imports: [ 
@@ -24,7 +26,10 @@ import { MapComponent } from './components/map/map.component';
     routing, 
     ReactiveFormsModule, 
     FormsModule, 
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI'
+    })
     ],
 
   declarations: [ 
@@ -40,7 +45,7 @@ import { MapComponent } from './components/map/map.component';
     MapComponent
      ],
 
-  providers: [Auth,AUTH_PROVIDERS,AuthGuard],
+  providers: [Auth,AUTH_PROVIDERS],//,AuthGuard],
 
   bootstrap: [AppComponent]
 
