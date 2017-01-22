@@ -1,6 +1,6 @@
-class Event {
-    name: String;
-    owner: String;
+export class Event {
+    eventName: String;
+    eventOwner: String; //the user who created event
     coordinates: [String];
     address: String;
     description: String;
@@ -8,7 +8,5 @@ class Event {
     startTime: Date;
     endTime: Date;
     ongoing: Boolean;
-    attendingUsers: [String];
+    attendingUsers: [String] 
 }
-
-export default Event;
