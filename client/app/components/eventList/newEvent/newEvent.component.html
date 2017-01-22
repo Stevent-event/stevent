@@ -1,4 +1,4 @@
-<form>
+<form (submit)="addnewMarker()">
   <div class="form-group">
     <label class="control-label col-md-4" for="titleInput"></label>
     <input type="text" class="form-control" id="eventTitleInput" placeholder="Event title">
@@ -18,7 +18,18 @@
 
   <div class="form-group">
     <label class="control-label col-md-4" for="locationInput"></label>
-    <input type="text" class="form-control" id="locationInput" placeholder="location">
+    <input type="text" [(ngModel)]="markerName" name="markerName" 
+    class="form-control" id="locationInput" placeholder="location">
+  </div>
+  <div class="form-group">
+    <label class="control-label col-md-4" for="locationInputLat"></label>
+    <input type="text" [(ngModel)]="markerLat" name="markerLat" 
+    class="form-control" id="locationInputLat" placeholder="Lat">
+  </div>
+  <div class="form-group">
+    <label class="control-label col-md-4" for="locationInputLng"></label>
+    <input type="text" [(ngModel)]="markerLng" name="markerLng" 
+    class="form-control" id="locationInputLng" placeholder="Lng">
   </div>
 
 <div class="form-group">
