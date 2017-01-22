@@ -21,6 +21,14 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
+.event_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.event_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 .content {
     height: 100vh; /* vh = Relative to 1% of the height of the viewport */
 }

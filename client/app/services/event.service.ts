@@ -12,10 +12,10 @@ export class EventService {
 
     constructor(private http: Http) { }
 
-    getEvents(): Promise<any[]> {
+    getEvents(): Promise<Event[]> {
         return this.http.get('api/event/getEvents')
             .toPromise()
-            .then(response => response.json().data as any[])
+            .then(response => response.json() as Event[])
             .catch(this.handleError);
     }
 

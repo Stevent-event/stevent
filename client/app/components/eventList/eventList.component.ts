@@ -13,7 +13,7 @@ import { Event } from "../../classes/Event";
 })
 
 export class eventListComponent implements OnInit {
-  title = "Events";
+  title = "Find events nearby";
   events: Event[];
   selectedEvent: Event;
 

@@ -1,4 +1,12 @@
 <div class="container">
   <h1>{{title}}</h1>
-  {{events}}
+  <hr>
+  
+  <div class="row" *ngFor="let event of events">
+    <div class="col-xs-12 event_card">
+      <h4>{{event.eventName}}</h4>
+      <hr>
+      <p>{{event.address}}</p>
+    </div>
+  </div>
 </div>
