@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": { //Scripts are run by passing the line as a script argument to sh
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "",
+    "install": "node-gyp rebuild", //binding.gyp
+    "postinstall": "",
+    "prestart": "",
+    "start": "node server.js", //server.js
+    "poststart": ""
   },
   "author": "",
   "license": "ISC",
