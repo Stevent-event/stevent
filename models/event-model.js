@@ -18,8 +18,8 @@ var eventSchema = new Schema({
     },
     description: String,
     category: String,
-    startTime: { type: Date, default: Date.now },
-    endTime: Date,
+    startTime: { type: Date, default: Date.now() },
+    endTime: { type: Date, default: Date.now()+7200000 },
     ongoing: Boolean,
     attendingUsers: [String]
 }, { collection: 'events' })
