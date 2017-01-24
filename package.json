@@ -1,15 +1,15 @@
 {
   "name": "stevent",
   "version": "1.0.0",
-  "description": "",
+  "description": "Event application",
   "main": "index.js",
-  "scripts": { //Scripts are run by passing the line as a script argument to sh
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "",
-    "install": "node-gyp rebuild", //binding.gyp
+    "install": "node-gyp rebuild",
     "postinstall": "",
     "prestart": "",
-    "start": "node server.js", //server.js
+    "start": "node server.js",
     "poststart": ""
   },
   "author": "",
