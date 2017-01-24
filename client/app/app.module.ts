@@ -28,8 +28,10 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     FormsModule, 
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI'
-    })
+      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI',
+      libraries: ["locations"]
+    }),
+    ReactiveFormsModule
     ],
 
   declarations: [ 

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { NgZone, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from "@angular/forms";
+import { MapsAPILoader } from 'angular2-google-maps/core';
 
 @Component({
     moduleId: module.id,
@@ -7,15 +10,14 @@ import { Component } from '@angular/core';
       styleUrls: ['map.component.css']
 })
 
-export class MapComponent {
-    lat: number = 60.4518;
-    lng: number = 22.22666;
-    zoom: number = 10;
-
+export class MapComponent{
+    lat: 60.5;
+    lng: 22.30;
+    zoom: 10;
     markerName: string;
     markerLat: string;
     markerLng: string;
-
+    
     markers: marker[] = [
         {
             name: 'marker one',
