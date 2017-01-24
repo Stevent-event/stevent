@@ -3,11 +3,6 @@ var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
     eventName: String,
-<<<<<<< HEAD
-    eventOwner: String,
-    coordinates: String,
-    address: String,
-=======
     eventOwner: String, //the user who created event
     location: {
         lat: Number,
@@ -21,7 +16,6 @@ var eventSchema = new Schema({
         country: String,
         formatted_address: String
     },
->>>>>>> 985759dc72ca7f5966b5f0624f01e28c446fede2
     description: String,
     category: String,
     startTime: { type: Date, default: Date.now() },
