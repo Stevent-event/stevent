@@ -1,32 +1,14 @@
-<div class="events">
+<div class="container container-fluid">
+  <h1>{{title}}</h1>
+  <hr>
 
-  <ul class="slides">
-
-    <li>
-      <h2>Sports</h2>
-      <img src="../../../../Images/soccer.jpg" alt="soccer">
-    </li>
-
-    <li>
-      <h2>Culture</h2>
-      <img src="../../../../Images/finnishsauna.jpg" alt="sauna">
-    </li>
-
-    <li>
-      <h2>Food</h2>
-      <img src="../../../../Images/ruoka.jpg" alt="ruoka">
-    </li>
-
-    <li>
-      <h2>Gathering</h2>
-      <img src="../../../../Images/generation.jpg" alt="gathering">
-    </li>
-
-    <li>
-      <h2>More</h2>
-      <img src="../../../../Images/preschool.jpg" alt="more">
-    </li>
-
-  </ul>
-
+  <div *ngFor="let event of events">
+    <div class="row event_card">
+      <div class="col-xs-12">
+        <h4>{{event.eventName}}</h4>
+        <hr>
+        <p>{{event.address.formatted_address}}</p>
+      </div>
+    </div>
+  </div>
 </div>

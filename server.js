@@ -4,8 +4,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var config = require('./config');
 var index = require('./routes/index');
-var tasks = require('./routes/tasks');
 var user = require('./routes/user');
+var event = require('./routes/event');
 
 // Global variables and aliases
 var app = express();
@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
-app.use('/api', tasks);
+app.use('/api/event', event);
 app.use('/api/authentication', user);
 
 app.get('/', function (req, res) {

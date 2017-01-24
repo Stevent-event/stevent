@@ -9,12 +9,25 @@ html {
   box-sizing: inherit;
 }
 
+a {
+    color: white;
+}
+
 body {
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.event_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 10px;
+}
+
+.event_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .content {
@@ -35,6 +48,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    /*padding: 1em;*/
     background-color: #aaa;
 }
