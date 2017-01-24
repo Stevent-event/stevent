@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "Event application",
   "main": "index.js",
+  "config": {
+    "port": "3000"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "",
+    "publish": "",
     "preinstall": "",
     "install": "node-gyp rebuild",
     "postinstall": "",

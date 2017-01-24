@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { routes } from "../../../app/app.routes";
 import { EventService } from "../../services/event.service";
 
-import { Event } from "../../classes/Event";
+import { Event } from "../../classes/event";
 
 @Component({
   selector: 'eventList',
