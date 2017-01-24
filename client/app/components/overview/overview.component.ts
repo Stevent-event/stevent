@@ -16,11 +16,11 @@ export class OverviewComponent {
 }
 var EVENTS: Events[]= [
 
- { "title": "Sports", "url": "../../../../Images/soccer.jpg" },
- { "title": "Culture", "url": "../../../../Images/finnishsauna.jpg" },
- { "title": "Food", "url": "../../../../Images/ruoka.jpg" },
- { "title": "ChildrenFriendly", "url": "../../../../Images/preschool.jpg" },
- { "title": "Gathering", "url": "../../../../Images/generation.jpg" },
- { "title": "More", "url": "../../../../Images/covered.jpg" },
+ { "title": "Sports", "url": "../../../../images/soccer.jpg" },
+ { "title": "Culture", "url": "../../../../images/finnishsauna.jpg" },
+ { "title": "Food", "url": "../../../../images/ruoka.jpg" },
+ { "title": "ChildrenFriendly", "url": "../../../../images/preschool.jpg" },
+ { "title": "Gathering", "url": "../../../../images/generation.jpg" },
+ { "title": "More", "url": "../../../../images/covered.jpg" },
 
 ];
