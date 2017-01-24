@@ -11,9 +11,9 @@ import { MapsAPILoader } from 'angular2-google-maps/core';
 })
 
 export class MapComponent{
-    lat: 60.5;
-    lng: 22.30;
-    zoom: 10;
+    lat: number = 60.5;
+    lng: number = 22.30;
+    zoom: number = 10;
     markerName: string;
     markerLat: string;
     markerLng: string;
