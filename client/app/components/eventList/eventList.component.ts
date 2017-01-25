@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { routes } from "../../../app/app.routes";
 import { EventService } from "../../services/event.service";
-
+import { Observable } from 'rxjs/Observable';
+//import './rxjs-operators';
 import { Event } from "../../classes/Event";
 
 @Component({
@@ -13,12 +14,12 @@ import { Event } from "../../classes/Event";
 })
 
 export class eventListComponent implements OnInit {
-  title = "Find events nearby";
+  title:string;
   events: Event[];
   selectedEvent: Event;
-
+  
   constructor(private eventService: EventService) { }
-
+/*
   getEvents(): void {
     this.eventService
       .getEvents()
@@ -27,8 +28,26 @@ export class eventListComponent implements OnInit {
         console.log(events);
       });
   }
+*/
 
-  ngOnInit(): void {
-    this.getEvents();
-  }
+    createEvent(event:string)
+    {
+      this.eventService.createEvent(event)
+      .subscribe(
+        event=>this.events.push(),
+        err => {
+            // Log errors if any
+                console.log(err);
+                });
+    }
+
+  ngOnInit() {
+    this.eventService.getEvents()
+  .subscribe (events => this.events = events, //Bind to view
+                                err => {
+                                    // Log errors if any
+                                    console.log(err);
+                                });
+    }
+  
 }
