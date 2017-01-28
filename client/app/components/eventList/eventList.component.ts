@@ -29,18 +29,7 @@ export class eventListComponent implements OnInit {
       });
   }
 */
-
-    createEvent(event:string)
-    {
-      this.eventService.createEvent(event)
-      .subscribe(
-        event=>this.events.push(),
-        err => {
-            // Log errors if any
-                console.log(err);
-                });
-    }
-
+    
   ngOnInit() {
     this.eventService.getEvents()
   .subscribe (events => this.events = events, //Bind to view
