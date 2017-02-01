@@ -2,33 +2,43 @@ import { Component, ElementRef } from '@angular/core';
 import { NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { MapsAPILoader } from 'angular2-google-maps/core';
+import { EventService } from "../../services/event.service";
+import { Event } from "../../classes/Event";
 
 @Component({
-    moduleId: module.id,
-    selector: 'map',
-    templateUrl: 'map.component.html',
-    styleUrls: ['map.component.css']
+  moduleId: module.id,
+  selector: 'map',
+  templateUrl: 'map.component.html',
+  styleUrls: ['map.component.css'],
+  providers: [EventService]
 })
 
-export class MapComponent implements OnInit{
-    public lat: number;
-    public lng: number;
-    public searchControl: FormControl;
-    public zoom: number;
+export class MapComponent implements OnInit {
+  lat: number;
+  lng: number;
+  searchControl: FormControl;
+  zoom: number;
 
-    markerName: string;
-    markerLat: string;
-    markerLng: string;
+  markerName: string;
+  markerLat: string;
+  markerLng: string;
 
-    @ViewChild("search")
-    public searchElementRef: ElementRef;
+  title: string;
+  events: Event[];
+  selectedEvent: Event;
 
-    constructor(
+  @ViewChild("search")
+  public searchElementRef: ElementRef;
+
+  constructor(
+    private eventService: EventService,
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
-  ) {}
+  ) { }
 
-    ngOnInit() {
+  ngOnInit() {
+    this.getEvents();
+
     //set google maps defaults
     this.zoom = 20;
     this.lat = 60.5;
@@ -63,25 +73,25 @@ export class MapComponent implements OnInit{
       });
     });
   }
-    
-    markers: marker[] = [
-        {
-            name: 'marker one',
-            lat: 60.55,
-            lng: 22.33
-        },
-        {
-            name: 'marker two',
-            lat: 60.50,
-            lng: 22.30
-        },
-        {
-            name: 'marker three',
-            lat: 60.53,
-            lng: 22.35
-        }
-    ];
-    private setCurrentPosition() {
+
+  markers: marker[] = [
+    {
+      name: 'marker one',
+      lat: 60.55,
+      lng: 22.33
+    },
+    {
+      name: 'marker two',
+      lat: 60.50,
+      lng: 22.30
+    },
+    {
+      name: 'marker three',
+      lat: 60.53,
+      lng: 22.35
+    }
+  ];
+  private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.lat = position.coords.latitude;
@@ -91,20 +101,28 @@ export class MapComponent implements OnInit{
     }
   }
 
-    addNewMarker(){
-        console.log('new marker');
-        var newMarker = {
-            //name: this.markerName,
-            lat: parseFloat(this.markerLat),
-            lng: parseFloat(this.markerLng)
-        }
-        this.markers.push(newMarker);
+  addNewMarker() {
+    console.log('new marker');
+    var newMarker = {
+      //name: this.markerName,
+      lat: parseFloat(this.markerLat),
+      lng: parseFloat(this.markerLng)
     }
+    this.markers.push(newMarker);
+  }
+  getEvents() {
+    this.eventService.getEvents()
+      .subscribe(events => this.events = events, //Bind to view
+      err => {
+        // Log errors if any
+        console.log(err);
+      });
+  }
 
 }
 
-interface marker{
-    name?:string;
-    lat:number;
-    lng:number;
+interface marker {
+  name?: string;
+  lat: number;
+  lng: number;
 }

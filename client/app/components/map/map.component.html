@@ -14,13 +14,15 @@
 >
 
   <sebm-google-map-marker 
-  *ngFor="let m of markers; let i = index" 
-  (markerClick)="clickedMarker(m,i)" 
-  [latitude]="lat"
-  [longitude]="lng">
+  *ngFor="let event of events" 
+  (markerClick)="clickedMarker(event)" 
+  [latitude]="event.location.lat"
+  [longitude]="event.location.lng">
 
     <sebm-google-map-info-window>
-      <strong>{{m.name}}</strong>
+      <strong>{{event.eventName}}</strong>
+      <hr>
+      <p>{{event.address.formatted_address}}</p>
     </sebm-google-map-info-window>
     
   </sebm-google-map-marker>
