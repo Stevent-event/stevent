@@ -21,6 +21,18 @@ export class newEventComponent implements OnInit {
 
   event: FormGroup; // form
   responseStatus: Object = [];
+  eventObject: Event = {
+    eventName: "",
+    eventOwner: "",
+    location: {},
+    address: "",
+    description: "",
+    category: "",
+    startTime: new Date(),
+    endTime: new Date(),
+    ongoing: false,
+    attendingUsers: [""] 
+  };
 
   ngOnInit() {
     this.event = this.fb.group({
@@ -31,6 +43,7 @@ export class newEventComponent implements OnInit {
         lat: [''],
         lon: [''],
       }),
+
 
       address: this.fb.group({
         street_number: [''],
