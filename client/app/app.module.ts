@@ -18,7 +18,7 @@ import { AUTH_PROVIDERS }      from 'angular2-jwt';
 import {GlobalComponent} from './components/shared/global_component/global.component';
 import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 @NgModule({ 
   imports: [ 
@@ -45,7 +45,7 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     MapComponent
      ],
 
-  providers: [Auth,AUTH_PROVIDERS],//,AuthGuard],
+  providers: [Auth,AUTH_PROVIDERS,{provide: LocationStrategy, useClass: HashLocationStrategy}],//,AuthGuard],
 
   bootstrap: [AppComponent]
 

@@ -14,7 +14,17 @@
       && event.get('eventName').hasError('minlength')">
         Minimum of 2 characters
       </div>
+
+       <label class="control-label col-md-4" >
+             <span>Event Organizer</span>
+             <input type="text" placeholder="Event organizer *" formControlName="eventOwner">
+        </label>
+             <div class="error" *ngIf="event.get('eventOwner').touched 
+             && event.get('eventOwner').hasError('required')">
+              Event organizer's info is required
+             </div>
  
+        
    <div formGroupName="eventDescription">
             <label class="control-label col-md-4" >
                 <span>Date</span>

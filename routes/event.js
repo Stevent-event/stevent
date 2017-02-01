@@ -13,7 +13,7 @@ router.get('/getEvents', function(req, res) {
 router.post('/createEvent', function(req, res) {
     var event = new Event({
         eventName: req.body.eventName,
-        userResponsible: req.body.eventOwner,
+        eventOwner: req.body.eventOwner,
        
     })
     event.save(function(err, data) {
