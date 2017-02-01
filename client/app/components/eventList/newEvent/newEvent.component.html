@@ -1,55 +1,75 @@
-<div class="container">
+<div class="container"> 
+      <form method="POST" novalidate (ngSubmit)="onSubmit()" [formGroup]="event">
+    
+        <label class="control-label col-md-4" >
+             <span>Event Title</span>
+             <input type="text" placeholder="Event title *" formControlName="eventName">
+        </label>
+             <div class="error" *ngIf="event.get('eventName').touched 
+             && event.get('eventName').hasError('required')">
+              Title is required
+             </div>
 
-  <form (submit)="addnewMarker()">
-    <div class="form-group">
-      <label class="control-label col-md-4" for="titleInput"></label>
-      <input type="text" class="form-control" id="eventTitleInput" placeholder="Event title">
-    </div>
-
-    <div class="form-group">
-      <div class="col-10">
-        <input class="form-control" type="date" value="2011-08-19" id="date-input">
+      <div class="error" *ngIf="event.get('eventName').touched 
+      && event.get('eventName').hasError('minlength')">
+        Minimum of 2 characters
       </div>
-    </div>
 
-    <div class="form-group">
-      <div class="col-10">
-        <input class="form-control" type="time" value="13:45:00" id="time-input">
-      </div>
-    </div>
+       <label class="control-label col-md-4" >
+             <span>Event Organizer</span>
+             <input type="text" placeholder="Event organizer *" formControlName="eventOwner">
+        </label>
+             <div class="error" *ngIf="event.get('eventOwner').touched 
+             && event.get('eventOwner').hasError('required')">
+              Event organizer's info is required
+             </div>
+ 
+        
+   <div formGroupName="eventDescription">
+            <label class="control-label col-md-4" >
+                <span>Date</span>
+                <input type="date"  formControlName="date">
+            </label>
+                    <div class="error" *ngIf="event.get('eventDescription').get('date').hasError('required') 
+                    && event.get('eventDescription').get('date').touched">
+                    
+                     Date is required
 
-    <div class="form-group">
-      <label class="control-label col-md-4" for="locationInput"></label>
-      <input type="text" [(ngModel)]="markerName" name="markerName" class="form-control" id="locationInput" placeholder="location">
-    </div>
-    <div class="form-group">
-      <label class="control-label col-md-4" for="locationInputLat"></label>
-      <input type="text" [(ngModel)]="markerLat" name="markerLat" class="form-control" id="locationInputLat" placeholder="Lat">
-    </div>
-    <div class="form-group">
-      <label class="control-label col-md-4" for="locationInputLng"></label>
-      <input type="text" [(ngModel)]="markerLng" name="markerLng" class="form-control" id="locationInputLng" placeholder="Lng">
-    </div>
+                   </div>
 
-    <div class="form-group">
-      <label class="control-label col-md-6" for="eventDescription"></label>
-      <div class="col-md-6">
-        <textarea rows="6" class="form-control" id="eventDescription" placeholder="Tell People about your event"></textarea>
-      </div>
-    </div>
+            <div class="control-label col-md-4">
+                <label class="control-label col-md-4" >
+                    <span>Time</span>
+                    <input type="time" formControlName="time">
+                 </label>
+             </div>
+             <div class="error" *ngIf="event.get('eventDescription').get('time').hasError('required')
+              && event.get('eventDescription').get('time').touched">
 
-    <div class="form-group">
-      <label class="col-md-6" for="eventPrivacy">Privacy</label>
-      <select class="col-md-6 pull-right" id="eventtypeSelect">
-         <option value="one">Private</option>
-         <option value="two">Public</option> 
-      </select>
-    </div>
-    <div class="form-group">
-      <div class="col-md-6">
-        <button type="submit" value="Submit" class="btn btn-custom btn-lg pull-left">Cancel</button>
-        <button type="submit" value="Submit" class="btn btn-custom btn-lg pull-right">Create</button>
-      </div>
-    </div>
-  </form>
+               Time is required
+
+             </div>
+
+         <div class="control-label col-md-4">
+              <label class="control-label col-md-4" >
+             <span>Description</span>
+              <textarea rows="16" class="form-control"  placeholder="Tell People about your event" formControlName="description"></textarea>
+        </label>
+                <div class="error" *ngIf="event.get('eventDescription').get('description').hasError('required')
+             && event.get('eventDescription').get('description').touched">
+
+              Event Description is required
+
+               </div>
+
+         </div>
+     </div>
+           <div class="control-label col-md-4">
+              <label class="control-label col-md-4" >
+               <button type="submit" class="btn btn-custom btn-lg pull-right">Create</button>
+               <button type="cancel" class="btn btn-custom btn-lg pull-left">Cancel</button>
+            </label>
+           </div>
+
+    </form>
 </div>
