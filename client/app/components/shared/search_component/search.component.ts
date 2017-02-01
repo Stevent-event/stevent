@@ -7,7 +7,8 @@ import {routes} from "../../../../app/app.routes";
 @Component({
     moduleId: module.id,
     selector: 'search-component',
-    templateUrl: 'search.component.html'
+    templateUrl: 'search.component.html',
+    styleUrls: ['search.component.css'],
 })
 
 export class SearchComponent {

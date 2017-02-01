@@ -4,7 +4,7 @@ import { EventService } from "../../services/event.service";
 import { Observable } from 'rxjs/Observable';
 //import './rxjs-operators';
 import { Event } from "../../classes/Event";
-import {SearchComponent} from '../shared/search_component/search.component';
+// import { SearchComponent } from '../shared/search_component/search.component';
 
 @Component({
   selector: 'eventList',
