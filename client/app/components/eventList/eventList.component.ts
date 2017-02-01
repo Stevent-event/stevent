@@ -4,6 +4,7 @@ import { EventService } from "../../services/event.service";
 import { Observable } from 'rxjs/Observable';
 //import './rxjs-operators';
 import { Event } from "../../classes/Event";
+import {SearchComponent} from '../shared/search_component/search.component';
 
 @Component({
   selector: 'eventList',
@@ -14,29 +15,23 @@ import { Event } from "../../classes/Event";
 })
 
 export class eventListComponent implements OnInit {
-  title:string;
+  title: string;
   events: Event[];
   selectedEvent: Event;
-  
+
   constructor(private eventService: EventService) { }
-/*
-  getEvents(): void {
-    this.eventService
-      .getEvents()
-      .then(events => {
-        this.events = events;
-        console.log(events);
+
+  getEvents() {
+    this.eventService.getEvents()
+      .subscribe(events => this.events = events, //Bind to view
+      err => {
+        // Log errors if any
+        console.log(err);
       });
   }
-*/
-    
+
   ngOnInit() {
-    this.eventService.getEvents()
-  .subscribe (events => this.events = events, //Bind to view
-                                err => {
-                                    // Log errors if any
-                                    console.log(err);
-                                });
-    }
-  
+    this.getEvents();
+  }
+
 }
