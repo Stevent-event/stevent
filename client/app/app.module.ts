@@ -29,8 +29,10 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     FormsModule, 
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI'
-    })
+      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI',
+      libraries: ["places"]
+    }),
+    ReactiveFormsModule
     ],
 
   declarations: [ 
