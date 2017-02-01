@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { routes } from "../../../../app/app.routes";
-import { EventService } from "../../../services/event.service";
+import { routes } from "app/app.routes";
+import { EventService } from "app/services/event.service";
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Event } from "app/classes/event";
 import 'rxjs/add/operator/map';
-import { Event } from "../../../classes/Event";
 
 @Component({
   selector: 'newEvent',

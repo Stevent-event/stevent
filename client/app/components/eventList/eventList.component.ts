@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { routes } from "../../../app/app.routes";
-import { EventService } from "../../services/event.service";
+import { routes } from "app/app.routes";
+import { EventService } from "app/services/event.service";
 import { Observable } from 'rxjs/Observable';
 //import './rxjs-operators';
-import { Event } from "../../classes/Event";
-import {SearchComponent} from '../shared/search_component/search.component';
+import { Event } from "app/classes/event";
+import { SearchComponent } from 'app/components/shared/search_component/search.component';
 
 @Component({
   selector: 'eventList',
