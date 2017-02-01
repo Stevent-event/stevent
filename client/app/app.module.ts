@@ -16,9 +16,10 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
 // import {AuthGuard} from './auth.guard';
 import {GlobalComponent} from './components/shared/global_component/global.component';
+import {SearchComponent} from './components/shared/search_component/search.component';
 import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-
+import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 @NgModule({ 
   imports: [ 
@@ -28,8 +29,10 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     FormsModule, 
     HttpModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI'
-    })
+      apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI',
+      libraries: ["places"]
+    }),
+    ReactiveFormsModule
     ],
 
   declarations: [ 
@@ -42,10 +45,11 @@ import { AgmCoreModule } from 'angular2-google-maps/core';
     WelcomeComponent,
     OverviewComponent,
     GlobalComponent,
+    SearchComponent,
     MapComponent
      ],
 
-  providers: [Auth,AUTH_PROVIDERS],//,AuthGuard],
+  providers: [Auth,AUTH_PROVIDERS,{provide: LocationStrategy, useClass: HashLocationStrategy}],//,AuthGuard],
 
   bootstrap: [AppComponent]
 

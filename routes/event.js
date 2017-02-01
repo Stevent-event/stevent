@@ -10,10 +10,10 @@ router.get('/getEvents', function(req, res) {
     })
 })
 
-router.post('createEvent', function(req, res) {
-    var event = new event({
-        name: req.body.name,
-        userResponsible: req.body.userResponsible,
+router.post('/createEvent', function(req, res) {
+    var event = new Event({
+        eventName: req.body.eventName,
+        eventOwner: req.body.eventOwner,
     })
     event.save(function(err, data) {
         if (err) {

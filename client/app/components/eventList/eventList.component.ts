@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { routes } from "../../../app/app.routes";
 import { EventService } from "../../services/event.service";
-
-import { Event } from "../../classes/event";
+import { Observable } from 'rxjs/Observable';
+//import './rxjs-operators';
+import { Event } from "../../classes/Event";
+import {SearchComponent} from '../shared/search_component/search.component';
 
 @Component({
   selector: 'eventList',
@@ -13,22 +15,23 @@ import { Event } from "../../classes/event";
 })
 
 export class eventListComponent implements OnInit {
-  title = "Find events nearby";
+  title: string;
   events: Event[];
   selectedEvent: Event;
 
   constructor(private eventService: EventService) { }
 
-  getEvents(): void {
-    this.eventService
-      .getEvents()
-      .then(events => {
-        this.events = events;
-        console.log(events);
+  getEvents() {
+    this.eventService.getEvents()
+      .subscribe(events => this.events = events, //Bind to view
+      err => {
+        // Log errors if any
+        console.log(err);
       });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getEvents();
   }
+
 }
