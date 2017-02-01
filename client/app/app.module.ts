@@ -16,6 +16,7 @@ import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS }      from 'angular2-jwt';
 // import {AuthGuard} from './auth.guard';
 import {GlobalComponent} from './components/shared/global_component/global.component';
+import {SearchComponent} from './components/shared/search_component/search.component';
 import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
@@ -42,6 +43,7 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     WelcomeComponent,
     OverviewComponent,
     GlobalComponent,
+    SearchComponent,
     MapComponent
      ],
 
