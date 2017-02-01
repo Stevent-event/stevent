@@ -11,7 +11,7 @@
     "prepublish": "",
     "publish": "",
     "preinstall": "",
-    "install": "node-gyp rebuild",
+    "install": "scripts/install.js",
     "postinstall": "",
     "prestart": "",
     "start": "scripts/start.js",

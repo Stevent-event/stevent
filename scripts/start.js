@@ -1,5 +1,4 @@
 //server package.json
-echo("helloheloe");
 "node server.js"
 
 
