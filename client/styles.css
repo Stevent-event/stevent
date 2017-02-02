@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Komika_display-webfont";
+    src: local("Komika_display-webfont.woff"), url(/client/fonts/Komika_display-webfont.woff);
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -18,7 +23,7 @@ body {
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Komika_display-webfont", Arial, sans-serif;
 }
 
 .event_card {
@@ -41,6 +46,7 @@ body {
 
 .btn.btn-primary {
     border-radius: 0px;
+    color: #02C9C9;
 }
 
 #footer {
@@ -51,3 +57,22 @@ body {
     /*padding: 1em;*/
     background-color: #aaa;
 }
+
+
+
+.jumbotron{
+    background-color: #FFC300;
+    font-family: "Komika_display-webfont", sans-serif;
+    height: 100%;
+    margin-bottom: 0%;
+    padding: 0%;
+}
+
+#footer.container{
+    width: 100%;
+}
+
+.ngcontent-hxs-4{
+    align-self: center;
+}
+
