@@ -1,17 +1,14 @@
-<div class="container">
-  <h1>{{title}}</h1>
-  <hr>
-
+<div class="container-fluid eventlist-container">
  
   <div *ngFor="let event of events">
-    <div class="row event_card">
-      <div class="col-sm-6">
+    <div class="row">
+      <div class="col-xs-9 event_card">
         <h4>{{event.eventName}}</h4>
         <hr>
         <p>{{event.address.formatted_address}}</p>
       </div>
     </div>
   </div>
-
-   <search-component></search-component>
 </div>
+
+<search-component></search-component>
