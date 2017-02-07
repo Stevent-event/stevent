@@ -4,17 +4,17 @@
   "description": "Event application",
   "main": "index.js",
   "config": {
-    "port": "3000"
+    "port": "3001"
   },
   "scripts": {
-    "test": "scripts/test.js",
+    "test": "echo 'Testing.... Done...'",
     "prepublish": "",
     "publish": "",
     "preinstall": "",
-    "install": "scripts/install.js",
+    "install": "node-gyp rebuild",
     "postinstall": "",
     "prestart": "",
-    "start": "scripts/start.js",
+    "start": "node server.js",
     "poststart": ""
   },
   "author": "",
