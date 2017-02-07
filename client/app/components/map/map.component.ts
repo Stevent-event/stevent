@@ -19,9 +19,9 @@ export class MapComponent implements OnInit {
   searchControl: FormControl;
   zoom: number;
 
-  markerName: string;
-  markerLat: string;
-  markerLng: string;
+  // markerName: string;
+  // markerLat: string;
+  // markerLng: string;
 
   title: string;
   events: Event[];
@@ -40,7 +40,7 @@ export class MapComponent implements OnInit {
     this.getEvents();
 
     //set google maps defaults
-    this.zoom = 20;
+    this.zoom = 10;
     this.lat = 60.5;
     this.lng = 22.30;
 
@@ -68,48 +68,48 @@ export class MapComponent implements OnInit {
           //set latitude, longitude and zoom
           this.lat = place.geometry.location.lat();
           this.lng = place.geometry.location.lng();
-          this.zoom = 20;
+          this.zoom = 16;
         });
       });
     });
   }
 
-  markers: marker[] = [
-    {
-      name: 'marker one',
-      lat: 60.55,
-      lng: 22.33
-    },
-    {
-      name: 'marker two',
-      lat: 60.50,
-      lng: 22.30
-    },
-    {
-      name: 'marker three',
-      lat: 60.53,
-      lng: 22.35
-    }
-  ];
+  // markers: marker[] = [
+  //   {
+  //     name: 'marker one',
+  //     lat: 60.55,
+  //     lng: 22.33
+  //   },
+  //   {
+  //     name: 'marker two',
+  //     lat: 60.50,
+  //     lng: 22.30
+  //   },
+  //   {
+  //     name: 'marker three',
+  //     lat: 60.53,
+  //     lng: 22.35
+  //   }
+  // ];
   private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.lat = position.coords.latitude;
         this.lng = position.coords.longitude;
-        this.zoom = 10;
+        this.zoom = 15;
       });
     }
   }
 
-  addNewMarker() {
-    console.log('new marker');
-    var newMarker = {
-      //name: this.markerName,
-      lat: parseFloat(this.markerLat),
-      lng: parseFloat(this.markerLng)
-    }
-    this.markers.push(newMarker);
-  }
+  // addNewMarker() {
+  //   console.log('new marker');
+  //   var newMarker = {
+  //     //name: this.markerName,
+  //     lat: parseFloat(this.markerLat),
+  //     lng: parseFloat(this.markerLng)
+  //   }
+  //   this.markers.push(newMarker);
+  // }
   getEvents() {
     this.eventService.getEvents()
       .subscribe(events => this.events = events, //Bind to view
@@ -120,9 +120,8 @@ export class MapComponent implements OnInit {
   }
 
 }
-
-interface marker {
-  name?: string;
-  lat: number;
-  lng: number;
-}
+// interface marker {
+//   name?: string;
+//   lat: number;
+//   lng: number;
+// }

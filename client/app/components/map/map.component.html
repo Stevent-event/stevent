@@ -7,22 +7,23 @@
 </div>
 
 <sebm-google-map 
-[latitude]="lat" 
-[longitude]="lng" 
+[latitude]="lat || event.location.lat"
+[longitude]="lng || event.location.lng" 
 [zoom]="zoom" 
-[zoomControl]="false"
+[zoomControl]="true"
+[disableDefaultUI]="true"
 >
 
   <sebm-google-map-marker 
-  *ngFor="let event of events" 
-  (markerClick)="clickedMarker(event)" 
+  *ngFor="let event of events; let i = index" 
+  (markerClick)="clickedMarker($event)" 
   [latitude]="event.location.lat"
   [longitude]="event.location.lng">
 
     <sebm-google-map-info-window>
-      <strong>{{event.eventName}}</strong>
-      <hr>
-      <p>{{event.address.formatted_address}}</p>
+      <strong>{{event.eventName}} | {{event.eventOwner}}</strong>
+      <!--<hr>-->
+      <!--<p>{{event.address.formatted_address}}</p>-->
     </sebm-google-map-info-window>
     
   </sebm-google-map-marker>
