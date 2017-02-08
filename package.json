@@ -14,7 +14,7 @@
     "install": "",
     "postinstall": "typings install",
     "prestart": "",
-    "start": "node server.js",
+    "start": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\"",
     "poststart": "",
     "lite": "lite-server"
   },
