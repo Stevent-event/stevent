@@ -1,6 +1,16 @@
-<div class="row">
-    <div class="col-xs-12">
-        <h1>SC</h1>
+<div class="search-container">
+    <div *ngIf="!show1" class="search-button" (click)="toggleSearch('address')" id="address">
+        <i class="fa fa-search search-image" aria-hidden="true"></i>
     </div>
-    
+    <div *ngIf="show1" class="search-input" (click)="toggleSearch('address')">
+        <input type="text" placeholder="Address" />
+    </div>
+    <div *ngIf="!show2" class="search-button" (click)="toggleSearch('category')" id="category">
+        <i class="fa fa-search search-image" aria-hidden="true"></i>
+        <input *ngIf="show2" type="text" placeholder="Category" />
+    </div>
+    <div *ngIf="!show3" class="search-button" (click)="toggleSearch('time')" id="time">
+        <i class="fa fa-search search-image" aria-hidden="true"></i>
+        <input *ngIf="show3" type="text" placeholder="Time" />
+    </div>
 </div>
