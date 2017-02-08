@@ -16,13 +16,15 @@ var eventSchema = new Schema({
         country: String,
         formatted_address: String
     },
-    description: String,
-    category: String,
-    date:{type:Date},
+    description: { type: String, default: "My shiny new 7vent!" },
+    category: { type: String, default: "Culture" },
+    date: { type: Date, default: Date.now() },
     startTime: { type: Date, default: Date.now() },
-    endTime: { type: Date, default: Date.now()+7200000 },
-    ongoing: Boolean,
-    attendingUsers: [String]
+    endTime: { type: Date, default: Date.now()+7200000 }, //default 2 hour event
+    ongoing: { type: Boolean, default: false },
+    attendingUsers: [String], //this needs event creator as first user by default
+    maximumUsers: { type: Number, default: 4 },
+    currentUserNumber: { type: Number, default: 1 },
 }, { collection: 'events' })
 
 module.exports = mongoose.model('Event', eventSchema);

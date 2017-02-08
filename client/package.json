@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": { 
-    "start": "tsc && concurrently \"tsc -w\" \"browser-sync --port 3000\" \"lite-server -c bs-config.json\"",
-    "lite": "lite-server -c bs-config.json",
+    "start": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\"",
+    "lite": "lite-server",
     "postinstall": "typings install",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\""
   },
