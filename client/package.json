@@ -1,7 +1,7 @@
 {
   "name": "7vent",
   "version": "0.0.1",
-  "description": "QuickStart package.json from the documentation, supplemented with testing support",
+  "description": "Event application client package.json",
   "scripts": { 
     "start": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\"",
     "lite": "lite-server",
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "",
   "dependencies": {
     "@angular/common": "~2.0.1",
     "@angular/compiler": "~2.0.1",
@@ -25,9 +25,7 @@
     "angular2-google-maps": "^0.16.0",
     "angular2-jwt": "^0.1.23",
     "angular2-notifications": "^0.4.47",
-    "auth0-lock": "^10.4.0",
-    "bootstrap": "^3.3.7",
-    "bower": "^1.8.0",
+    "auth0-lock": "^10.4.0",  
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
@@ -52,7 +50,9 @@
     "rimraf": "^2.5.4",
     "tslint": "^3.15.1",
     "typescript": "^2.0.3",
-    "typings": "^1.4.0"
+    "typings": "^1.4.0",
+    "bower": "^1.8.0",
+    "bootstrap": "^3.3.7"
   },
   "repository": {}
 }
