@@ -2,7 +2,7 @@
   "name": "7vent",
   "version": "0.0.1",
   "description": "Event application server pacakge.json",
-  "main": "index.js",
+  "main": "server.js",
   "config": {
     "port": "3001"
   },
