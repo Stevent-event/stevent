@@ -7,15 +7,16 @@
     "port": "3001"
   },
   "scripts": {
-    "test": "echo 'Testing.... Done...'",
+    "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "prepublish": "",
     "publish": "",
     "preinstall": "",
-    "install": "node-gyp rebuild",
-    "postinstall": "",
+    "install": "",
+    "postinstall": "typings install",
     "prestart": "",
     "start": "node server.js",
-    "poststart": ""
+    "poststart": "",
+    "lite": "lite-server"
   },
   "keywords": [],
   "author": "",
