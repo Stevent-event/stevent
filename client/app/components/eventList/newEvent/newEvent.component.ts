@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { routes } from "app/app.routes";
 import { EventService } from "app/services/event.service";
 import { Http, Response } from '@angular/http';
@@ -21,47 +21,43 @@ export class newEventComponent implements OnInit {
 
   event: FormGroup; // form
   responseStatus: Object = [];
-  eventObject: Event = {
-    eventName: "",
-    eventOwner: "",
-    location: {},
-    address: "",
-    description: "",
-    category: "",
-    startTime: new Date(),
-    endTime: new Date(),
-    ongoing: false,
-    attendingUsers: [""] 
-  };
 
   ngOnInit() {
     this.event = this.fb.group({
-      eventName: ['', [Validators.required, Validators.minLength(2)]],
-      eventOwner: [''],
-
-      location: this.fb.group({
-        lat: [''],
-        lon: [''],
-      }),
-
+      eventName: ['',[Validators.required]],
+      eventOwner: ['',[Validators.required]],
+      /*
+            location: this.fb.group({
+              lat:'',
+              lon: '',
+            }),
+      */
+      /*
+          address: this.fb.group({
+            street: '',
+            route: '',
+            locality: '',
+            postal_code: '',
+            country: '',
+            formatted_address:'',
+          }),
+          */
 
       address: this.fb.group({
-        street_number: [''],
-        route: [''],
-        locality: [''],
-        postal_code: [''],
-        country: [''],
-        formatted_address: [''],
+        street: '',
+        postalcode: '',
+        city: '',
+        country: '',
       }),
 
-      eventDescription: this.fb.group({
-        date: ['', Validators.required],
-        time: ['', Validators.required],
-        // startTime: ['', Validators.required],
-        //endTime: ['', Validators.required],
-        description: ['', Validators.required],
-      }),
-      attendingUsers: [''],
+
+      description: '',
+      category: '',
+      date: '',
+      startTime: '',
+      endTime: '',
+      //  ongoing:'',
+      // attendingUsers: '',
 
     });
 
