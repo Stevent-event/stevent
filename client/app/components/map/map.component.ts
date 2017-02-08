@@ -3,7 +3,7 @@ import { NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { MapsAPILoader } from 'angular2-google-maps/core';
 import { EventService } from "../../services/event.service";
-import { Event } from "../../classes/Event";
+import { Event } from "../../classes/event";
 
 @Component({
   moduleId: module.id,
