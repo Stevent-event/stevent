@@ -28,7 +28,7 @@ export class EventService {
         }
     
         */
-    // Fetch all existing comments
+    // Fetch all existing events
     getEvents(): Observable<Event[]> {
         // ...using get request
         return this.http.get(this.eventsUrl)
@@ -39,6 +39,7 @@ export class EventService {
     }
 
     createEvent(event: Event) {
+
         return this.http.post(this.createEventsUrl, event, {
         })
             .map(res => res.json());
