@@ -17,7 +17,7 @@
 
             <div *ngFor="let event of events">
               <div class="row">
-                <div class="col-xs-9 event_card" *ngIf="event.category && (event?.category==='Food || Social')">
+                <div class="col-xs-9 event_card" *ngIf="event.category && (event?.category==='Food')">
                   <h4>{{event.eventName}}</h4>
                   <hr>
                   <!--<p>{{event.address.formatted_address}}</p>-->
