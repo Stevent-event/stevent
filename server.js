@@ -18,13 +18,11 @@ mongoose.connection.once('open', function() {
 mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB');
 });
-<<<<<<< HEAD
+// to handle browser refresh issue
 function refreshPageRequest(req,res) {
     res.sendFile("views/index.html", { root: '.' });
 }
-=======
 
->>>>>>> parent of 1439fae... browser refresh error fixed without the use of hash and boot strap class changed to container for eventlistpage and profile page
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -39,11 +37,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
 app.use('/api/event', event);
 app.use('/api/authentication', user);
-<<<<<<< HEAD
+// to handle browser refresh issue
 app.use(refreshPageRequest);
-=======
-
->>>>>>> parent of 1439fae... browser refresh error fixed without the use of hash and boot strap class changed to container for eventlistpage and profile page
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'views/index.html'))
 });
