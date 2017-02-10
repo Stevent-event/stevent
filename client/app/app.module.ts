@@ -19,7 +19,7 @@ import {GlobalComponent} from './components/shared/global_component/global.compo
 import {SearchComponent} from './components/shared/search_component/search.component';
 import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+
 
 @NgModule({ 
   imports: [ 
@@ -49,7 +49,7 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     MapComponent
      ],
 
-  providers: [Auth,AUTH_PROVIDERS,{provide: LocationStrategy, useClass: HashLocationStrategy}],//,AuthGuard],
+  providers: [Auth,AUTH_PROVIDERS],//,AuthGuard],
 
   bootstrap: [AppComponent]
 
