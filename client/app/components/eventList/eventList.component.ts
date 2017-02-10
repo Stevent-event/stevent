@@ -33,5 +33,8 @@ export class eventListComponent implements OnInit {
   ngOnInit() {
     this.getEvents();
   }
-
+eventDetails()
+{
+  
+}
 }
