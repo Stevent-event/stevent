@@ -18,7 +18,9 @@ mongoose.connection.once('open', function() {
 mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB');
 });
-
+function sendSpaFileIfUnmatched(req,res) {
+    res.sendFile("views/index.html", { root: '.' });
+}
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -33,7 +35,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', index);
 app.use('/api/event', event);
 app.use('/api/authentication', user);
-
+app.use(sendSpaFileIfUnmatched);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'views/index.html'))
 });

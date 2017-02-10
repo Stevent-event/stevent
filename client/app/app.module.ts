@@ -49,7 +49,7 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     MapComponent
      ],
 
-  providers: [Auth,AUTH_PROVIDERS,{provide: LocationStrategy, useClass: HashLocationStrategy}],//,AuthGuard],
+  providers: [Auth,AUTH_PROVIDERS],//,AuthGuard],
 
   bootstrap: [AppComponent]
 
