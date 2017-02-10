@@ -7,6 +7,9 @@
             <h1>{{profile.nickname}}'s profile</h1>
             <p>Email: {{profile.name}}</p>
             <p>Last Update: {{profile.created_at}}</p>
+            <div class="col-xs-12" *ngIf="auth.authenticated()">
+                <button (click)="auth.logout()" routerLink = "/" class="btn btn-custom btn-lg pull-right">Logout</button>
+            </div>
         </div>
 
         <div class="row event_card">
