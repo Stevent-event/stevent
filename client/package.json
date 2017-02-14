@@ -6,6 +6,8 @@
     "start": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\"",
     "lite": "lite-server",
     "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\""
   },
   "keywords": [],

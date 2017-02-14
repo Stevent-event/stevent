@@ -19,8 +19,8 @@ var eventSchema = new Schema({
     description: { type: String, default: "My shiny new 7vent!" },
     category: { type: String, default: "Culture" },
     date: { type: Date, default: Date.now() },
-    startTime: { type: Date, default: Date.now() },
-    endTime: { type: Date, default: Date.now()+7200000 }, //default 2 hour event
+    startTime:{},// { type: Date, default: Date.now() },
+    endTime: {}, //{ type: Date, default: Date.now()+7200000 }, //default 2 hour event
     ongoing: { type: Boolean, default: false },
     attendingUsers: [String], //this needs event creator as first user by default
     maximumUsers: { type: Number, default: 4 },
