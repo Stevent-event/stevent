@@ -2,7 +2,8 @@
   "name": "7vent",
   "version": "0.0.2",
   "engines": {
-    "node": "6.7.0"
+    "node": "6.7.0",
+    "npm": "3.10.3"
   },
   "description": "Event application server pacakge.json",
   "main": "server.js",
