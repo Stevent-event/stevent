@@ -26,4 +26,8 @@ NodeJS 6.7.0
 
 ## INSTRUCTION FOR DEPLOYMENT  
 
-1. Run "npm start"  
+1. Push changes to Heroku  
+
+2. "heroku local" to run local packages "heroku open" to open Heroku remote URL  
+
+3. Open localhost:5000 in browser if running local instance  
