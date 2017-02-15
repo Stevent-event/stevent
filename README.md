@@ -20,7 +20,7 @@ NodeJS 6.7.0
 
 4. Open another console window.  
 
-5. On same folder run "npm run-script development"  
+5. On same folder run "npm run-script develop"  
 
 6. On browser navigate to localhost:3000 (client server opens automatically localhost:3001)  
 
