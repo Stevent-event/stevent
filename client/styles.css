@@ -1,11 +1,14 @@
 @font-face {
-    font-family: "Komika_display-webfont";
-    src: local("Komika_display-webfont.woff"), url(/client/fonts/Komika_display-webfont.woff);
+    font-family: "Quicksand-Regular";
+    src: local("Quicksand-Regular.otf"), url(../../../../fonts/Quicksand-Regular);
 }
 
 html {
-  /*height: 100%;*/
+  min-height: 100%;
   box-sizing: border-box;
+  background-color: #ffcf33;
+  width: 100%;
+  margin: 0%;
 }
 
 *,
@@ -21,9 +24,10 @@ a {
 body {
   position: relative;
   /*margin: 0;*/
-  padding-bottom: 6rem;
-  /*min-height: 100%;*/
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /*padding-bottom: 6rem;*/
+  min-height: 100%;
+  font-family: "Quicksand-Regular", Arial, sans-serif;
+  background-color: inherit;
 }
 
 .content {
@@ -52,9 +56,9 @@ body {
 
 
 .jumbotron{
-    background-color: #FFC300;
-    font-family: "Komika_display-webfont", sans-serif;
-    height: 100%;
+    background-color: inherit;
+    font-family: "Quicksand-Regular", sans-serif;
+    min-height: 100%;
     margin-bottom: 0%;
     padding: 0%;
 }
@@ -66,4 +70,17 @@ body {
 .ngcontent-hxs-4{
     align-self: center;
 }
-
+/*
+.btn{
+    background-color: #e3dac9;
+    border-color: #333333;
+    color: #dcdcdc;
+}
+*/
+.btn.btn-primary{
+    background-color: #dcdcdc;
+    border-color: #dcdcdc;
+    border-left-color: #333333;
+    border-right-color: #333333;
+    color: #333333;
+}

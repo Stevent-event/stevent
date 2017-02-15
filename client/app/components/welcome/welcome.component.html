@@ -21,7 +21,11 @@
       </div>
     </nav> -->
 
-<div class= "jumbotron" style="font-family:Komika_display-webfont;">
+<div class= "jumbotron" >
+    <div class="container">               
+    <img src="../../../../images/7vent_final_logov2.png" class="img-responsive" alt="7vent logo"> 
+</div>
+
     <div class="row">
         <div class="col-xs-12">
             <h2>Perfect application for every student in Turku</h2>
@@ -35,11 +39,11 @@
         <div class="col-xs-12">
             <p>Just click the button!</p>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12" >
             <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary">Lets Go!</button>
         </div>
         <div class="col-xs-12">
-            <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary">Logout</button>
+            <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary" >Logout</button>
             
         </div>
         
@@ -48,3 +52,4 @@
         </div>
     </div>
 </div>
+
