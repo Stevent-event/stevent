@@ -24,3 +24,6 @@ NodeJS 6.7.0
 
 6. On browser navigate to localhost:3000 (client server opens automatically localhost:3001)  
 
+## INSTRUCTION FOR DEPLOYMENT
+
+1. Run "npm start"

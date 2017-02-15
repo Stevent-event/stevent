@@ -1,23 +1,23 @@
 {
   "name": "7vent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Event application server pacakge.json",
   "main": "server.js",
   "config": {
-    "port": "3001"
+    "port": "3000"
   },
   "scripts": {
-    "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
+    "test": "tsc && concurrently \"tsc --watch\" \"karma start karma.conf.js\"",
     "prepublish": "",
     "publish": "",
     "preinstall": "",
     "install": "",
     "postinstall": "typings install",
     "prestart": "",
-    "start": "",
+    "start": "tsc && concurrently \"tsc\" \"node server\"",
     "poststart": "",
     "lite": "lite-server",
-    "develop": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\""
+    "develop": "tsc && concurrently \"tsc --watch\" \"browser-sync\" \"lite-server\""
   },
   "keywords": [],
   "author": "",
