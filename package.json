@@ -14,9 +14,10 @@
     "install": "",
     "postinstall": "typings install",
     "prestart": "",
-    "start": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\"",
+    "start": "",
     "poststart": "",
-    "lite": "lite-server"
+    "lite": "lite-server",
+    "develop": "tsc && concurrently \"tsc -w\" \"browser-sync\" \"lite-server\""
   },
   "keywords": [],
   "author": "",
