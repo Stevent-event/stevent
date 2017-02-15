@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-    eventName: String,
-    eventOwner: String, //the user who created event
+    name: String,
+    owner: String, //owner id
     location: {
         lat: Number,
         lng: Number
@@ -16,15 +16,15 @@ var eventSchema = new Schema({
         country: String,
         formatted_address: String
     },
-    description: { type: String, default: "My shiny new 7vent!" },
+    description: { type: String },
     category: { type: String, default: "Culture" },
-    date: { type: Date, default: Date.now() },
-    startTime:{},// { type: Date, default: Date.now() },
-    endTime: {}, //{ type: Date, default: Date.now()+7200000 }, //default 2 hour event
+    date: Date,
+    startTime: Date,
+    endTime: Date,
     ongoing: { type: Boolean, default: false },
-    attendingUsers: [String], //this needs event creator as first user by default
-    maximumUsers: { type: Number, default: 4 },
-    currentUserNumber: { type: Number, default: 1 },
+    attendingUsers: [String], //attending user id:s
+    limitedAttendees: {type: Boolean, default: false}, //true if attendees count limited
+    maximumParticipants: { type: Number, default: 8 }
 }, { collection: 'events' })
 
 module.exports = mongoose.model('Event', eventSchema);
