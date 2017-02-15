@@ -11,8 +11,8 @@
             <h2><i class="fa fa-picture-o" aria-hidden="true"></i></h2>
           </div>
           <div class="col-xs-10">
-            <h4>{{event.eventName}}</h4>
-            <p *ngIf="event.date">{{event.date | date}} {{event.startTime}}</p>
+            <h4>{{event.name}}</h4>
+            <p *ngIf="event.date">{{event.startTime}}</p>
             <p *ngIf="event.address.formatted_address">{{event.address.formatted_address}}</p>
           </div>
         </div>

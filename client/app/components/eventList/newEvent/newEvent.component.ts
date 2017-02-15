@@ -24,8 +24,8 @@ export class newEventComponent implements OnInit {
 
   ngOnInit() {
     this.event = this.fb.group({
-      eventName: ['',[Validators.required]],
-      eventOwner: ['',[Validators.required]],
+      name: ['',[Validators.required]],
+      owner: ['',[Validators.required]],
       /*
             location: this.fb.group({
               lat:'',
