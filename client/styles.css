@@ -1,6 +1,7 @@
 @font-face {
-    font-family: "Quicksand-Regular";
-    src: local("Quicksand-Regular.otf"), url(../../../../fonts/Quicksand-Regular);
+    font-family: "quicksandregular";
+    src: local("Quicksand-Regular");
+    src: url(../../../../fonts/Quicksand-Regular.otf);
 }
 
 html {
@@ -9,6 +10,7 @@ html {
   background-color: #ffcf33;
   width: 100%;
   margin: 0%;
+  font-family: "quicksandregular";
 }
 
 *,
@@ -26,7 +28,7 @@ body {
   /*margin: 0;*/
   /*padding-bottom: 6rem;*/
   min-height: 100%;
-  font-family: "Quicksand-Regular", Arial, sans-serif;
+  font-family: "quicksandregular", Arial, sans-serif;
   background-color: inherit;
 }
 
@@ -53,8 +55,6 @@ body {
     background-color: #aaa;
 }
 
-
-
 .jumbotron{
     background-color: inherit;
     font-family: "Quicksand-Regular", sans-serif;
@@ -77,10 +77,21 @@ body {
     color: #dcdcdc;
 }
 */
-.btn.btn-primary{
-    background-color: #dcdcdc;
-    border-color: #dcdcdc;
-    border-left-color: #333333;
-    border-right-color: #333333;
+.btn, .btn.btn-primary{    
+    background-color: #e3dac9;
+    border-color: #e3dac9;
     color: #333333;
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.2);
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.3);
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.row{
+    margin-left: 15px;
+    margin-right: 15px;
+    /*overrides some booststraps own margin which distubed clobal components work*/
 }
