@@ -4,6 +4,7 @@ var router = express.Router();
 var event = require('../models/event-model');
 
 router.get('/getEvents', function(req, res) {
+    console.log(req);
     event.find({})
     .then(function(data) {
         res.status(200).send(data);
@@ -12,8 +13,8 @@ router.get('/getEvents', function(req, res) {
 
 router.post('/createEvent', function(req, res) {
     var newEvent = new event({
-        eventName: req.body.eventName,
-        eventOwner: req.body.eventOwner,
+        event: req.body.name,
+        owner: req.body.owner,
      /*
         address:req.body.address,
        /* street_number: req.body.street,

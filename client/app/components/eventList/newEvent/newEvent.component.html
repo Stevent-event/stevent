@@ -12,17 +12,17 @@
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Event Name</label>
             <div class="col-sm-10">
-              <input type="text" placeholder="event name" class="form-control" formControlName="eventName">
+              <input type="text" placeholder="event name" class="form-control" formControlName="name">
             </div>
           </div>
 
-          <div class="error" *ngIf="event.get('eventName').touched 
-             && event.get('eventName').hasError('required')">
+          <div class="error" *ngIf="event.get('name').touched 
+             && event.get('name').hasError('required')">
             Title is required
           </div>
 
-          <div class="error" *ngIf="event.get('eventName').touched 
-      && event.get('eventName').hasError('minlength')">
+          <div class="error" *ngIf="event.get('name').touched 
+      && event.get('name').hasError('minlength')">
             Minimum of 2 characters
           </div>
 
