@@ -4,7 +4,6 @@ var router = express.Router();
 var event = require('../models/event-model');
 
 router.get('/getEvents', function(req, res) {
-    console.log(req);
     event.find({})
     .then(function(data) {
         res.status(200).send(data);
