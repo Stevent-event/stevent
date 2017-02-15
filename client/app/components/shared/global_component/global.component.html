@@ -1,10 +1,12 @@
 <div class="container" id="footer">
   <div class="row">
 
-    <div class="col-xs-3" align="middle">
-      <a routerLink="/newEvent"><h2 align="middle"><i class="fa fa-plus" aria-hidden="true"></i></h2></a>
+    <div class="col-xs-3" align="middle" (click)="auth.login()" *ngIf="!auth.authenticated()" >
+      <a  ><h2 align="middle"><i class="fa fa-plus" aria-hidden="true"></i></h2></a>
     </div>
-    
+    <div class="col-xs-3" align="middle" *ngIf="auth.authenticated()" >
+      <a routerLink="/newEvent" ><h2 align="middle"><i class="fa fa-plus" aria-hidden="true"></i></h2></a>
+    </div>
     <div class="col-xs-3">
       <a routerLink="/eventMap"><h2 align="middle"><i class="fa fa-globe" aria-hidden="true"></i></h2></a>
     </div>
@@ -14,7 +16,7 @@
     </div>
 
     <div class="col-xs-3">
-      <a routerLink="/profile"><h2 align="middle"><i class="fa fa-user" aria-hidden="true"></i></h2></a>
+      <a routerLink="/profile" *ngIf="auth.authenticated()"><h2 align="middle"><i class="fa fa-user" aria-hidden="true"></i></h2></a>
     </div>
     
   </div>

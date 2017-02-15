@@ -12,7 +12,24 @@ import {routes} from "app/app.routes";
 })
 
 export class SearchComponent {
+    show1: boolean;
+    show2: boolean;
+    show3: boolean;
+
     constructor() {
-        
+        this.show1 = false;
+        this.show2 = false;
+        this.show3 = false;
+    }
+
+    toggleSearch(field: String) {
+        console.log(event);
+        if (field == 'address') {
+            this.show1 = !this.show1;
+        } else if(field == 'category') {
+            this.show2 = !this.show2;
+        } else if(field == 'time') {
+            this.show3 = !this.show3;
+        }
     }
 }
