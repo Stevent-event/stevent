@@ -1,7 +1,7 @@
 {
   "name": "stevent",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "authors": [
     "Pyry Pajunpää <pymapa@utu.fi>"
   ],

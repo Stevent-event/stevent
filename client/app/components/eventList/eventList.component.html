@@ -12,8 +12,8 @@
           </div>
           <div class="col-xs-10">
             <h4>{{event.name}}</h4>
-            <p *ngIf="event.date">{{event.startTime}}</p>
-            <p *ngIf="event.address.formatted_address">{{event.address.formatted_address}}</p>
+            <p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
+            <p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
           </div>
         </div>
       </div>
