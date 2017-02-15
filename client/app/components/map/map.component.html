@@ -6,26 +6,28 @@
   </div>
 </div>
 
-<sebm-google-map 
-[latitude]="lat" 
-[longitude]="lng" 
-[zoom]="zoom" 
+<sebm-google-map
+[latitude]="lat || event.location.lat"
+[longitude]="lng || event.location.lng" 
+[zoom]="zoom"
 [zoomControl]="false"
+[disableDefaultUI]="false"
 >
-
-  <sebm-google-map-marker 
-  *ngFor="let event of events" 
-  (markerClick)="clickedMarker(event)" 
+<div *ngFor="let event of events; let i = index"> 
+  <sebm-google-map-marker
+  *ngIf="event.location && event.location.lat && event.location.lng"
   [latitude]="event.location.lat"
-  [longitude]="event.location.lng">
-
+  [longitude]="event.location.lng"
+  (markerClick)="clickedMarker($event)">
+  
     <sebm-google-map-info-window>
-      <strong>{{event.eventName}}</strong>
+      <strong>{{event.name}}</strong>
       <hr>
-      <p>{{event.address.formatted_address}}</p>
+      {{event.address.formatted_address}}
     </sebm-google-map-info-window>
     
   </sebm-google-map-marker>
+</div>
 
 
 </sebm-google-map>
