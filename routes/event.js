@@ -26,6 +26,8 @@ router.post('/createEvent', function(req, res) {
         date:req.body.date,
         startTime: req.body.startTime,
         endTime: req.body.endTime,
+        limitedAttendees: req.body.limitedAttendees,
+        maximumAttendees:req.body.maximumAttendees,
     })
     newEvent.save(function (err, data) {
         if (err) {
