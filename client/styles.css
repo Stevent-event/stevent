@@ -1,7 +1,7 @@
 @font-face {
     font-family: "quicksandregular";
-    src: local("Quicksand-Regular");
-    src: url(../../../../fonts/Quicksand-Regular.otf);
+    src: local("Quicksand-Bold");
+    src: url(../../../../fonts/Quicksand-Bold.otf);
 }
 
 html {
@@ -11,6 +11,7 @@ html {
   width: 100%;
   margin: 0%;
   font-family: "quicksandregular";
+  color: #333333;
 }
 
 *,
@@ -30,6 +31,7 @@ body {
   min-height: 100%;
   font-family: "quicksandregular", Arial, sans-serif;
   background-color: inherit;
+  color: inherit;
 }
 
 .content {
@@ -39,11 +41,6 @@ body {
 .form-control {
     border-radius: 0px;
     border: 0px;
-}
-
-.btn.btn-primary {
-    border-radius: 0px;
-    color: #02C9C9;
 }
 
 #footer {
@@ -83,10 +80,8 @@ body {
     color: #333333;
     box-shadow: 0 3px 1px 0 rgba(0,0,0,0.2);
     border-radius: 7px;
-    border: 1px solid rgba(0,0,0,0.3);
-    text-transform: uppercase;
+    border: 2px solid rgba(0,0,0,0.3);
     display: inline-block;
-    letter-spacing: 2px;
     font-weight: bold;
 }
 
@@ -94,4 +89,12 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     /*overrides some booststraps own margin which distubed clobal components work*/
+}
+
+.event_card{
+    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    border: solid;
+    background-color: rgba(227,218,201,0.7);
+    border-radius: 15px;
 }

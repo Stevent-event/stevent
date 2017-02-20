@@ -21,10 +21,10 @@
       </div>
     </nav> -->
 
-<div class= "jumbotron" >
+<div class= "jumbotron" style="font-family: quicksandregular;">
     <div class="container">               
-    <img src="../../../../images/7vent_final_logov2.png" class="img-responsive" alt="7vent logo"> 
-</div>
+    <img src="../../../../images/7vent_final_logov2.png" class="img-responsive center-block" alt="7vent logo" align="middle"> 
+    </div>
 
     <div class="row">
         <div class="col-xs-12">
@@ -40,7 +40,7 @@
             <p>Just click the button!</p>
         </div>
         <div class="col-xs-12" >
-            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary">Lets Go!</button>
+            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary text-uppercase">Lets Go!</button>
         </div>
         <div class="col-xs-12">
             <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary" >Logout</button>
