@@ -76,13 +76,11 @@ body {
 */
 .btn, .btn.btn-primary{    
     background-color: #e3dac9;
-    border-color: #e3dac9;
     color: #333333;
     box-shadow: 0 3px 1px 0 rgba(0,0,0,0.2);
-    border-radius: 7px;
+    border-radius: 15px;
     border: 2px solid rgba(0,0,0,0.3);
     display: inline-block;
-    font-weight: bold;
 }
 
 .row{
@@ -92,9 +90,12 @@ body {
 }
 
 .event_card{
-    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 1px rgba(0,0,0,0.2);
     margin-bottom: 30px;
-    border: solid;
-    background-color: rgba(227,218,201,0.7);
+    border: 2px solid rgba(0,0,0,0.3);;
+    background-color: rgba(227,218,201,1);
     border-radius: 15px;
+    color: #333333;
+    width: 100%;
+    padding: 0px;
 }
