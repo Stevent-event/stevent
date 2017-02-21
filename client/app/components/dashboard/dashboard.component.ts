@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { routes } from "app/app.routes";
+import { routes } from "../../../app/app.routes";
 
 @Component({
   selector: 'dashboard',

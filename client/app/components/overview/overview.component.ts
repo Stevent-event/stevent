@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { routes } from "app/app.routes";
-import {Events} from 'app/eventlists.interface';
-import {Auth} from 'app/services/authentication.service';
+import { routes } from '../../../app/app.routes';
+import {Events} from '../../../app/eventlists.interface';
+import {Auth} from '../../../app/services/authentication.service';
 import { tokenNotExpired } from 'angular2-jwt';
 @Component({
   selector: 'overview',

@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { routes } from "app/app.routes";
-import { EventService } from "app/services/event.service";
+import { routes } from "../../../../app/app.routes";
+import { EventService } from "../../../../app/services/event.service";
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Event } from "app/classes/event";
+import { Event } from "../../../../app/classes/event";
 import 'rxjs/add/operator/map';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Auth} from 'app/services/authentication.service';
-import { routes } from "./../../../app/app.routes";
+import {Auth} from '../../../app/services/authentication.service';
+import { routes } from '../../../app/app.routes';
 @Component({
     moduleId: module.id,
     selector: 'profile',
