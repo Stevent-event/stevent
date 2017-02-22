@@ -30,4 +30,4 @@ NodeJS 6.7.0
 
 2. "heroku local" to run local packages "heroku open" to open Heroku remote URL  
 
-3. Open localhost:5000 in browser if running local instance  
+3. Open localhost:3000 in browser if running local instance  
