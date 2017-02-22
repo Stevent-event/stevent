@@ -7,19 +7,17 @@
 </div>
 
 <sebm-google-map
-[latitude]="lat || event.location.lat"
-[longitude]="lng || event.location.lng" 
+[latitude]="lat"
+[longitude]="lng" 
 [zoom]="zoom"
-[zoomControl]="false"
-[disableDefaultUI]="false"
 >
 <div *ngFor="let event of events; let i = index"> 
   <sebm-google-map-marker
   *ngIf="event.location && event.location.lat && event.location.lng"
   [latitude]="event.location.lat"
   [longitude]="event.location.lng"
-  (markerClick)="clickedMarker($event)">
-  
+>
+
     <sebm-google-map-info-window>
       <strong>{{event.name}}</strong>
       <hr>
@@ -28,8 +26,5 @@
     
   </sebm-google-map-marker>
 </div>
-
-
 </sebm-google-map>
-
 <search-component></search-component>
