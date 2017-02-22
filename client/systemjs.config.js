@@ -45,7 +45,16 @@
       'angular-in-memory-web-api': {
         main: './server.js',
         defaultExtension: 'js'
-      }
+      },
+      'moment': {
+                main: './moment.js',
+                defaultExtension: 'js'
+            },
+            'angular2-moment': {
+                main: './index.js',
+                defaultExtension: 'js'
+            }
+
     }
   });
 })(this);

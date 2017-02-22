@@ -6,6 +6,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Event } from "app/classes/event";
 import 'rxjs/add/operator/map';
+import {moment} from 'moment';
 
 @Component({
   selector: 'newEvent',
@@ -21,7 +22,7 @@ export class newEventComponent implements OnInit {
 
   event: FormGroup; // form
   responseStatus: Object = [];
-
+  limitedAttendees:Boolean;
   ngOnInit() {
     this.event = this.fb.group({
       name: ['',[Validators.required]],
@@ -58,7 +59,8 @@ export class newEventComponent implements OnInit {
       endTime: '',
       //  ongoing:'',
       // attendingUsers: '',
-
+      limitedAttendees:'',
+      maximumAttendees:'',
     });
 
   }

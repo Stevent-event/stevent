@@ -19,7 +19,7 @@ import { GlobalComponent } from './components/shared/global_component/global.com
 import { SearchComponent } from './components/shared/search_component/search.component';
 import { MapComponent } from './components/map/map.component';
 import { AgmCoreModule } from 'angular2-google-maps/core';
-
+import {MomentModule} from 'angular2-moment';
 
 @NgModule({
   imports: [
