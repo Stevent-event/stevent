@@ -67,13 +67,7 @@ body {
 .ngcontent-hxs-4{
     align-self: center;
 }
-/*
-.btn{
-    background-color: #e3dac9;
-    border-color: #333333;
-    color: #dcdcdc;
-}
-*/
+
 .btn, .btn.btn-primary{    
     background-color: #e3dac9;
     color: #333333;
@@ -98,4 +92,9 @@ body {
     color: #333333;
     width: 100%;
     padding: 0px;
+}
+
+.search-button, .search-input, .search-button:hover{
+    margin-bottom: 5px;
+    min-height: 66px;
 }

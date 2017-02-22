@@ -2,14 +2,14 @@
     <div *ngIf="!show1" align="right" class="search-button" (click)="toggleSearch('address')" id="address">
         <i class="fa fa-map-marker search-image" aria-hidden="true"></i>
     </div>
-    <div *ngIf="show1" class="search-input">
+    <div *ngIf="show1" class="search-input" style="background-color: rgba(255, 195, 0, 0.7); margin-bottom: 5px;">
         <i (click)="toggleSearch('address')" class="fa fa-times search-image" aria-hidden="true"></i><input type="text" placeholder="Address" />
     </div>
 
     <div *ngIf="!show2" class="search-button" (click)="toggleSearch('category')" id="category">
         <i class="fa fa-filter search-image" aria-hidden="true"></i>
             </div>
-    <div *ngIf="show2" class="search-input">
+    <div *ngIf="show2" class="search-input" style="background-color: rgba(255, 195, 0, 0.7); margin-bottom: 5px;">
         <i (click)="toggleSearch('category')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show2" type="text" placeholder="Category" />
     </div>
 
@@ -17,7 +17,7 @@
     <div *ngIf="!show3" class="search-button" (click)="toggleSearch('time')" id="time">
         <i class="fa fa-clock-o search-image" aria-hidden="true"></i>
     </div>
-    <div *ngIf="show3" class="search-input" >
+    <div *ngIf="show3" class="search-input" style="background-color: rgba(255, 195, 0, 0.7); margin-bottom: 5px;">
         <i (click)="toggleSearch('time')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show3" type="text" placeholder="Time" />
     </div>
 </div>
