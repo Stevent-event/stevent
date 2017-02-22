@@ -1,12 +1,10 @@
 (function (global) {
   System.config({
     paths: {
-      'npm:': 'node_modules/' // paths serve as alias
+      'npm:': 'node_modules/'
     },
-    // map tells the System loader where to look for things
     map: {
-      app: 'app', // our app is within the app folder
-      // angular bundles
+      app: 'app',
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',
       '@angular/compiler': 'npm:@angular/compiler/bundles/compiler.umd.js',
@@ -17,25 +15,23 @@
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       'angular2-google-maps/core': 'npm:angular2-google-maps/core/core.umd.js',
-      // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api',
       'angular2-jwt':              'node_modules/angular2-jwt/angular2-jwt.js'
     },
-    // packages tells the System loader how to load when no filename and/or no extension
     packages: {
-      app: {
-        main: './main.js',
+      'app': {
+        main: '../main.js',
         defaultExtension: 'js'
       },
-      rxjs: {
+      'rxjs': {
         defaultExtension: 'js'
       },
       'angular2-jwt': {
         defaultExtension:'js'
       },
       'angular-in-memory-web-api': {
-        main: './server.js',
+        main: '../server.js',
         defaultExtension: 'js'
       }
     }
