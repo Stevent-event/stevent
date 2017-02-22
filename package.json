@@ -19,8 +19,9 @@
     "prestart": "",
     "start": "tsc && concurrently \"tsc\" \"node server\"",
     "poststart": "",
-    "lite": "lite-server",
-    "develop": "tsc && concurrently \"tsc --watch\" \"browser-sync\" \"lite-server\""
+    "build": "cl client && tsc",
+    "watch": "cd client && tsc -w",
+    "develop": "nodemon server"
   },
   "keywords": [],
   "author": "",
