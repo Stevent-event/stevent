@@ -19,10 +19,10 @@ mongoose.connection.on('error', function() {
   console.info('Error: Could not connect to MongoDB');
 });
 // to handle browser refresh issue
-function refreshPageRequest(req,res) {
+/*function refreshPageRequest(req,res) {
     res.sendFile("views/index.html", { root: '.' });
 }
-
+*/
 //View Engine
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -38,10 +38,10 @@ app.use('/', index);
 app.use('/api/event', event);
 app.use('/api/authentication', user);
 // to handle browser refresh issue
-app.use(refreshPageRequest);
+/*app.use(refreshPageRequest);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname,'views/index.html'))
-});
+});*/
 
 app.listen(port, function() {
   console.log("Server started on port " + port);
