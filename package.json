@@ -11,13 +11,13 @@
     "port": "3000"
   },
   "scripts": {
-    "build": "tsc",
-    "build:watch": "tsc -w",
+    "build": "tsc -p .",
+    "build:watch": "tsc -w -p .",
     "develop": "nodemon server",
     "serve": "lite-server -c=bs-config.json",
     "lint": "tslint ./**/*.ts -t verbose",
     
-    "prepublish": "tsc",
+    "prepublish": "npm run build",
     "pretest": "npm run build",
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "preinstall": "",
