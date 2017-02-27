@@ -11,12 +11,13 @@
     "port": "3000"
   },
   "scripts": {
-    "build": "tsc ",
+    "build": "tsc",
     "build:watch": "tsc -w",
     "develop": "nodemon server",
     "serve": "lite-server -c=bs-config.json",
     "lint": "tslint ./**/*.ts -t verbose",
     
+    "prepublish": "tsc",
     "pretest": "npm run build",
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "preinstall": "",
@@ -62,7 +63,9 @@
     "canonical-path": "0.0.2",
     "http-server": "^0.9.0",
     "jasmine-core": "~2.5.2",
-    "@types/googlemaps": "^3.26.1",
+    "@types/googlemaps": "^3.26.1"
+  },
+  "devDependencies": {
     "concurrently": "^3.2.0",
     "lite-server": "^2.2.2",
     "typescript": "^2.0.10",
@@ -77,8 +80,6 @@
     "protractor": "^3.3.0",
     "rimraf": "^2.5.4",
     "tslint": "^3.15.1"
-  },
-  "devDependencies": {
 
   },
   "repository": {}

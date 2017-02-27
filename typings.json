@@ -1,5 +1,5 @@
 {
-  "resolution": "client/typings",
+  "resolution": "typings",
   "globalDependencies": {
     "angular-protractor": "registry:dt/angular-protractor#1.5.0+20160425143459",
     "core-js": "registry:dt/core-js#0.9.7+20161130133742",
