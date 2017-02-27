@@ -3,18 +3,18 @@
 Capstone 2016 project, Team Ekat  
 
 ## Platform   
-MongoDB  3.2.8
-Express  
-Angular 2.4.0  
-NodeJS 6.10.0  
+**M**ongoDB  3.2.8  
+**E**xpress  
+**A**ngular 2.4.0  
+**N**odeJS 6.10.0  
 
 ## INSTRUCTIONS FOR DEVELOPERS  
 
 1. Install nodemon and bower: "npm install -g nodemon bower"  
 
-2. Install dependencies: "npm install", then "bower install"  
+2. Install dependencies: "npm install"  
 
-4. In project directory, if you installed nodemon, run "nodemon server". If not, run "node server"  
+4. In project directory run "nodemon server"  
 
 5. Open another console window.  
 
