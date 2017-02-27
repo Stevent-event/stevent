@@ -24,12 +24,12 @@ mongoose.connection.on('error', function() {
 }
 */
 //View Engine
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '.'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, '.')));
 
 // Body parser middleware
 app.use(bodyParser.json());
