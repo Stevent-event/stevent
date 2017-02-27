@@ -3,31 +3,36 @@
 Capstone 2016 project, Team Ekat  
 
 ## Platform   
-MongoDB  
+MongoDB  3.2.8
 Express  
-AngularJS 2  
-NodeJS 6.7.0  
+Angular 2.4.0  
+NodeJS 6.10.0  
 
 ## INSTRUCTIONS FOR DEVELOPERS  
 
-0. To help development, install also nodemon and bower: "npm install --global nodemon bower"  
+1. Install nodemon and bower: "npm install -g nodemon bower"  
 
-1. Install dependencies: "npm install"  
+2. Install dependencies: "npm install", then "bower install"  
 
-2. Install client-side dependencies in project root directory: "bower install"  
+4. In project directory, if you installed nodemon, run "nodemon server". If not, run "node server"  
 
-3. In project root directory, if you installed nodemon, run "nodemon server". If not, run "node server"  
+5. Open another console window.  
 
-4. Open another console window.  
+6. In same folder run "npm start"  
 
-5. On same folder run "npm run-script develop"  
-
-6. On browser navigate to localhost:3000 (client server opens automatically localhost:3001)  
+7. On browser navigate to localhost:3001 (it should open automatically)  
 
 ## INSTRUCTION FOR DEPLOYMENT  
 
 1. Push changes to Heroku  
 
-2. "heroku local" to run local packages "heroku open" to open Heroku remote URL  
+2. "heroku local" to run local packages, or "heroku open" to open Heroku remote URL  
 
 3. Open localhost:3000 in browser if running local instance  
+
+## Help! I'm stuck! It doesn't work!  
+
+1. Run "sh ./clean-project.sh" to erase all packages and compiled files. Then try again. If it still doesn't work, complain at Slack.  
+
+2. Reinstall everything easily with "sh ./install-project.sh".  
+  

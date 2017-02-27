@@ -1,0 +1,13 @@
+{
+  "ui": {
+    "port": 3000
+  },
+  "server": {
+    "baseDir": "client",
+    "directory": true,
+    "port": 3000,
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}
