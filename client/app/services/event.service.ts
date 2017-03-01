@@ -31,6 +31,7 @@ export class EventService {
     // Fetch all existing events
     getEvents(): Observable<Event[]> {
         // ...using get request
+        console.log("getEven");
         return this.http.get(this.eventsUrl)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())

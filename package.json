@@ -19,8 +19,9 @@
     "prestart": "",
     "start": "tsc && concurrently \"tsc\" \"node server\"",
     "poststart": "",
-    "lite": "lite-server",
-    "develop": "tsc && concurrently \"tsc --watch\" \"browser-sync\" \"lite-server\""
+    "build": "cl client && tsc",
+    "watch": "cd client && tsc -w",
+    "develop": "nodemon server"
   },
   "keywords": [],
   "author": "",
@@ -48,6 +49,7 @@
     "core-js": "^2.4.1",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
     "mongoose": "^4.6.3",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
