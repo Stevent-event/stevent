@@ -17,9 +17,8 @@
   <sebm-google-map-marker
   *ngIf="event.location && event.location.lat && event.location.lng"
   [latitude]="event.location.lat"
-  [longitude]="event.location.lng"
-  (markerClick)="clickedMarker($event)">
-  
+  [longitude]="event.location.lng">
+
     <sebm-google-map-info-window>
       <strong>{{event.name}}</strong>
       <p>{{event.owner}}</p>
