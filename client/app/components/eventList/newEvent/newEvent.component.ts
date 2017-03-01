@@ -6,7 +6,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Event } from "app/classes/event";
 import 'rxjs/add/operator/map';
-import {moment} from 'moment';
+import {Moment} from 'moment';
 
 @Component({
   selector: 'newEvent',
