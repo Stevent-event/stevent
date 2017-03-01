@@ -24,10 +24,10 @@ var options = { server: {
 var mongodbUri = 'mongodb://user:pass@host:port/db';
  
 mongoose.connect(mongodbUri, options);
-var conn = mongoose.connection;
+var connection = mongoose.connection;
  
-conn.on('error', console.error.bind(console, 'connection error:'));
+connection.on('error', console.error.bind(console, 'connection error:'));
  
-conn.once('open', function() {
+connection.once('open', function() {
   // Wait for the database connection to establish, then start the app. 
 });

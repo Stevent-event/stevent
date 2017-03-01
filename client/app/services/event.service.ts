@@ -28,9 +28,10 @@ export class EventService {
         }
     
         */
-    // Fetch all existing comments
+    // Fetch all existing events
     getEvents(): Observable<Event[]> {
         // ...using get request
+        console.log("getEven");
         return this.http.get(this.eventsUrl)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
@@ -39,6 +40,7 @@ export class EventService {
     }
 
     createEvent(event: Event) {
+
         return this.http.post(this.createEventsUrl, event, {
         })
             .map(res => res.json());

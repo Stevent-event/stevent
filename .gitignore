@@ -23,6 +23,7 @@
 npm-debug.log
 testem.log
 /client/typings
+typings
 
 # e2e
 /e2e/*.js
@@ -99,6 +100,7 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+bower_components
 
 # Optional npm cache directory
 .npm

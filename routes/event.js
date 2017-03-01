@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var auth = require('./../jwt');
 
 var event = require('../models/event-model');
 
@@ -11,18 +12,31 @@ router.get('/getEvents', function(req, res) {
 })
 
 router.post('/createEvent', function(req, res) {
-    var event = new Event({
-        eventName: req.body.eventName,
-        eventOwner: req.body.eventOwner,
+    var newEvent = new event({
+        event: req.body.name,
+        owner: req.body.owner,
+     /*
+        address:req.body.address,
+       /* street_number: req.body.street,
+        postal_code: req.body.postalcode,
+        locality: req.body.city,
+        country: req.body.country,
+        */
+        description: req.body.description,
+        category: req.body.category,
+        date:req.body.date,
+        startTime: req.body.startTime,
+        endTime: req.body.endTime,
+        limitedAttendees: req.body.limitedAttendees,
+        maximumAttendees:req.body.maximumAttendees,
     })
-    event.save(function(err, data) {
+    newEvent.save(function (err, data) {
         if (err) {
             res.status(500).send(err);
         }
         res.status(200).send(data);
     })
 })
-
 
 
 module.exports = router;

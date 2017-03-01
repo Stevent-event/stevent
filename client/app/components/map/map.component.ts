@@ -3,7 +3,7 @@ import { NgZone, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from "@angular/forms";
 import { MapsAPILoader } from 'angular2-google-maps/core';
 import { EventService } from "../../services/event.service";
-import { Event } from "../../classes/Event";
+import { Event } from "../../classes/event";
 
 @Component({
   moduleId: module.id,
@@ -17,12 +17,7 @@ export class MapComponent implements OnInit {
   lat: number;
   lng: number;
   searchControl: FormControl;
-  zoom: number;
-
-  // markerName: string;
-  // markerLat: string;
-  // markerLng: string;
-
+  zoom: number = 12;
   title: string;
   events: Event[];
   selectedEvent: Event;
@@ -33,22 +28,25 @@ export class MapComponent implements OnInit {
   constructor(
     private eventService: EventService,
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
+    private ngZone: NgZone,
   ) { }
+
+
 
   ngOnInit() {
     this.getEvents();
 
-    //set google maps defaults
-    this.zoom = 10;
-    this.lat = 60.5;
-    this.lng = 22.30;
+    // //set google maps defaults
+    // this.zoom = 10;
+    // this.lat = 60.5;
+    // this.lng = 22.30;
 
     //create search FormControl
     this.searchControl = new FormControl();
 
     //set current position
     this.setCurrentPosition();
+    this.zoom = 12;
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
@@ -68,48 +66,22 @@ export class MapComponent implements OnInit {
           //set latitude, longitude and zoom
           this.lat = place.geometry.location.lat();
           this.lng = place.geometry.location.lng();
-          this.zoom = 16;
+          this.zoom = 12;
         });
       });
     });
   }
 
-  // markers: marker[] = [
-  //   {
-  //     name: 'marker one',
-  //     lat: 60.55,
-  //     lng: 22.33
-  //   },
-  //   {
-  //     name: 'marker two',
-  //     lat: 60.50,
-  //     lng: 22.30
-  //   },
-  //   {
-  //     name: 'marker three',
-  //     lat: 60.53,
-  //     lng: 22.35
-  //   }
-  // ];
   private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.lat = position.coords.latitude;
         this.lng = position.coords.longitude;
-        this.zoom = 16;
+        this.zoom = 12;
       });
     }
   }
 
-  // addNewMarker() {
-  //   console.log('new marker');
-  //   var newMarker = {
-  //     //name: this.markerName,
-  //     lat: parseFloat(this.markerLat),
-  //     lng: parseFloat(this.markerLng)
-  //   }
-  //   this.markers.push(newMarker);
-  // }
   getEvents() {
     this.eventService.getEvents()
       .subscribe(events => this.events = events, //Bind to view
@@ -120,8 +92,3 @@ export class MapComponent implements OnInit {
   }
 
 }
-// interface marker {
-//   name?: string;
-//   lat: number;
-//   lng: number;
-// }
