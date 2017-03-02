@@ -1,6 +1,7 @@
 ### Angular ###
 # compiled output
 tmp
+client
 
 # dependencies
 node_modules
