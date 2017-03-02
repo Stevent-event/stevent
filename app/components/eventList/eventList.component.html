@@ -1,17 +1,16 @@
 <search-component></search-component>
-<div class="container eventlist-container">
+<h1 style="align-content: space-between; margin-left: 7.5%; margin-right: 7.5%;">Hop in to upcoming 
+  <span style="color: #02C9C9">7</span>vents!</h1>
+<div class="container eventlist-container" style="padding-left: 0%; padding-right: 50px; margin-top: 20px; margin-bottom: 63px;">
 
 
   <div *ngFor="let event of events">
     <div class="row">
-      <div class="col-xs-9 event_card">
+      <div class="col-xs-12 event_card">
 
         <div class="row">
-          <div class="col-xs-2">
-            <h2><i class="fa fa-picture-o" aria-hidden="true"></i></h2>
-          </div>
-          <div class="col-xs-10">
-            <h4>{{event.name}}</h4>
+          <div class="col-xs-12" style="padding: 0px;">
+            <h4 style="font-size: 22px;"><i class="fa fa-futbol-o" aria-hidden="true"></i>  {{event.name}}</h4>
             <p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
             <p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
           </div>

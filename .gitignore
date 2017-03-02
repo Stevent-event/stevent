@@ -44,6 +44,7 @@ lib-cov
 .nyc_output
 .grunt
 .lock-wscript
+
 .npm
 .eslintcache
 .node_repl_history

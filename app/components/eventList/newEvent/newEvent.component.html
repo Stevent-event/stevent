@@ -42,36 +42,15 @@
     Event organizer's info is required
 </div>
 
-
-<fieldset formGroupName="address">
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Street:</label>
-    <div class="row">
-      <div class="col-sm-10">
-        <input type="text" class="form-control" formControlName="street">
-      </div>
-    </div>
+<div class="searchContainer">
+  <label class="col-sm-2 control-label" for="textinput">Location</label>
+  <div class="row">
     <div class="col-sm-10">
-      <div class="row">
-        <label class="col-sm-2 control-label">Postalcode:</label>
-        <input type="text" class="form-control" formControlName="postalcode">
-      </div>
-    </div>
-    <div class="col-sm-10">
-      <div class="row">
-        <label class="col-sm-2 control-label">City:</label>
-        <input type="text" class="form-control" formControlName="city">
-      </div>
-    </div>
-
-    <div class="col-sm-10">
-      <div class="row">
-        <label class="col-sm-2 control-label">Country:</label>
-        <input type="text" class="form-control" formControlName="country">
-      </div>
+      <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+        #search [formControl]="searchControl">
     </div>
   </div>
-</fieldset>
+</div>
 
 <div class="form-group">
   <label class="col-sm-2 control-label" for="textinput">Event Description</label>
