@@ -15,7 +15,7 @@ import { Event } from "../../classes/event";
 
 export class MapComponent implements OnInit {
   lat: number;
-  lng: number;
+  lng: number;               
   searchControl: FormControl;
   zoom: number = 12;
   title: string;
@@ -31,16 +31,8 @@ export class MapComponent implements OnInit {
     private ngZone: NgZone,
   ) { }
 
-
-
   ngOnInit() {
     this.getEvents();
-
-    // //set google maps defaults
-    // this.zoom = 10;
-    // this.lat = 60.5;
-    // this.lng = 22.30;
-
     //create search FormControl
     this.searchControl = new FormControl();
 
@@ -51,7 +43,7 @@ export class MapComponent implements OnInit {
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["address"]
+        // types: ["address"]
       });
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {

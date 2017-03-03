@@ -34,5 +34,10 @@ Capstone 2016 project, Team Ekat
 
 1. Run "sh ./clean-project.sh" to erase all packages and compiled files. Then try again. If it still doesn't work, complain at Slack.  
 
-2. Reinstall everything easily with "sh ./install-project.sh".  
+2. Reinstall everything easily with "sh ./install-project.sh".
+
+## Problems with Google Maps? Can't see it or it doesn't work?
+
+1. Run "npm install angular2-google-maps --save" and "npm install @types/googlemaps --save-dev" to install google maps module
+    and TypeScript declaration.
   

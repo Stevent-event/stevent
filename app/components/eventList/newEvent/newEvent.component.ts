@@ -44,13 +44,9 @@ export class newEventComponent implements OnInit {
 
   ngOnInit() {
     this.searchControl = new FormControl();
-    //set current position
-    this.setCurrentPosition();
-
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        types: ["address"]
       });
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
@@ -61,13 +57,13 @@ export class newEventComponent implements OnInit {
           if (place.geometry === undefined || place.geometry === null) {
             return;
           }
-
           //set latitude, longitude and zoom
           this.lat = place.geometry.location.lat();
           this.lng = place.geometry.location.lng();
         });
       });
     });
+
     this.event = this.fb.group({
       name: ['',[Validators.required]],
       owner: ['',[Validators.required]],
@@ -105,7 +101,6 @@ export class newEventComponent implements OnInit {
 
   }
 
-
   onSubmit() //when user clicks create button , this function executes
   {
     console.log("Create button clicked, event submitted" + this.event.value)
@@ -114,15 +109,5 @@ export class newEventComponent implements OnInit {
       err => console.log(err),
       () => console.log('Request Completed')
     );
-
   }
-  private setCurrentPosition() {
-    if ("geolocation" in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.lat = position.coords.latitude;
-        this.lng = position.coords.longitude;
-      });
-    }
-  }
-
 }
