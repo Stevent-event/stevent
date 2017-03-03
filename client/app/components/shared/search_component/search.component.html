@@ -3,21 +3,29 @@
         <i class="fa fa-search search-image" aria-hidden="true"></i>
     </div>
     <div *ngIf="show1" class="search-input">
-        <i (click)="toggleSearch('address')" class="fa fa-times search-image" aria-hidden="true"></i><input type="text" placeholder="Address" />
+        <i (click)="toggleSearch('address')" class="fa fa-times search-image" aria-hidden="true"></i>
+        <div class="searchContainer">
+            <div class="form-group">
+                <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+                    #search2 [formControl]="searchControl">
+            </div>
+        </div>
     </div>
 
     <div *ngIf="!show2" class="search-button" (click)="toggleSearch('category')" id="category">
         <i class="fa fa-search search-image" aria-hidden="true"></i>
-            </div>
+    </div>
     <div *ngIf="show2" class="search-input">
-        <i (click)="toggleSearch('category')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show2" type="text" placeholder="Category" />
+        <i (click)="toggleSearch('category')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show2"
+            type="text" placeholder="Category" />
     </div>
 
 
     <div *ngIf="!show3" class="search-button" (click)="toggleSearch('time')" id="time">
         <i class="fa fa-search search-image" aria-hidden="true"></i>
     </div>
-    <div *ngIf="show3" class="search-input" >
-        <i (click)="toggleSearch('time')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show3" type="text" placeholder="Time" />
+    <div *ngIf="show3" class="search-input">
+        <i (click)="toggleSearch('time')" class="fa fa-times search-image" aria-hidden="true"></i><input *ngIf="show3" type="text"
+            placeholder="Time" />
     </div>
 </div>

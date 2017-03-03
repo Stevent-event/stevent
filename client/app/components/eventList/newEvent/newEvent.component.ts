@@ -22,11 +22,12 @@ import { MapsAPILoader } from 'angular2-google-maps/core';
 
 export class newEventComponent implements OnInit {
 
-  constructor(private fb: FormBuilder,
-  private eventService: EventService,
-  private http: Http,
-  private mapComponent: MapComponent,
-  private mapsAPILoader: MapsAPILoader,
+  constructor(
+    private fb: FormBuilder,
+    private eventService: EventService,
+    private http: Http,
+    private mapComponent: MapComponent,
+    private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone,
   ) { }
 
