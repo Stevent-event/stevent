@@ -21,13 +21,17 @@ export class EventComponent implements OnInit, OnDestroy {
         this.eventService.getEvent(_id)
         .subscribe(event => {
             this.event = event;
-            console.log(this.event)
+            console.log(this.event);
+        },
+        err => {
+            console.log(err);
         })
     }
 
     ngOnInit() {
         this.route.params.subscribe(params => {
             this._id = params['_id']});
+            
         this.getEvent(this._id);
     }
 
