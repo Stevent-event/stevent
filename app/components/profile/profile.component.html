@@ -50,11 +50,29 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
-            <div class="btn-group btn-group-justified">
-                <a href="#" class="btn">Joined</a>
-                <a href="#" class="btn">Hosted</a>
-                <a href="#" class="btn">Past</a>
+        <div class="col-xs-12" align="middle">
+            <h3>My hosted events</h3>
+                <!--<button class="btn">Joined</button>
+                <button class="btn">Hosted</button>-->
+                <!--<button class="btn">Past</button>-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div *ngFor="let event of myEvents">
+                <div class="row">
+                    <div routerLink="/event/{{event._id}}" class="col-xs-12 event_card">
+
+                        <div class="row">
+                            <div class="col-xs-12" style="padding: 0px;">
+                                <h4 style="font-size: 22px;"><i class="fa fa-futbol-o" aria-hidden="true"></i> {{event.name}}</h4>
+                                <p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
+                                <p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

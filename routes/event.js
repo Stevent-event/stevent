@@ -11,6 +11,13 @@ router.get('/getEvents', auth.authCheck, function(req, res) {
     })
 })
 
+router.get('/getMyEvents/:user_id', auth.authCheck, function(req, res) {
+    event.find({ 'owner.user_id': req.params.user_id})
+    .then(function(data) {
+        res.status(200).send(data);
+    })
+})
+
 router.get('/getEvent/:_id', auth.authCheck, function(req, res) {
     event.findOne({_id: req.params._id})
     .then(function(data) {
