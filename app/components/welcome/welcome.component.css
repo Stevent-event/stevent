@@ -1,20 +1,20 @@
-*Css for middle section (jumbotron)*/
+/*Css for middle section (jumbotron)*/
 .jumbotron {
   display: flex;
   justify-content: center;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   height: 100%;
 }
 
 .jumbotron .row .col-xs-12 {
   display: flex;
   justify-content: center;
-  padding: 5 0;
+  padding: 5px 0px 5px 0px;
   
 }
 .jumbotron .row button {
-  padding: 10 0;
+  padding: 10px 0px 10px 0px;
   width: 200px;
   justify-content: flex-end;
 }
@@ -27,6 +27,6 @@ footer {
 }
 
 h2, p {
-  color:black;
+  color: black;
   text-align: center;
 }
