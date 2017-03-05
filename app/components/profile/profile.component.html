@@ -1,4 +1,3 @@
-
 <!-- Justus's code:
 <div class="container" style="margin-bottom: 63px;">
     <div class="row" style="margin-bottom: 15px;">
@@ -37,14 +36,27 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <h2>My upcoming events</h2>
-
-        </div>
+    <div class="row" style="margin-bottom: 15px;">
 
         <div *ngIf="auth.authenticated()">
-            <button (click)="auth.logout()" routerLink="/" class="btn btn-custom btn-lg pull-right">Logout</button>
+            <button (click)="auth.logout()" routerLink="/" class="btn btn-custom pull-right">Logout</button>
+        </div>
+
+        <div class="col-xs-12">
+            <h2>My upcoming events:</h2>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12" style="padding-left: 0px; padding-right: 0px;">
+            <div class="btn-group btn-group-justified">
+                <a href="#" class="btn">Joined</a>
+                <a href="#" class="btn">Hosted</a>
+                <a href="#" class="btn">Past</a>
+            </div>
         </div>
     </div>
+
 </div>
