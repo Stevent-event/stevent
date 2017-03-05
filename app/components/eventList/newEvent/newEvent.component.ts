@@ -6,8 +6,8 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { Event } from "app/classes/event";
 import 'rxjs/add/operator/map';
-
 import {Moment} from 'moment';
+//For the Google Maps
 import { MapComponent } from '../../map/map.component';
 import { FormControl } from "@angular/forms";
 import { MapsAPILoader } from 'angular2-google-maps/core';
@@ -32,6 +32,7 @@ export class newEventComponent implements OnInit {
 
   lat:number;
   lng:number;
+  formatted_address: String;
   searchControl: FormControl;
 
 
@@ -48,8 +49,8 @@ export class newEventComponent implements OnInit {
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         componentRestrictions: { country: 'FIN' }
-
       });
+
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
           //get the place result
@@ -62,6 +63,7 @@ export class newEventComponent implements OnInit {
           //set latitude, longitude and zoom
           this.lat = place.geometry.location.lat();
           this.lng = place.geometry.location.lng();
+          this.formatted_address = place.formatted_address;
         });
       });
     });
@@ -70,16 +72,16 @@ export class newEventComponent implements OnInit {
       name: ['',[Validators.required]],
       owner: ['',[Validators.required]],
             location: this.fb.group({
-              lat:'',
-              lon: '',
+              lat: this.lat,
+              lng: this.lng,
             }),
           address: this.fb.group({
-            street: '',
-            route: '',
-            locality: '',
-            postal_code: '',
-            country: '',
-            formatted_address:'',
+            // street: this.street,
+            // route: '',
+            // locality: '',
+            // postal_code: '',
+            // country: this.country,
+            formatted_address: this.formatted_address,
           }),
 
       // address: this.fb.group({
@@ -106,6 +108,7 @@ export class newEventComponent implements OnInit {
   onSubmit() //when user clicks create button , this function executes
   {
     console.log("Create button clicked, event submitted" + this.event.value)
+    console.log(this.formatted_address + "/ " + "lat" + this.lat + "/ " + "lng" + this.lng )
     this.eventService.createEvent(this.event.value).subscribe(  //creatEvent method from the EventService component is called
       data => console.log(this.responseStatus = data),
       err => console.log(err),

@@ -37,13 +37,14 @@
             <p>Wanna get involved and connected with wonderful people?</p>
         </div>
         <div class="col-xs-12" >
-            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary text-uppercase">Lets Go!</button>
+            <button (click)="auth.login()" *ngIf="!auth.authenticated()" class="btn btn-primary text-uppercase">Let's Go!</button>
         </div>
         <div class="col-xs-12">
-            <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary text-uppercase" >Log out</button>
-            
+            <button (click)="auth.logout()" *ngIf="auth.authenticated()" class="btn btn-primary text-uppercase" >Log Out</button>
         </div>
-        
+        <div class="col-xs-12">
+	    <p></p>
+	</div>
         <div class="col-xs-12">
             <a routerLink = "/profile"*ngIf="auth.authenticated()" class="glyphicon glyphicon-chevron-down"></a>
         </div>

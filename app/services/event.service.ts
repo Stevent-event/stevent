@@ -31,11 +31,17 @@ export class EventService {
     // Fetch all existing events
     getEvents(): Observable<Event[]> {
         // ...using get request
-        console.log("getEven");
         return this.http.get(this.eventsUrl)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             //...errors if any
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+    getEvent(_id: String): Observable<Event> {
+        console.log("getevent");
+        return this.http.get('api/event/getEvent/' + _id)
+            .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
