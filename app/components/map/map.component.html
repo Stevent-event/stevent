@@ -19,7 +19,7 @@
 >
 
     <sebm-google-map-info-window>
-      <strong>{{event.name}}</strong>
+      <strong routerLink="/event/{{event._id}}">{{event.name}}</strong>
       <hr>
       {{event.address.formatted_address}}
     </sebm-google-map-info-window>
