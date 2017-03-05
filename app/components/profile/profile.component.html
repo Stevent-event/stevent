@@ -1,3 +1,5 @@
+
+<!-- Justus's code:
 <div class="container" style="margin-bottom: 63px;">
     <div class="row" style="margin-bottom: 15px;">
         <div class="col-xs-12" style="max-height: 150px; align-content: center;">
@@ -22,6 +24,27 @@
                 </div>
             </div>
         </div>
+        -->
 
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <h1><img class="img-circle img-responsive" src="{{profile.picture}}"></h1>
+        </div>
+        <div class="col-xs-8">
+            <h1>{{profile.nickname}}</h1>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>My upcoming events</h2>
+
+        </div>
+
+        <div *ngIf="auth.authenticated()">
+            <button (click)="auth.logout()" routerLink="/" class="btn btn-custom btn-lg pull-right">Logout</button>
+        </div>
     </div>
 </div>

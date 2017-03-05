@@ -10,6 +10,7 @@ var event = require('./routes/event');
 // Global variables and aliases
 var app = express();
 var port = process.env.PORT || 3000;
+var prod = process.env.NODE_ENV === 'production';
 
 mongoose.connect(config.database);
 mongoose.connection.once('open', function() {
