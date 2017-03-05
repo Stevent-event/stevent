@@ -11,6 +11,7 @@ import { routing } from './app.routes';
 import { Auth } from './services/authentication.service';
 import { newEventComponent } from './components/eventList/newEvent/newEvent.component';
 import { eventListComponent } from './components/eventList/eventList.component';
+import { EventComponent} from './components/event/event.component';
 import { dashboardComponent } from './components/dashboard/dashboard.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
@@ -46,7 +47,8 @@ import {MomentModule} from 'angular2-moment';
     OverviewComponent,
     GlobalComponent,
     SearchComponent,
-    MapComponent
+    MapComponent,
+    EventComponent
   ],
 
   providers: [Auth, AUTH_PROVIDERS],//,AuthGuard],
