@@ -1,7 +1,7 @@
 @font-face {
     font-family: "quicksandregular";
     src: local("Quicksand-Bold");
-    src: url(../../../../fonts/Quicksand-Bold.otf);
+    src: url(../../../../images/Quicksand-Bold.otf);
 }
 
 html {
