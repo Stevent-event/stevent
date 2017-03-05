@@ -1,65 +1,23 @@
-<div class="container" style="margin-bottom: 63px;">
+<div class="container">
     <div class="row">
-        <div class="col-xs-12" style="max-height: 150px; align-content: center;">
-            <img class="img-circle" style="width:70%; height: 150px; align-content: center;" src="{{profile.picture}}">
+        <div class="col-xs-4">
+            <h1><img class="img-circle img-responsive" src="{{profile.picture}}"></h1>
         </div>
+        <div class="col-xs-8">
+            <h1>{{profile.nickname}}</h1>
+
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-xs-12">
-            <div class="row">
-                <p>{{profile.nickname}}'s profile</p>
-                <p>Email: {{profile.name}}</p>
-                <p>Last Update: {{profile.created_at}}</p>
-                <div class="col-xs-12" *ngIf="auth.authenticated()">
-                    <button (click)="auth.logout()" routerLink="/" class="btn btn-custom btn-lg pull-right">Logout</button>
-                </div>
-            </div>
-        </div>
-    <div class="row">
-            <div class="col-xs-12">
-                <!--event image-->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h2 class="event-category">Event attended</h2>
-                        <img src="../../../../images/ruoka.jpg" class="img-responsive" style="width:100%" alt="Image">
-                        <p class="text-nowrap"> Some text about the event attended.</p>
-                    </div>
-                    <!--/.event image-->
-                    <!--event content-->
-                    <a href="#" class="col-xs-6 btn btn-primary">Read more</a>
-                    <!--/.event content-->
-                </div>
-            </div>
+            <h2>My upcoming events</h2>
+
         </div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="event-block">Event organized</h2>
-                <!--event image-->
-                <div class="row">
-                    <div class="col-xs-12">
-                        <img src="../../../../images/finnishsauna.jpg" class="img-responsive" style="width:100%" alt="Image">
-                        <p class="text-nowrap">Some text about the event .</p>
-                    </div>
-                    <!--/.event image-->
-                    <!--event content-->
-                    <a href="#" class="col-xs-6 btn btn-primary">Read more</a>
-                    <!--/.event content-->
-                </div>
-            </div>
+        <div *ngIf="auth.authenticated()">
+            <button (click)="auth.logout()" routerLink="/" class="btn btn-custom btn-lg pull-right">Logout</button>
         </div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <h2 class="event-block">Future Events</h2>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <img src="../../../../images/soccer.jpg" class="img-responsive" style="width:100%" alt="Image">
-                        <p class="text-nowrap">Some text about the event..</p>
-                    </div>
-                    <!--event content-->
-                    <a href="#" class="col-xs-6 btn btn-primary">Read more</a>
-                    <!--/.event content-->
-                </div>
-            </div>
-        </div>
     </div>
 </div>
