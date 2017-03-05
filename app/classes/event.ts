@@ -1,8 +1,13 @@
 export class Event {
     name: String;
     owner: String; //the user who created event
-    location: {}; //Google maps api latitude and longnitude
-    address: {};
+    location: {
+        lat: Number,
+        lng: Number,
+    }; //Google maps api latitude and longnitude
+    address: {
+        formatted_address: String;
+    };
     description: String;
     category: String;
     startTime: Date;
