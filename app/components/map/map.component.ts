@@ -39,11 +39,13 @@ export class MapComponent implements OnInit {
     //set current position
     this.setCurrentPosition();
     this.zoom = 12;
+    
 
-    //load Places Autocomplete
+    //load Places Autocomplete.
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
-        // types: ["address"]
+        // types: ["address"],
+        componentRestrictions: { country: 'FIN' }
       });
       autocomplete.addListener("place_changed", () => {
         this.ngZone.run(() => {
@@ -63,7 +65,7 @@ export class MapComponent implements OnInit {
       });
     });
   }
-
+//The current location of the user. Geolocation API.
   private setCurrentPosition() {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {

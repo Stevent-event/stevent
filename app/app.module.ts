@@ -30,7 +30,7 @@ import {MomentModule} from 'angular2-moment';
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBulfwJnO47bp7VUYkibolTaBDW3pE33MI',
-      libraries: ["places"]
+      libraries: ['places']
     }),
     ReactiveFormsModule
   ],
