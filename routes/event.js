@@ -15,13 +15,19 @@ router.post('/createEvent', function(req, res) {
     var newEvent = new event({
         event: req.body.name,
         owner: req.body.owner,
-     /*
-        address:req.body.address,
-       /* street_number: req.body.street,
-        postal_code: req.body.postalcode,
-        locality: req.body.city,
-        country: req.body.country,
-        */
+        location: req.body.location,
+        lat: req.body.lat,
+        lng: req.body.lng,
+
+        address: req.body.address,
+        formatted_address: req.body.formatted_address,
+        // street_number: req.body.street,
+        // postal_code: req.body.postalcode,
+        // locality: req.body.city,
+        // country: req.body.country,
+        // lat: req.body.lat,
+        // lng: req.body.lng,
+
         description: req.body.description,
         category: req.body.category,
         date:req.body.date,
