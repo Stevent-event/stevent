@@ -2,8 +2,8 @@
 header {
     display: flex;
     justify-content: center;
-    background-color: black;
-    padding: 10px 0px;
+    background-color: #1B1B1B;
+    padding: 10px 0px 10px 0px;
 }
 
 header .row {
@@ -14,7 +14,7 @@ header .row .col-xs-12 {
      padding: 0px;
      display: flex;
      justify-content: center;
-     background-color: #000000;
+     background-color: #1B1B1B;
 }
 
  /* Remove the navbar's default margin-bottom and rounded borders */ 
@@ -25,7 +25,7 @@ header .row .col-xs-12 {
 
 .wrapper{
     width: 100%;
-    margin: 10px auto;
+    margin: 10px auto 10px auto;
 }
 
 /* Add a gray background color and some padding to the footer */
@@ -40,15 +40,15 @@ footer {
 }
 
 .slides {
-    list-style:none;
-    position:relative;
-    width:500%; /* Number of panes * 100% */
-    overflow:hidden; /* Clear floats */
+    list-style: none;
+    position: relative;
+    width: 500%; /* Number of panes * 100% */
+    overflow: hidden; /* Clear floats */
     
     /* Slide effect Animations*/
-    -moz-animation:carousel 30s infinite;
-    -webkit-animation:carousel 30s infinite;
-    animation:carousel 30s infinite;
+    -moz-animation: carousel 30s infinite;
+    -webkit-animation: carousel 30s infinite;
+    animation: carousel 30s infinite;
 }
 
 .slides > li {
@@ -64,7 +64,7 @@ footer {
 }
 
 .carousel h2 {
-    margin-bottom: 0;
+    margin-bottom: 0px;
     font-size: 1em;
     padding: 1.5em 0.5em 1.5em 0.5em;
     position: absolute;
@@ -73,7 +73,7 @@ footer {
     left: 0px;
     text-align: center;
     color: #FFFFFF;
-    background-color: #000000;
+    background-color: #1B1B1B;
     text-transform: uppercase;
 }
 
@@ -96,4 +96,3 @@ footer {
     98.5% { left:-105%; }
     100%  { left:-5%; }
 } 
-  

@@ -1,21 +1,20 @@
 /*Css for middle section (jumbotron)*/
 .jumbotron {
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
+  /*margin: 0px;*/
+  /*padding: 0px;*/
+  /*height: 100%;*/
 }
 
 .jumbotron .row .col-xs-12 {
-  display: flex;
+  /*/*display: flex;*/
   justify-content: center;
-  padding: 5px 0px 5px 0px;
-  
+  /*padding: 5px 0px 5px 0px;*/*/
 }
 .jumbotron .row button {
-  padding: 10px 0px 10px 0px;
-  width: 200px;
+  /*padding: 10px 0px 10px 0px;
+  /*width: 200px;*/
   justify-content: flex-end;
 }
 /*Css for bottom section (footer)*/
@@ -27,6 +26,6 @@ footer {
 }
 
 h2, p {
-  color: black;
+  color: #1B1B1B;
   text-align: center;
 }
