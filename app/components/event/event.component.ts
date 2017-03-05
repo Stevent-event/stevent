@@ -19,9 +19,9 @@ export class EventComponent implements OnInit, OnDestroy {
 
     getEvent(_id: String) {
         this.eventService.getEvent(_id)
-        .subscribe(event => {
-            this.event = event;
-            console.log(this.event)
+        .subscribe(event => this.event = event,
+        err => {
+            console.log(err);
         })
     }
 
