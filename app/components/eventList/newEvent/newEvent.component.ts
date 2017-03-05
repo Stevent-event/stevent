@@ -112,6 +112,7 @@ export class newEventComponent implements OnInit {
     console.log(this.event);
     this.event.value.location.lat = this.lat;
     this.event.value.location.lng = this.lng;
+    this.event.value.address.formatted_address = this.formatted_address;
     this.eventService.createEvent(this.event.value).subscribe(  //creatEvent method from the EventService component is called
       data => console.log(this.responseStatus = data),
       err => console.log(err),
