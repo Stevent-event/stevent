@@ -32,15 +32,14 @@ export class MapComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.lat = 60.4518;
+    this.lng = 22.2666;
+    this.zoom = 12;
     this.getEvents();
     //create search FormControl
     this.searchControl = new FormControl();
-
     //set current position
     this.setCurrentPosition();
-    this.zoom = 12;
-    
-
     //load Places Autocomplete.
     this.mapsAPILoader.load().then(() => {
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
