@@ -13,7 +13,7 @@ export class Event {
     startTime: Date;
     endTime: Date;
     ongoing: Boolean;
-    attendingUsers: [String];
+    attendingUsers: [String]
     limitedAttendees: Boolean;
-    maximumParticipants: Number;
+    maximumAttendees: Number;
 }

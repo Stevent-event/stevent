@@ -33,6 +33,7 @@ export class newEventComponent implements OnInit {
   lat: number;
   lng: number;
   formatted_address: String;
+  maximumAttendees: number;
   searchControl: FormControl;
 
 
@@ -97,7 +98,7 @@ export class newEventComponent implements OnInit {
       startTime: '',
       endTime: '',
       //  ongoing:'',
-      // attendingUsers: '',
+      attendingUsers: '',
       limitedAttendees: '',
       maximumAttendees: '',
     });
@@ -113,6 +114,7 @@ export class newEventComponent implements OnInit {
     this.event.value.location.lat = this.lat;
     this.event.value.location.lng = this.lng;
     this.event.value.address.formatted_address = this.formatted_address;
+    this.event.value.location.maximumAttendees = this.maximumAttendees;
     this.eventService.createEvent(this.event.value).subscribe(  //creatEvent method from the EventService component is called
       data => console.log(this.responseStatus = data),
       err => console.log(err),

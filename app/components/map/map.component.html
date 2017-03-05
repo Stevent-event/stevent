@@ -1,29 +1,27 @@
 <div class="searchContainer">
   <div class="form-group">
-    <input placeholder="search for location" autocorrect="off"
-    autocapitalize="off" spellcheck="off" type="text"
-    class="form-control" #search [formControl]="searchControl">
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+      #search [formControl]="searchControl">
   </div>
 </div>
 
-<sebm-google-map
-[latitude]="lat"
-[longitude]="lng" 
-[zoom]="zoom"
->
-<div *ngFor="let event of events; let i = index"> 
-  <sebm-google-map-marker
-  *ngIf="event.location && event.location.lat && event.location.lng"
-  [latitude]="event.location.lat"
-  [longitude]="event.location.lng"
->
+<sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <div *ngFor="let event of events; let i = index">
+    <sebm-google-map-marker *ngIf="event.location && event.location.lat && event.location.lng" [latitude]="event.location.lat"
+      [longitude]="event.location.lng">
 
-    <sebm-google-map-info-window>
-      <strong routerLink="/event/{{event._id}}">{{event.name}}</strong>
-      <hr>
-      {{event.address.formatted_address}}
-    </sebm-google-map-info-window>
-    
-  </sebm-google-map-marker>
+      <sebm-google-map-info-window>
+        <h4 style="font-size: 22px;"><i class="fa fa-futbol-o" aria-hidden="true"></i> {{event.name}}</h4>
+<p *ngIf="event.description">{{event.description}}</p>
+<p *ngIf="event.category">Category: {{event.category}}</p>
+<p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
+<p>Attending: {{event.attendingUsers}}/{{event.maximumParticipants}}</p>
+<hr>
+<p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
+<div routerLink="/event/{{event._id}}" class="col-xs-12">
+  <button type="showEvent" class="btn btn-custom btn-lg pull-center">Show Me the Event!</button>
+</div>
+</sebm-google-map-info-window>
+</sebm-google-map-marker>
 </div>
 </sebm-google-map>
