@@ -23,21 +23,5 @@
             </div>
         </div>
 
-        <div *ngFor="let event of events">
-            <div class="row">
-                <div class="col-xs-12 event_card">
-
-                    <div class="row">
-                        <div class="col-xs-12" style="padding: 0px;">
-                            <h4 style="font-size: 22px;"><i class="fa fa-futbol-o" aria-hidden="true"></i> {{event.name}}</h4>
-                            <p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
-                            <p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 </div>
