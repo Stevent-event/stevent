@@ -11,6 +11,13 @@ router.get('/getEvents', function(req, res) {
     })
 })
 
+router.get('/getEvent/:_id', function(req, res) {
+    event.find({_id: req.params._id})
+    .then(function(data) {
+        res.status(200).send(data);
+    })
+})
+
 router.post('/createEvent', function(req, res) {
     var newEvent = new event({
         event: req.body.name,

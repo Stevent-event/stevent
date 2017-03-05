@@ -6,7 +6,7 @@
 
   <div *ngFor="let event of events">
     <div class="row">
-      <div class="col-xs-12 event_card">
+      <div routerLink="/event/{{event._id}}" class="col-xs-12 event_card">
 
         <div class="row">
           <div class="col-xs-12" style="padding: 0px;">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { routes } from "app/app.routes";
 import { EventService } from "app/services/event.service";
 import { Observable } from 'rxjs/Observable';
@@ -13,7 +13,7 @@ import { SearchComponent } from 'app/components/shared/search_component/search.c
   providers: [EventService]
 })
 
-export class eventListComponent implements OnInit {
+export class eventListComponent implements OnInit, OnDestroy {
   title: string;
   events: Event[];
   selectedEvent: Event;
@@ -31,6 +31,9 @@ export class eventListComponent implements OnInit {
 
   ngOnInit() {
     this.getEvents();
+  }
+
+  ngOnDestroy() {
   }
 
 }

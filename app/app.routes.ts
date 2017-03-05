@@ -7,6 +7,7 @@ import { eventListComponent } from './components/eventList/eventList.component';
 import { dashboardComponent } from './components/dashboard/dashboard.component';
 import { OverviewComponent } from './components/overview/overview.component';
 import {ProfileComponent} from './components/profile/profile.component';
+import {EventComponent} from './components/event/event.component';
 //import {AuthGuard} from './auth.guard';
 import { MapComponent } from './components/map/map.component';
 
@@ -20,7 +21,8 @@ export const routes: Routes = [
   { path: 'eventList', component: eventListComponent}, //canActivate: [AuthGuard]},
   { path: 'dashboard', component: dashboardComponent},
   { path:'profile', component:ProfileComponent}, //canActivate: [AuthGuard]},
-  { path: 'eventMap', component: MapComponent}
+  { path: 'eventMap', component: MapComponent},
+  { path: 'event/:_id', component: EventComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
