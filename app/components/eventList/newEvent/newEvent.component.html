@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" id="newevent-container">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
-      <form class="form-horizontal" role="form" method="POST"  (ngSubmit)="onSubmit()" [formGroup]="event">
+      <form class="form-horizontal" role="form" method="POST" (ngSubmit)="onSubmit()" [formGroup]="event">
 
         <fieldset>
 
@@ -10,12 +10,8 @@
 
 
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Name</label>
-            <div class="row">
-              <div class="col-sm-10">
-                <input type="text" placeholder="event name" class="form-control" formControlName="name">
-              </div>
-            </div>
+            <label class="control-label" for="textinput">Name</label>
+            <input type="text" placeholder="event name" class="form-control" formControlName="name">
           </div>
 
           <div class="error" *ngIf="event.get('name').touched 
@@ -29,12 +25,8 @@
   </div>
 
   <div class="form-group">
-    <label class="col-sm-2 control-label" for="textinput">Organizer</label>
-    <div class="row">
-      <div class="col-sm-10">
-        <input type="text" placeholder="event organizer" class="form-control" formControlName="owner">
-      </div>
-    </div>
+    <label class="control-label" for="textinput">Organizer</label>
+    <input type="text" placeholder="event organizer" class="form-control" formControlName="owner">
   </div>
 
   <div class="error" *ngIf="event.get('owner').touched 
@@ -42,31 +34,21 @@
     Event organizer's info is required
 </div>
 
-<div class="searchContainer">
-  <label class="col-sm-2 control-label" for="textinput">Location</label>
-  <div class="row">
-    <div class="col-sm-10">
-      <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
-        #search [formControl]="searchControl">
-    </div>
-  </div>
+<div class="form-group">
+  <label class="control-label" for="textinput">Location</label>
+  <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+    #search [formControl]="searchControl">
 </div>
 
 <div class="form-group">
-  <label class="col-sm-2 control-label" for="textinput">Event Description</label>
-  <div class="row">
-    <div class="col-sm-10">
-      <textarea rows="16" class="form-control" placeholder="Tell People about your event" formControlName="description"></textarea>
-    </div>
-  </div>
+  <label class="control-label" for="textinput">Event Description</label>
+  <textarea rows="5" class="form-control" placeholder="Tell People about your event" formControlName="description"></textarea>
 </div>
 
 <div class="form-group">
-  <label class="col-sm-2 control-label" for="textinput">Event category</label>
-  <div class="row">
-    <div class="col-sm-10">
+  <label class="control-label" for="textinput">Event category</label>
 
-      <select class="form-control" formControlName="category">
+  <select class="form-control" formControlName="category">
         <option>  
             Culture
         </option>
@@ -88,17 +70,11 @@
             Other
         </option>
     </select>
-    </div>
-  </div>
 </div>
 
 <div class="form-group">
-  <label class="col-sm-2 control-label" for="textinput">Event Date</label>
-  <div class="row">
-    <div class="col-sm-10">
-      <input type="date" class="form-control" formControlName="date">
-    </div>
-  </div>
+  <label class="control-label" for="textinput">Event Date</label>
+  <input type="date" class="form-control" formControlName="date">
 </div>
 
 
@@ -109,21 +85,13 @@
   </div>
 
   <div class="form-group">
-    <label class="col-sm-2 control-label" for="textinput">Start</label>
-    <div class="row">
-      <div class="col-sm-10">
-        <input type="time" class="form-control" formControlName="startTime">
-      </div>
-    </div>
+    <label class="control-label" for="textinput">Start</label>
+    <input type="time" class="form-control" formControlName="startTime">
   </div>
 
   <div class="form-group">
-    <label class="col-sm-2 control-label" for="textinput">End</label>
-    <div class="row">
-      <div class="col-sm-10">
-        <input type="time" class="form-control" formControlName="endTime">
-      </div>
-    </div>
+    <label class="control-label" for="textinput">End</label>
+    <input type="time" class="form-control" formControlName="endTime">
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label" for="textinput">  
@@ -131,11 +99,11 @@
    
     <div class="row" *ngIf="showlimited">
        <label class="col-sm-2 control-label" for="textinput">Maximum Attendees</label>
-      <div class="col-sm-10">
-        <input type="number" class="form-control" formControlName="maximumAttendees">
-      </div>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" formControlName="maximumAttendees">
     </div>
-     </label>
+  </div>
+  </label>
   </div>
 
   <div class="form-group">
