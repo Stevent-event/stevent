@@ -1,5 +1,12 @@
 <div class="container">
-    <div class="row">
-        <h1 *ngIf="event">{{event.name}}</h1>
+    <div *ngIf="event" class="row">
+
+        <div class="col-xs-12">
+            <h1>{{event.name}} <small>{{event.category}}</small></h1>
+            <p>{{event.description}}</p>
+            <p>Owner: {{event.owner.nickname}}</p>
+            <hr>
+            <p>{{event.address.formatted_address}}</p>
+        </div>
     </div>
 </div>

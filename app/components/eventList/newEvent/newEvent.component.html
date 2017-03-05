@@ -25,30 +25,20 @@
   </div>
 
   <div class="form-group">
-    <label class="control-label" for="textinput">Organizer</label>
-    <input type="text" placeholder="event organizer" class="form-control" formControlName="owner">
+    <label class="control-label" for="textinput">Location</label>
+    <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
+      #search [formControl]="searchControl">
   </div>
 
-  <div class="error" *ngIf="event.get('owner').touched 
-             && event.get('owner').hasError('required')">
-    Event organizer's info is required
-</div>
+  <div class="form-group">
+    <label class="control-label" for="textinput">Event Description</label>
+    <textarea rows="5" class="form-control" placeholder="Tell something about your event" formControlName="description"></textarea>
+  </div>
 
-<div class="form-group">
-  <label class="control-label" for="textinput">Location</label>
-  <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control"
-    #search [formControl]="searchControl">
-</div>
+  <div class="form-group">
+    <label class="control-label" for="textinput">Event category</label>
 
-<div class="form-group">
-  <label class="control-label" for="textinput">Event Description</label>
-  <textarea rows="5" class="form-control" placeholder="Tell People about your event" formControlName="description"></textarea>
-</div>
-
-<div class="form-group">
-  <label class="control-label" for="textinput">Event category</label>
-
-  <select class="form-control" formControlName="category">
+    <select class="form-control" formControlName="category">
         <option>  
             Culture
         </option>
@@ -70,21 +60,14 @@
             Other
         </option>
     </select>
-</div>
-
-<div class="form-group">
-  <label class="control-label" for="textinput">Event Date</label>
-  <input type="date" class="form-control" formControlName="date">
-</div>
-
-
-<div class="error" *ngIf="event.get('date').hasError('required') 
-                    && event.get('date').touched">
-
-  Date is required
   </div>
 
   <div class="form-group">
+    <label class="control-label" for="textinput">Event Date</label>
+    <input type="date" class="form-control" formControlName="date">
+  </div>
+
+  <!--<div class="form-group">
     <label class="control-label" for="textinput">Start</label>
     <input type="time" class="form-control" formControlName="startTime">
   </div>
@@ -92,7 +75,7 @@
   <div class="form-group">
     <label class="control-label" for="textinput">End</label>
     <input type="time" class="form-control" formControlName="endTime">
-  </div>
+  </div>-->
   <div class="form-group">
     <label class="col-sm-2 control-label" for="textinput">  
    <input type="checkbox" [(ngModel)]="showlimited"  [ngModelOptions]="{standalone: true}"/> Limited Attendees
@@ -104,19 +87,19 @@
     </div>
   </div>
   </label>
-  </div>
+</div>
 
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-custom btn-lg pull-right" [disabled]="!event.valid">Create</button>
-      <button type="reset" class="btn btn-custom btn-lg pull-left">Cancel</button>
-    </div>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <button type="submit" class="btn btn-custom btn-lg pull-right" [disabled]="!event.valid">Create</button>
+    <button type="reset" class="btn btn-custom btn-lg pull-left">Cancel</button>
   </div>
+</div>
 
-  </fieldset>
-  </form>
-  </div>
+</fieldset>
+</form>
+</div>
 
-  </div>
+</div>
 
-  </div>
+</div>

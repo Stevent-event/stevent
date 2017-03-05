@@ -70,7 +70,6 @@ export class newEventComponent implements OnInit {
 
     this.event = this.fb.group({
       name: ['', [Validators.required]],
-      owner: ['', [Validators.required]],
       location: this.fb.group({
         lat: this.lat,
         lng: this.lng,
@@ -110,6 +109,7 @@ export class newEventComponent implements OnInit {
     console.log("Create button clicked, event submitted" + this.event.value)
     console.log(this.formatted_address + "/ " + "lat" + this.lat + "/ " + "lng" + this.lng)
     console.log(this.event);
+    this.event.value.owner = JSON.parse(localStorage.getItem('profile')); 
     this.event.value.location.lat = this.lat;
     this.event.value.location.lng = this.lng;
     this.event.value.address.formatted_address = this.formatted_address;

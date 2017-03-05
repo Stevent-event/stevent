@@ -20,7 +20,7 @@ router.get('/getEvent/:_id', auth.authCheck, function(req, res) {
 
 router.post('/createEvent', auth.authCheck, function(req, res) {
     var newEvent = new event({
-        event: req.body.name,
+        name: req.body.name,
         owner: req.body.owner,
         location: req.body.location,
         lat: req.body.lat,

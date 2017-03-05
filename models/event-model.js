@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
     name: String,
-    owner: String, //owner id
+    owner: {}, //owner id
     location: {
         lat: Number,
         lng: Number
@@ -14,9 +14,9 @@ var eventSchema = new Schema({
         locality: String,
         postal_code: Number,
         country: String,
-        formatted_address: String
+        formatted_address: {type: String, default: ''}
     },
-    description: { type: String },
+    description: { type: String, default: '' },
     category: { type: String, default: "Culture" },
     date: Date,
     startTime: Date,
