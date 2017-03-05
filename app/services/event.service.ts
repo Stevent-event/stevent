@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
+import {AuthHttp} from 'angular2-jwt';
 
 //import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -13,7 +14,10 @@ export class EventService {
     private headers = new Headers({ 'Content-Type': 'application/json' });
     private eventsUrl = 'api/event/getEvents';
     private createEventsUrl = 'api/event/createEvent';
-    constructor(private http: Http) { }
+    constructor(
+        private http: Http,
+        private authHttp: AuthHttp
+        ) { }
     /*
         getEvents(): Promise<Event[]> {
             return this.http.get('api/event/getEvents')
@@ -31,7 +35,7 @@ export class EventService {
     // Fetch all existing events
     getEvents(): Observable<Event[]> {
         // ...using get request
-        return this.http.get(this.eventsUrl)
+        return this.authHttp.get(this.eventsUrl)
             // ...and calling .json() on the response to return data
             .map((res: Response) => res.json())
             //...errors if any
@@ -40,14 +44,14 @@ export class EventService {
 
     getEvent(_id: String): Observable<Event> {
         console.log("getevent");
-        return this.http.get('api/event/getEvent/' + _id)
+        return this.authHttp.get('api/event/getEvent/' + _id)
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }
 
     createEvent(event: Event) {
 
-        return this.http.post(this.createEventsUrl, event, {
+        return this.authHttp.post(this.createEventsUrl, event, {
         })
             .map(res => res.json());
     }

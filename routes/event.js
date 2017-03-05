@@ -4,21 +4,21 @@ var auth = require('./../jwt');
 
 var event = require('../models/event-model');
 
-router.get('/getEvents', function(req, res) {
+router.get('/getEvents', auth.authCheck, function(req, res) {
     event.find({})
     .then(function(data) {
         res.status(200).send(data);
     })
 })
 
-router.get('/getEvent/:_id', function(req, res) {
+router.get('/getEvent/:_id', auth.authCheck, function(req, res) {
     event.findOne({_id: req.params._id})
     .then(function(data) {
         res.status(200).send(data);
     })
 })
 
-router.post('/createEvent', function(req, res) {
+router.post('/createEvent', auth.authCheck, function(req, res) {
     var newEvent = new event({
         event: req.body.name,
         owner: req.body.owner,
