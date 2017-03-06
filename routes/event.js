@@ -25,6 +25,34 @@ router.get('/getEvent/:_id', auth.authCheck, function(req, res) {
     })
 })
 
+router.get('/joinEvent/:eventId/:user_id', auth.authCheck, function(req, res) {
+    event.findOne({_id: req.params.eventId})
+    .then(function(event) {
+        event.attendingUsers.push(req.params.user_id)
+        event.save()
+        .then(function(data) {
+            res.status(200).send();
+        })
+        
+    })
+})
+
+router.get('/leaveEvent/:eventId/:user_id', auth.authCheck, function(req, res) {
+    event.findOne({_id: req.params.eventId})
+    .then(function(event) {
+        for(var i=0; i<event.attendingUsers.length; i++) {
+            if(event.attendingUsers[i]==req.params.user_id) {
+                event.attendingUsers.splice(i, 1);
+            }
+        }
+        event.save()
+        .then(function(data) {
+            res.status(200).send();
+        })
+        
+    })
+})
+
 router.post('/createEvent', auth.authCheck, function(req, res) {
     var newEvent = new event({
         name: req.body.name,

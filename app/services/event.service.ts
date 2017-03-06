@@ -65,5 +65,14 @@ export class EventService {
             .map(res => res.json());
     }
 
+    joinEvent(_id: String): Observable<any> {
+        return this.authHttp.get('api/event/joinEvent/' + _id + '/' + JSON.parse(localStorage.getItem('profile')).user_id)
+            .map((res:Response) => res)
+    }
+
+    leaveEvent(_id: String): Observable<any> {
+        return this.authHttp.get('api/event/leaveEvent/' + _id + '/' + JSON.parse(localStorage.getItem('profile')).user_id)
+            .map((res: Response) => res)
+    }
 
 }

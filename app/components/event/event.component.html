@@ -9,8 +9,14 @@
             <p>{{event.address.formatted_address}}</p>
         </div>
 
-        <div class="col-xs-12">
-            <button class="btn btn-custom btn-lg pull-right">I'm in!</button>
+        <div class="col-xs-6">
+            <p>Attending: {{event.attendingUsers.length}}</p>
+        </div>
+        <div class="col-xs-6" *ngIf="!joined">
+            <button (click)="joinEvent(event._id)" class="btn btn-custom btn-lg pull-right">I'm in!</button>
+        </div>
+        <div class="col-xs-6" *ngIf="joined">
+            <button (click)="leaveEvent(event._id)" class="btn btn-custom btn-lg pull-right">Cancel join</button>
         </div>
     </div>
 </div>
