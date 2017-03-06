@@ -5,8 +5,6 @@ var User = require('../models/user-model');
 
 
     router.post('/login', function(req, res) {
-        console.log(req.body);
-
         var user = new User({
             email: req.body.email,
             password: req.body.password
@@ -28,7 +26,6 @@ var User = require('../models/user-model');
     })
 
 router.post('/passwordchange', function(req, res) {
-    console.log(req.body);
 
     res.status(200).send();
 })

@@ -38,7 +38,6 @@ export class EventComponent implements OnInit, OnDestroy {
     }
 
     joinEvent(_id: String) {
-        console.log(_id);
         this.eventService.joinEvent(_id)
         .subscribe(res => {
             this.joined = true;

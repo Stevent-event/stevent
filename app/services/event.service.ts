@@ -52,7 +52,6 @@ export class EventService {
     }
 
     getEvent(_id: String): Observable<Event> {
-        console.log("getevent");
         return this.authHttp.get('api/event/getEvent/' + _id)
             .map((res: Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));

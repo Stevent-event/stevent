@@ -107,9 +107,9 @@ export class newEventComponent implements OnInit {
 
   onSubmit() //when user clicks create button , this function executes
   {
-    console.log("Create button clicked, event submitted" + this.event.value)
-    console.log(this.formatted_address + "/ " + "lat" + this.lat + "/ " + "lng" + this.lng)
-    console.log(this.event);
+    // console.log("Create button clicked, event submitted" + this.event.value)
+    // console.log(this.formatted_address + "/ " + "lat" + this.lat + "/ " + "lng" + this.lng)
+    // console.log(this.event);
     this.event.value.owner = JSON.parse(localStorage.getItem('profile')); 
     this.event.value.location.lat = this.lat;
     this.event.value.location.lng = this.lng;

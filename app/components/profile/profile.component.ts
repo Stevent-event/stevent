@@ -20,14 +20,14 @@ export class ProfileComponent implements OnInit {
         private eventService: EventService
         ){
         this.profile = JSON.parse(localStorage.getItem('profile'));
-        console.log(this.profile);
+        // console.log(this.profile);
     }
 
     getMyEvents() {
         this.eventService.getMyEvents()
         .subscribe(events => {
             this.myEvents = events;
-            console.log(events);
+            // console.log(events);
         },
         err => {
             console.log(err);
