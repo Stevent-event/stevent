@@ -24,7 +24,7 @@ var eventSchema = new Schema({
     ongoing: { type: Boolean, default: false },
     attendingUsers: [String], //attending user id:s
     limitedAttendees: {type: Boolean, default: false}, //true if attendees count limited
-    maximumParticipants: { type: Number, default: 8 }
+    maximumAttendees: { type: Number, default: 8 }
 }, { collection: 'events' })
 
 module.exports = mongoose.model('Event', eventSchema);

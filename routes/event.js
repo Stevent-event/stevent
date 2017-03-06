@@ -54,6 +54,7 @@ router.get('/leaveEvent/:eventId/:user_id', auth.authCheck, function(req, res) {
 })
 
 router.post('/createEvent', auth.authCheck, function(req, res) {
+    console.log(req.body);
     var newEvent = new event({
         name: req.body.name,
         owner: req.body.owner,

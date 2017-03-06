@@ -15,7 +15,7 @@
 <p *ngIf="event.description">{{event.description}}</p>
 <p *ngIf="event.category">Category: {{event.category}}</p>
 <p *ngIf="event.startTime">{{event.startTime | date:'medium'}}</p>
-<p>Attending: {{event.attendingUsers.length}}/{{event.maximumParticipants}}</p>
+<p>Attending: {{event.attendingUsers.length}}/{{event.maximumAttendees}}</p>
 <hr>
 <p *ngIf="event.address && event.address.formatted_address">{{event.address.formatted_address}}</p>
 <div routerLink="/event/{{event._id}}" class="col-xs-12">
