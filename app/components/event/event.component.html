@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="height: 100%;">
     <div *ngIf="event" class="row">
 
         <div class="col-xs-12">
@@ -17,6 +17,9 @@
         </div>
         <div class="col-xs-6" *ngIf="joined">
             <button (click)="leaveEvent(event._id)" class="btn btn-custom btn-lg pull-right">Cancel join</button>
+        </div>
+        <div class="col-xs-12" style="margin-bottom: 63px; margin-top: 40px;">
+            <button routerLink="/eventList" class="btn btn-block">Return</button>
         </div>
     </div>
 </div>

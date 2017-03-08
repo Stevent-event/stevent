@@ -1,4 +1,4 @@
-<div class="container" id="newevent-container">
+<div class="container" id="newevent-container" style="margin-bottom: 63px;">
   <div class="row">
     <div class="col-md-4 col-md-offset-4">
       <form class="form-horizontal" role="form" method="POST" (ngSubmit)="onSubmit()" [formGroup]="event">
@@ -91,7 +91,7 @@
 <div class="form-group">
   <div class="col-sm-offset-2 col-sm-10">
     <button type="submit" class="btn btn-custom btn-lg pull-right" [disabled]="!event.valid">Create</button>
-    <button type="reset" class="btn btn-custom btn-lg pull-left">Cancel</button>
+    <button type="reset" class="btn btn-custom btn-lg pull-left">Reset</button>
   </div>
 </div>
 
